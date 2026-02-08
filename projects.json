@@ -1,1 +1,23 @@
-
+[
+{
+"title": "SmartTask Dashboard",
+"description": "Advanced task & project management dashboard",
+"category": "Dashboard",
+"image": "https://via.placeholder.com/600x400",
+"link": "#"
+},
+{
+"title": "Finance Tracker PWA",
+"description": "Offline-first finance tracking app",
+"category": "PWA",
+"image": "https://via.placeholder.com/600x400",
+"link": "#"
+},
+{
+"title": "Admin Panel System",
+"description": "Role-based admin management system",
+"category": "Admin",
+"image": "https://via.placeholder.com/600x400",
+"link": "#"
+}
+]

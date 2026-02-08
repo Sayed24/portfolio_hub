@@ -10,7 +10,6 @@
 { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
 ]
 }
-```json
 {
 "name": "My Portfolio Projects",
 "short_name": "Portfolio",

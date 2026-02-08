@@ -88,3 +88,27 @@ toggle.textContent = '☀️';
 if ('serviceWorker' in navigator) {
 navigator.serviceWorker.register('service-worker.js');
 }
+// Sort featured first
+function sortProjects(projects) {
+return projects.sort((a, b) => b.featured - a.featured);
+}
+
+
+// Modal
+const modal = document.createElement('div');
+modal.className = 'modal';
+document.body.appendChild(modal);
+
+
+function openModal(project) {
+modal.innerHTML = `
+<div class="modal-content">
+<h2>${project.title}</h2>
+<p>${project.details}</p>
+<a href="${project.link}" target="_blank">Visit Project →</a>
+</div>`;
+modal.style.display = 'flex';
+}
+
+
+modal.addEventListener('click', () => modal.style.display = 'none');

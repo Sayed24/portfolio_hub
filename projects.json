@@ -2,22 +2,28 @@
 {
 "title": "SmartTask Dashboard",
 "description": "Advanced task & project management dashboard",
+"details": "Includes drag & drop tasks, calendar view, analytics, and role-based access.",
 "category": "Dashboard",
-"image": "https://via.placeholder.com/600x400",
-"link": "#"
+"image": "https://via.placeholder.com/900x600",
+"link": "#",
+"featured": true
 },
 {
 "title": "Finance Tracker PWA",
 "description": "Offline-first finance tracking app",
+"details": "CSV export, charts, local storage sync, installable PWA.",
 "category": "PWA",
-"image": "https://via.placeholder.com/600x400",
-"link": "#"
+"image": "https://via.placeholder.com/900x600",
+"link": "#",
+"featured": true
 },
 {
 "title": "Admin Panel System",
 "description": "Role-based admin management system",
+"details": "User roles, permissions, charts, secure UI patterns.",
 "category": "Admin",
-"image": "https://via.placeholder.com/600x400",
-"link": "#"
+"image": "https://via.placeholder.com/900x600",
+"link": "#",
+"featured": false
 }
 ]

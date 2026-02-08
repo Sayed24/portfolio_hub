@@ -135,3 +135,18 @@ width: 90%;
 border-radius: 20px;
 padding: 2rem;
 }
+.cta {
+text-align: center;
+padding: 4rem 2rem;
+}
+
+
+.cta-btn {
+display: inline-block;
+margin-top: 1rem;
+padding: 0.8rem 1.6rem;
+background: var(--accent);
+color: white;
+border-radius: 999px;
+text-decoration: none;
+}

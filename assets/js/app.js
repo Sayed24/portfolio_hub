@@ -1,4 +1,19 @@
 const toggle = document.getElementById('themeToggle');
+const projectContainer = document.getElementById('projects');
+const filterButtons = document.querySelectorAll('.filters button');
+
+
+// Theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+document.documentElement.setAttribute('data-theme', 'dark');
+toggle.textContent = '☀️';
+}
+
+
+toggle.addEventListener('click', () => {
+const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+document.documentElement.toggleAttribute('data-theme', !isDark);
 localStorage.setItem('theme', isDark ? 'light' : 'dark');
 toggle.textContent = isDark ? '🌙' : '☀️';
 });

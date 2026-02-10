@@ -1,57 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sayedrahim Sadat – Portfolio Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Sayedrahim Sadat | Frontend & PWA Developer</title>
 
-<!-- SEO -->
-<meta name="description" content="Elite portfolio of web apps, dashboards, PWAs, and admin panels." />
+  <!-- ATS + SEO -->
+  <meta name="description" content="Frontend Developer specializing in Dashboards, Admin Systems, Shopify, PWAs, and Web Applications." />
+  <meta name="keywords" content="Frontend Developer, Dashboard Developer, Admin Systems, Shopify Developer, PWA Developer, Web App Developer" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Elite Frontend Portfolio – Sayedrahim Sadat" />
+  <meta property="og:description" content="Featured dashboards, PWAs, admin systems, and modern web apps." />
+  <meta property="og:image" content="assets/og-preview.png" />
+  <meta property="og:type" content="website" />
 
-<!-- Open Graph -->
-<meta property="og:title" content="Sayedrahim Sadat – Elite Portfolio" />
-<meta property="og:description" content="Modern web projects built for performance, UX, and scale." />
-<meta property="og:image" content="assets/og-preview.png" />
-<meta property="og:type" content="website" />
-
-
-<link rel="stylesheet" href="styles.css" />
-<link rel="manifest" href="manifest.json" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-
-
 <header class="topbar">
-<h1>Portfolio Hub</h1>
-<div class="controls">
-<button id="themeToggle">🌙</button>
-<button id="recruiterToggle">🎯 Recruiter Mode</button>
-<a href="resume/Sayedrahim_Sadat_Resume_v1.pdf" download class="resume-btn">⬇ Resume</a>
-</div>
+  <h1>Portfolio</h1>
+
+  <div class="actions">
+    <select id="langSwitcher">
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+    </select>
+
+    <button id="themeToggle">🌙</button>
+    <button id="recruiterToggle">🎯 Recruiter Mode</button>
+
+    <a href="resume/Resume_v2.pdf" download class="cta">
+      ⬇ Resume
+    </a>
+  </div>
 </header>
 
-
-<main>
-<section class="filters">
-<button data-filter="all">All</button>
-<button data-filter="web">Web</button>
-<button data-filter="dashboard">Dashboard</button>
-<button data-filter="pwa">PWA</button>
-<button data-filter="admin">Admin Panels</button>
+<section class="hero">
+  <h2 data-i18n="headline">Frontend & Dashboard Developer</h2>
+  <p data-i18n="sub">
+    Featured projects optimized for recruiters and hiring managers.
+  </p>
 </section>
 
+<section class="filters">
+  <button data-filter="all">All</button>
+  <button data-filter="featured">Featured</button>
+  <button data-filter="dashboard">Dashboard</button>
+  <button data-filter="admin">Admin</button>
+  <button data-filter="pwa">PWA</button>
+  <button data-filter="shopify">Shopify</button>
+</section>
 
 <section id="projects" class="grid"></section>
-</main>
-
 
 <footer>
-<p>© 2026 Sayedrahim Sadat</p>
+  <p>© 2026 Sayedrahim Sadat</p>
 </footer>
 
+<!-- Project Modal -->
+<div id="modal" class="modal hidden"></div>
 
 <script src="app.js"></script>
+<script src="crud.js"></script>
 </body>
 </html>

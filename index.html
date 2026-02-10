@@ -3,64 +3,55 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sayedrahim Sadat – Portfolio Hub</title>
 
 
-<title>Sayedrahim Sadat | Web Developer Portfolio</title>
-<meta name="description" content="Professional portfolio of Sayedrahim Sadat – Web Developer specializing in dashboards, PWAs, and modern web applications." />
-<meta name="keywords" content="Web Developer, JavaScript, Dashboard, PWA, Portfolio" />
+<!-- SEO -->
+<meta name="description" content="Elite portfolio of web apps, dashboards, PWAs, and admin panels." />
 
 
 <!-- Open Graph -->
-<meta property="og:title" content="Sayedrahim Sadat | Web Developer" />
-<meta property="og:description" content="Dashboards, PWAs, Admin Panels & modern web applications." />
-<meta property="og:image" content="https://yourdomain.com/preview.png" />
+<meta property="og:title" content="Sayedrahim Sadat – Elite Portfolio" />
+<meta property="og:description" content="Modern web projects built for performance, UX, and scale." />
+<meta property="og:image" content="assets/og-preview.png" />
 <meta property="og:type" content="website" />
 
 
+<link rel="stylesheet" href="styles.css" />
 <link rel="manifest" href="manifest.json" />
-<meta name="theme-color" content="#0f0f10" />
-
-
-<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
 
-<header class="top-bar">
-<div>
-<h1>Sayedrahim Sadat</h1>
-<p class="subtitle">Web Developer · Dashboards · PWAs</p>
+<header class="topbar">
+<h1>Portfolio Hub</h1>
+<div class="controls">
+<button id="themeToggle">🌙</button>
+<button id="recruiterToggle">🎯 Recruiter Mode</button>
+<a href="resume/Sayedrahim_Sadat_Resume_v1.pdf" download class="resume-btn">⬇ Resume</a>
 </div>
-<button id="themeToggle" aria-label="Toggle Theme">🌙</button>
 </header>
 
 
+<main>
 <section class="filters">
-<button data-filter="all" class="active">All</button>
-<button data-filter="Web">Web</button>
-<button data-filter="Dashboard">Dashboard</button>
-<button data-filter="PWA">PWA</button>
-<button data-filter="Admin">Admin Panel</button>
+<button data-filter="all">All</button>
+<button data-filter="web">Web</button>
+<button data-filter="dashboard">Dashboard</button>
+<button data-filter="pwa">PWA</button>
+<button data-filter="admin">Admin Panels</button>
 </section>
 
 
-<main class="container">
-<section id="projects" class="projects-grid"></section>
+<section id="projects" class="grid"></section>
 </main>
 
 
-<section class="cta">
-<h2>Looking for a Web Developer?</h2>
-<p>I build modern dashboards, PWAs, and scalable front-end systems.</p>
-<a href="resume/Sayedrahim-Sadat-Resume-v2.pdf" download class="cta-btn">Download Resume</a>
-</section>
-
-
-<footer class="footer">
-<p>© 2026 Sayedrahim Sadat · Built with Vanilla JS · PWA Ready</p>
+<footer>
+<p>© 2026 Sayedrahim Sadat</p>
 </footer>
 
 
-<script src="assets/js/app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

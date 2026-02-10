@@ -1,25 +1,39 @@
 const toggle = document.getElementById('themeToggle');
-const projectContainer = document.getElementById('projects');
-const filterButtons = document.querySelectorAll('.filters button');
-
-
-// Theme
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-document.documentElement.setAttribute('data-theme', 'dark');
-toggle.textContent = '☀️';
-}
-
-
-toggle.addEventListener('click', () => {
-const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-document.documentElement.toggleAttribute('data-theme', !isDark);
-localStorage.setItem('theme', isDark ? 'light' : 'dark');
-toggle.textContent = isDark ? '🌙' : '☀️';
 });
 
 
-// Load projects
+// RECRUITER MODE
+const params = new URLSearchParams(window.location.search);
+if (params.get('recruiter')) {
+document.body.classList.add('recruiter-mode');
+}
+
+
+// MODAL
+const modal = document.createElement('div');
+modal.className = 'modal';
+document.body.appendChild(modal);
+modal.addEventListener('click', () => modal.style.display = 'none');
+
+
+function openModal(project) {
+modal.innerHTML = `
+<div class="modal-content">
+<h2>${project.title}</h2>
+<p>${project.details}</p>
+<strong>Tech Stack:</strong>
+<p>${project.tech.join(', ')}</p>
+<strong>Challenge:</strong>
+<p>${project.challenges}</p>
+<strong>Solution:</strong>
+<p>${project.solution}</p>
+<a href="${project.link}" target="_blank">Live Project →</a>
+</div>`;
+modal.style.display = 'flex';
+}
+
+
+// LOAD PROJECTS
 fetch('projects.json')
 .then(res => res.json())
 .then(data => renderProjects(data));
@@ -28,6 +42,7 @@ fetch('projects.json')
 function renderProjects(projects, filter = 'all') {
 projectContainer.innerHTML = '';
 projects
+.sort((a, b) => b.featured - a.featured)
 .filter(p => filter === 'all' || p.category === filter)
 .forEach(p => {
 const card = document.createElement('a');
@@ -40,6 +55,10 @@ card.innerHTML = `
 <p>${p.description}</p>
 <span>${p.category}</span>
 </div>`;
+card.addEventListener('click', e => {
+e.preventDefault();
+openModal(p);
+});
 projectContainer.appendChild(card);
 });
 }
@@ -56,59 +75,7 @@ fetch('projects.json')
 });
 
 
-// Service Worker
+// SERVICE WORKER
 if ('serviceWorker' in navigator) {
 navigator.serviceWorker.register('service-worker.js');
 }
-```javascript
-const toggle = document.getElementById('themeToggle');
-const currentTheme = localStorage.getItem('theme');
-
-
-if (currentTheme) {
-document.documentElement.setAttribute('data-theme', currentTheme);
-toggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-}
-
-
-toggle.addEventListener('click', () => {
-let theme = document.documentElement.getAttribute('data-theme');
-if (theme === 'dark') {
-document.documentElement.removeAttribute('data-theme');
-localStorage.setItem('theme', 'light');
-toggle.textContent = '🌙';
-} else {
-document.documentElement.setAttribute('data-theme', 'dark');
-localStorage.setItem('theme', 'dark');
-toggle.textContent = '☀️';
-}
-});
-
-
-if ('serviceWorker' in navigator) {
-navigator.serviceWorker.register('service-worker.js');
-}
-// Sort featured first
-function sortProjects(projects) {
-return projects.sort((a, b) => b.featured - a.featured);
-}
-
-
-// Modal
-const modal = document.createElement('div');
-modal.className = 'modal';
-document.body.appendChild(modal);
-
-
-function openModal(project) {
-modal.innerHTML = `
-<div class="modal-content">
-<h2>${project.title}</h2>
-<p>${project.details}</p>
-<a href="${project.link}" target="_blank">Visit Project →</a>
-</div>`;
-modal.style.display = 'flex';
-}
-
-
-modal.addEventListener('click', () => modal.style.display = 'none');

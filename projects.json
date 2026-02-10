@@ -2,7 +2,10 @@
 {
 "title": "SmartTask Dashboard",
 "description": "Advanced task & project management dashboard",
-"details": "Includes drag & drop tasks, calendar view, analytics, and role-based access.",
+"details": "Includes drag & drop, calendar view, analytics, role-based access.",
+"tech": ["JavaScript", "HTML", "CSS", "Chart.js"],
+"challenges": "State management and role permissions",
+"solution": "Modular JS architecture with localStorage",
 "category": "Dashboard",
 "image": "https://via.placeholder.com/900x600",
 "link": "#",
@@ -12,18 +15,12 @@
 "title": "Finance Tracker PWA",
 "description": "Offline-first finance tracking app",
 "details": "CSV export, charts, local storage sync, installable PWA.",
+"tech": ["JavaScript", "PWA", "IndexedDB"],
+"challenges": "Offline persistence",
+"solution": "IndexedDB + Service Worker caching",
 "category": "PWA",
 "image": "https://via.placeholder.com/900x600",
 "link": "#",
 "featured": true
-},
-{
-"title": "Admin Panel System",
-"description": "Role-based admin management system",
-"details": "User roles, permissions, charts, secure UI patterns.",
-"category": "Admin",
-"image": "https://via.placeholder.com/900x600",
-"link": "#",
-"featured": false
 }
 ]

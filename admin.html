@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>Portfolio Admin</h1>
+  <a href="index.html">← Back to Site</a>
+</header>
+
+<section style="padding:2rem; max-width:800px; margin:auto;">
+  <h2>Add / Edit Project</h2>
+
+  <form id="projectForm">
+    <input type="hidden" id="projectId">
+
+    <input type="text" id="title" placeholder="Title" required><br><br>
+    <input type="text" id="tagline" placeholder="Tagline" required><br><br>
+    <input type="text" id="category" placeholder="Category (dashboard/pwa/shopify/admin)" required><br><br>
+    <input type="text" id="image" placeholder="Image path (assets/project.jpg)" required><br><br>
+    <textarea id="breakdown" placeholder="Breakdown"></textarea><br><br>
+    <textarea id="case" placeholder="Case Study"></textarea><br><br>
+    <label>
+      Featured:
+      <input type="checkbox" id="featured">
+    </label><br><br>
+
+    <button type="submit">Save Project</button>
+  </form>
+
+  <hr><br>
+
+  <h2>Existing Projects</h2>
+  <div id="adminList"></div>
+</section>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,18 +1,30 @@
 let projectsData = [];
 
+/* Load from localStorage first (admin), fallback to JSON */
+const localProjects = JSON.parse(localStorage.getItem("projects"));
+if (localProjects && localProjects.length) {
+  projectsData = localProjects;
+  renderProjects(projectsData);
+} else {
+  fetch("projects.json")
+    .then(res => res.json())
+    .then(data => {
+      projectsData = data;
+      renderProjects(data);
+    });
+}
+
 const grid = document.getElementById("projects");
 const modal = document.getElementById("modal");
 
-fetch("projects.json")
-  .then(res => res.json())
-  .then(data => {
-    projectsData = data;
-    renderProjects(data);
-  });
-
+/* Render */
 function renderProjects(list) {
+  if (!grid) return;
   grid.innerHTML = "";
-  list.forEach(p => {
+
+  const sorted = [...list].sort((a, b) => b.featured - a.featured);
+
+  sorted.forEach(p => {
     const card = document.createElement("div");
     card.className = "card";
     card.dataset.category = p.category;
@@ -26,17 +38,18 @@ function renderProjects(list) {
         <button onclick="openModal(${p.id})">View Project</button>
       </div>
     `;
+
     grid.appendChild(card);
   });
 }
 
+/* Modal */
 function openModal(id) {
   const p = projectsData.find(x => x.id === id);
   modal.innerHTML = `
     <div>
       <h2>${p.title}</h2>
       <p>${p.case}</p>
-      <a href="#" target="_blank">Visit Project →</a><br><br>
       <button onclick="closeModal()">Close</button>
     </div>
   `;
@@ -57,19 +70,41 @@ document.querySelectorAll(".filters button").forEach(btn => {
   };
 });
 
-/* Theme */
-document.getElementById("themeToggle").onclick = () => {
-  const html = document.documentElement;
-  html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
-};
+/* Dark Mode with memory */
+const themeToggle = document.getElementById("themeToggle");
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+
+themeToggle?.addEventListener("click", () => {
+  const current = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = current;
+  localStorage.setItem("theme", current);
+});
 
 /* Recruiter Mode */
-document.getElementById("recruiterToggle").onclick = () => {
+document.getElementById("recruiterToggle")?.addEventListener("click", () => {
   document.body.classList.toggle("recruiter");
-};
+});
+
+/* Auto Language Detection */
+const userLang = navigator.language.startsWith("es") ? "es" : "en";
+
+fetch("i18n.json")
+  .then(r => r.json())
+  .then(data => {
+    const langData = data[userLang];
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.dataset.i18n;
+      el.textContent = langData[key];
+    });
+  });
+
+/* Privacy Analytics (local only) */
+const visits = Number(localStorage.getItem("visits") || 0) + 1;
+localStorage.setItem("visits", visits);
+console.log("Total Visits:", visits);
 
 /* PWA */
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js");
 }
-

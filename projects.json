@@ -1,26 +1,22 @@
 [
-{
-"title": "SmartTask Dashboard",
-"description": "Advanced task & project management dashboard",
-"details": "Includes drag & drop, calendar view, analytics, role-based access.",
-"tech": ["JavaScript", "HTML", "CSS", "Chart.js"],
-"challenges": "State management and role permissions",
-"solution": "Modular JS architecture with localStorage",
-"category": "Dashboard",
-"image": "https://via.placeholder.com/900x600",
-"link": "#",
-"featured": true
-},
-{
-"title": "Finance Tracker PWA",
-"description": "Offline-first finance tracking app",
-"details": "CSV export, charts, local storage sync, installable PWA.",
-"tech": ["JavaScript", "PWA", "IndexedDB"],
-"challenges": "Offline persistence",
-"solution": "IndexedDB + Service Worker caching",
-"category": "PWA",
-"image": "https://via.placeholder.com/900x600",
-"link": "#",
-"featured": true
-}
+  {
+    "id": 1,
+    "title": "SmartTask Dashboard",
+    "tagline": "Admin & Analytics Dashboard",
+    "category": "dashboard",
+    "featured": true,
+    "image": "assets/project1.jpg",
+    "breakdown": "Role-based access, charts, CRUD operations",
+    "case": "Built for real-world team workflows with scalability in mind."
+  },
+  {
+    "id": 2,
+    "title": "Finance Tracker PWA",
+    "tagline": "Offline-first Progressive Web App",
+    "category": "pwa",
+    "featured": true,
+    "image": "assets/project2.jpg",
+    "breakdown": "IndexedDB, installable, CSV export",
+    "case": "Designed mobile-first with offline reliability."
+  }
 ]

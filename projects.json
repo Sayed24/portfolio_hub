@@ -2,21 +2,101 @@
   {
     "id": 1,
     "title": "SmartTask Dashboard",
-    "tagline": "Admin & Analytics Dashboard",
+    "tagline": "Enterprise Admin & Analytics System",
     "category": "dashboard",
     "featured": true,
     "image": "assets/project1.jpg",
-    "breakdown": "Role-based access, charts, CRUD operations",
-    "case": "Built for real-world team workflows with scalability in mind."
+    "breakdown": "Role-based authentication, dynamic charts, full CRUD system, modular architecture",
+    "case": "Designed and built a scalable dashboard for team workflow management with real-time state updates and performance optimization."
   },
   {
     "id": 2,
     "title": "Finance Tracker PWA",
-    "tagline": "Offline-first Progressive Web App",
+    "tagline": "Offline-First Financial Management App",
     "category": "pwa",
     "featured": true,
     "image": "assets/project2.jpg",
-    "breakdown": "IndexedDB, installable, CSV export",
-    "case": "Designed mobile-first with offline reliability."
+    "breakdown": "IndexedDB storage, installable PWA, offline sync, CSV export",
+    "case": "Created a mobile-first progressive web app enabling users to track expenses offline with seamless data persistence."
+  },
+  {
+    "id": 3,
+    "title": "E-Commerce Admin Panel",
+    "tagline": "Shopify-Style Product Management System",
+    "category": "admin",
+    "featured": true,
+    "image": "assets/project3.jpg",
+    "breakdown": "Product CRUD, image upload UI, sales metrics dashboard",
+    "case": "Built a modern admin interface for managing products, orders, and performance analytics."
+  },
+  {
+    "id": 4,
+    "title": "Modern Landing Page System",
+    "tagline": "High-Conversion Marketing Website",
+    "category": "web",
+    "featured": false,
+    "image": "assets/project4.jpg",
+    "breakdown": "Responsive layout, SEO optimized, performance tuned",
+    "case": "Developed a marketing-focused landing system optimized for speed, accessibility, and Lighthouse performance."
+  },
+  {
+    "id": 5,
+    "title": "Inventory Management Dashboard",
+    "tagline": "Real-Time Stock Monitoring System",
+    "category": "dashboard",
+    "featured": false,
+    "image": "assets/project5.jpg",
+    "breakdown": "Live data updates, low-stock alerts, filtering system",
+    "case": "Implemented a scalable inventory tracking solution with real-time monitoring and efficient UI rendering."
+  },
+  {
+    "id": 6,
+    "title": "Shopify Storefront Clone",
+    "tagline": "Modern E-Commerce Frontend",
+    "category": "shopify",
+    "featured": false,
+    "image": "assets/project6.jpg",
+    "breakdown": "Product grid, cart system, checkout UI simulation",
+    "case": "Recreated a high-performance Shopify-style storefront with optimized product browsing experience."
+  },
+  {
+    "id": 7,
+    "title": "Team Collaboration App",
+    "tagline": "Kanban & Task Board Web App",
+    "category": "pwa",
+    "featured": false,
+    "image": "assets/project7.jpg",
+    "breakdown": "Drag & drop, local persistence, installable app",
+    "case": "Designed a collaborative kanban-style web application supporting productivity and offline usage."
+  },
+  {
+    "id": 8,
+    "title": "Customer CRM Dashboard",
+    "tagline": "Client Relationship Management System",
+    "category": "dashboard",
+    "featured": false,
+    "image": "assets/project8.jpg",
+    "breakdown": "Client database, search filtering, activity logs",
+    "case": "Built a structured CRM dashboard enabling efficient client management and performance insights."
+  },
+  {
+    "id": 9,
+    "title": "Analytics Reporting Tool",
+    "tagline": "Interactive Data Visualization Platform",
+    "category": "admin",
+    "featured": false,
+    "image": "assets/project9.jpg",
+    "breakdown": "Chart.js integration, exportable reports, KPI tracking",
+    "case": "Engineered an interactive reporting interface for visualizing business metrics and performance trends."
+  },
+  {
+    "id": 10,
+    "title": "Portfolio Builder Platform",
+    "tagline": "Dynamic Website Generator",
+    "category": "web",
+    "featured": false,
+    "image": "assets/project10.jpg",
+    "breakdown": "Template engine, live preview, modular components",
+    "case": "Created a web-based platform that allows users to generate and customize portfolio websites dynamically."
   }
 ]

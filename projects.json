@@ -5,7 +5,7 @@
     "tagline": "Enterprise Admin & Analytics System",
     "category": "dashboard",
     "featured": true,
-    "image": "assets/project1.jpg",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Role-based authentication, dynamic charts, full CRUD system, modular architecture",
     "case": "Designed and built a scalable dashboard for team workflow management with real-time state updates and performance optimization."
   },
@@ -15,7 +15,7 @@
     "tagline": "Offline-First Financial Management App",
     "category": "pwa",
     "featured": true,
-    "image": "assets/project2.jpg",
+    "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "IndexedDB storage, installable PWA, offline sync, CSV export",
     "case": "Created a mobile-first progressive web app enabling users to track expenses offline with seamless data persistence."
   },
@@ -25,7 +25,7 @@
     "tagline": "Shopify-Style Product Management System",
     "category": "admin",
     "featured": true,
-    "image": "assets/project3.jpg",
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Product CRUD, image upload UI, sales metrics dashboard",
     "case": "Built a modern admin interface for managing products, orders, and performance analytics."
   },
@@ -35,7 +35,7 @@
     "tagline": "High-Conversion Marketing Website",
     "category": "web",
     "featured": false,
-    "image": "assets/project4.jpg",
+    "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Responsive layout, SEO optimized, performance tuned",
     "case": "Developed a marketing-focused landing system optimized for speed, accessibility, and Lighthouse performance."
   },
@@ -45,7 +45,7 @@
     "tagline": "Real-Time Stock Monitoring System",
     "category": "dashboard",
     "featured": false,
-    "image": "assets/project5.jpg",
+    "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Live data updates, low-stock alerts, filtering system",
     "case": "Implemented a scalable inventory tracking solution with real-time monitoring and efficient UI rendering."
   },
@@ -55,7 +55,7 @@
     "tagline": "Modern E-Commerce Frontend",
     "category": "shopify",
     "featured": false,
-    "image": "assets/project6.jpg",
+    "image": "https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Product grid, cart system, checkout UI simulation",
     "case": "Recreated a high-performance Shopify-style storefront with optimized product browsing experience."
   },
@@ -65,7 +65,7 @@
     "tagline": "Kanban & Task Board Web App",
     "category": "pwa",
     "featured": false,
-    "image": "assets/project7.jpg",
+    "image": "https://images.unsplash.com/photo-1581090700227-1e8a9d1b2e54?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Drag & drop, local persistence, installable app",
     "case": "Designed a collaborative kanban-style web application supporting productivity and offline usage."
   },
@@ -75,7 +75,7 @@
     "tagline": "Client Relationship Management System",
     "category": "dashboard",
     "featured": false,
-    "image": "assets/project8.jpg",
+    "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Client database, search filtering, activity logs",
     "case": "Built a structured CRM dashboard enabling efficient client management and performance insights."
   },
@@ -85,7 +85,7 @@
     "tagline": "Interactive Data Visualization Platform",
     "category": "admin",
     "featured": false,
-    "image": "assets/project9.jpg",
+    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Chart.js integration, exportable reports, KPI tracking",
     "case": "Engineered an interactive reporting interface for visualizing business metrics and performance trends."
   },
@@ -95,7 +95,7 @@
     "tagline": "Dynamic Website Generator",
     "category": "web",
     "featured": false,
-    "image": "assets/project10.jpg",
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1600&auto=format&fit=crop",
     "breakdown": "Template engine, live preview, modular components",
     "case": "Created a web-based platform that allows users to generate and customize portfolio websites dynamically."
   }

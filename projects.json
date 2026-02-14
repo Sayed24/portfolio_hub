@@ -1,102 +1,62 @@
 [
-  {
-    "id": 1,
-    "title": "SmartTask Dashboard",
-    "tagline": "Enterprise Admin & Analytics System",
-    "category": "dashboard",
-    "featured": true,
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "Role-based authentication, dynamic charts, full CRUD system, modular architecture",
-    "case": "Designed and built a scalable dashboard for team workflow management with real-time state updates."
-  },
-  {
-    "id": 2,
-    "title": "Finance Tracker PWA",
-    "tagline": "Offline-First Financial Management App",
-    "category": "pwa",
-    "featured": true,
-    "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "IndexedDB storage, installable PWA, offline sync",
-    "case": "Mobile-first progressive web app designed for offline reliability."
-  },
-  {
-    "id": 3,
-    "title": "E-Commerce Admin Panel",
-    "tagline": "Shopify-Style Product Management",
-    "category": "admin",
-    "featured": true,
-    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "Product CRUD, analytics dashboard",
-    "case": "Modern admin system focused on usability and performance."
-  },
-  {
-    "id": 4,
-    "title": "Modern Landing Page",
-    "tagline": "High-Conversion Marketing Website",
-    "category": "web",
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "SEO optimized, responsive",
-    "case": "Performance-first marketing layout."
-  },
-  {
-    "id": 5,
-    "title": "Inventory Dashboard",
-    "tagline": "Real-Time Stock Monitoring",
-    "category": "dashboard",
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "Live updates, alerts",
-    "case": "Efficient inventory visualization system."
-  },
-  {
-    "id": 6,
-    "title": "Shopify Storefront Clone",
-    "tagline": "Modern E-Commerce Frontend",
-    "category": "shopify",
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "Cart system, product browsing",
-    "case": "High-performance storefront UI."
-  },
-  {
-    "id": 7,
-    "title": "Team Collaboration App",
-    "tagline": "Kanban Task Manager",
-    "category": "pwa",
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1581090700227-1e8a9d1b2e54?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "Drag & drop, offline support",
-    "case": "Productivity-focused web application."
-  },
-  {
-    "id": 8,
-    "title": "Customer CRM Dashboard",
-    "tagline": "Client Relationship System",
-    "category": "dashboard",
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "Client database and analytics",
-    "case": "Structured CRM interface."
-  },
-  {
-    "id": 9,
-    "title": "Analytics Reporting Tool",
-    "tagline": "Data Visualization Platform",
-    "category": "admin",
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "Charts, KPI tracking",
-    "case": "Interactive reporting interface."
-  },
-  {
-    "id": 10,
-    "title": "Portfolio Builder Platform",
-    "tagline": "Dynamic Website Generator",
-    "category": "web",
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1400&q=75&fm=webp",
-    "breakdown": "Live preview system",
-    "case": "Dynamic portfolio generation platform."
-  }
+{
+"title":"SmartTask Dashboard",
+"category":"Dashboard / Admin",
+"image":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&fm=webp",
+"link":"#"
+},
+{
+"title":"Finance Tracker PWA",
+"category":"PWA",
+"image":"https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&fm=webp",
+"link":"#"
+},
+{
+"title":"FlowDesk CRUD System",
+"category":"Admin Panel",
+"image":"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&fm=webp",
+"link":"#"
+},
+{
+"title":"GitHub Analyzer",
+"category":"Web App",
+"image":"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&fm=webp",
+"link":"#"
+},
+{
+"title":"Task Organizer",
+"category":"Productivity",
+"image":"https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&fm=webp",
+"link":"#"
+},
+{
+"title":"Project Manager Pro",
+"category":"Dashboard",
+"image":"https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&fm=webp",
+"link":"#"
+},
+{
+"title":"Shopify UI System",
+"category":"E-commerce",
+"image":"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&fm=webp",
+"link":"#"
+},
+{
+"title":"Admin Analytics Suite",
+"category":"Admin",
+"image":"https://images.unsplash.com/photo-1556155092-8707de31f9c4?w=1200&fm=webp",
+"link":"#"
+},
+{
+"title":"Calendar Planner",
+"category":"PWA",
+"image":"https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&fm=webp",
+"link":"#"
+},
+{
+"title":"Portfolio Generator",
+"category":"Frontend",
+"image":"https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&fm=webp",
+"link":"#"
+}
 ]

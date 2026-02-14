@@ -6,13 +6,13 @@
 
 <title>Portfolio — Projects</title>
 
-<meta name="description" content="Frontend Developer | Dashboard | PWA Engineer">
-
 <link rel="manifest" href="./manifest.json">
 <link rel="stylesheet" href="./styles.css">
 
-<meta property="og:title" content="Developer Portfolio">
-<meta property="og:image" content="./icons/icon-512.png">
+<meta name="description" content="Frontend Developer | Dashboard Systems | PWA Engineer">
+
+<script src="./recruiter.js"></script>
+<script defer src="./app.js"></script>
 
 </head>
 
@@ -30,23 +30,24 @@
 </header>
 
 <section class="hero">
-  <h2>Featured Projects</h2>
+  <h2>Selected Projects</h2>
 </section>
 
 <main id="projects" class="grid"></main>
 
 <!-- COMMAND PALETTE -->
 <div id="commandPalette" class="palette hidden">
-  <input id="searchInput" placeholder="Search projects…" />
+  <input id="searchInput" placeholder="Search projects">
   <div id="results"></div>
 </div>
 
-<!-- ANALYTICS -->
-<section id="analyticsPanel" class="analytics">
-  <canvas id="heatmap"></canvas>
-</section>
-
-<script defer src="./app.js"></script>
+<!-- AI CASE STUDY MODAL -->
+<div id="caseModal" class="case-modal hidden">
+  <div class="case-content">
+    <button id="closeCase">✕</button>
+    <div id="caseBody"></div>
+  </div>
+</div>
 
 </body>
 </html>

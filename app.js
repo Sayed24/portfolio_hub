@@ -114,3 +114,27 @@ console.log("Total Visits:", visits);
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js");
 }
+/* Progressive Image Loader */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const img = entry.target;
+    const realSrc = img.dataset.src;
+
+    const highRes = new Image();
+    highRes.src = realSrc;
+
+    highRes.onload = () => {
+      img.src = realSrc;
+      img.classList.add("loaded");
+    };
+
+    observer.unobserve(img);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".lazy-img")
+    .forEach(img => observer.observe(img));
+});

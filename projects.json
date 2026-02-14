@@ -5,9 +5,9 @@
     "tagline": "Enterprise Admin & Analytics System",
     "category": "dashboard",
     "featured": true,
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=75&fm=webp",
     "breakdown": "Role-based authentication, dynamic charts, full CRUD system, modular architecture",
-    "case": "Designed and built a scalable dashboard for team workflow management with real-time state updates and performance optimization."
+    "case": "Designed and built a scalable dashboard for team workflow management with real-time state updates."
   },
   {
     "id": 2,
@@ -15,39 +15,39 @@
     "tagline": "Offline-First Financial Management App",
     "category": "pwa",
     "featured": true,
-    "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "IndexedDB storage, installable PWA, offline sync, CSV export",
-    "case": "Created a mobile-first progressive web app enabling users to track expenses offline with seamless data persistence."
+    "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "IndexedDB storage, installable PWA, offline sync",
+    "case": "Mobile-first progressive web app designed for offline reliability."
   },
   {
     "id": 3,
     "title": "E-Commerce Admin Panel",
-    "tagline": "Shopify-Style Product Management System",
+    "tagline": "Shopify-Style Product Management",
     "category": "admin",
     "featured": true,
-    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "Product CRUD, image upload UI, sales metrics dashboard",
-    "case": "Built a modern admin interface for managing products, orders, and performance analytics."
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "Product CRUD, analytics dashboard",
+    "case": "Modern admin system focused on usability and performance."
   },
   {
     "id": 4,
-    "title": "Modern Landing Page System",
+    "title": "Modern Landing Page",
     "tagline": "High-Conversion Marketing Website",
     "category": "web",
     "featured": false,
-    "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "Responsive layout, SEO optimized, performance tuned",
-    "case": "Developed a marketing-focused landing system optimized for speed, accessibility, and Lighthouse performance."
+    "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "SEO optimized, responsive",
+    "case": "Performance-first marketing layout."
   },
   {
     "id": 5,
-    "title": "Inventory Management Dashboard",
-    "tagline": "Real-Time Stock Monitoring System",
+    "title": "Inventory Dashboard",
+    "tagline": "Real-Time Stock Monitoring",
     "category": "dashboard",
     "featured": false,
-    "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "Live data updates, low-stock alerts, filtering system",
-    "case": "Implemented a scalable inventory tracking solution with real-time monitoring and efficient UI rendering."
+    "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "Live updates, alerts",
+    "case": "Efficient inventory visualization system."
   },
   {
     "id": 6,
@@ -55,39 +55,39 @@
     "tagline": "Modern E-Commerce Frontend",
     "category": "shopify",
     "featured": false,
-    "image": "https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "Product grid, cart system, checkout UI simulation",
-    "case": "Recreated a high-performance Shopify-style storefront with optimized product browsing experience."
+    "image": "https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "Cart system, product browsing",
+    "case": "High-performance storefront UI."
   },
   {
     "id": 7,
     "title": "Team Collaboration App",
-    "tagline": "Kanban & Task Board Web App",
+    "tagline": "Kanban Task Manager",
     "category": "pwa",
     "featured": false,
-    "image": "https://images.unsplash.com/photo-1581090700227-1e8a9d1b2e54?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "Drag & drop, local persistence, installable app",
-    "case": "Designed a collaborative kanban-style web application supporting productivity and offline usage."
+    "image": "https://images.unsplash.com/photo-1581090700227-1e8a9d1b2e54?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "Drag & drop, offline support",
+    "case": "Productivity-focused web application."
   },
   {
     "id": 8,
     "title": "Customer CRM Dashboard",
-    "tagline": "Client Relationship Management System",
+    "tagline": "Client Relationship System",
     "category": "dashboard",
     "featured": false,
-    "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "Client database, search filtering, activity logs",
-    "case": "Built a structured CRM dashboard enabling efficient client management and performance insights."
+    "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "Client database and analytics",
+    "case": "Structured CRM interface."
   },
   {
     "id": 9,
     "title": "Analytics Reporting Tool",
-    "tagline": "Interactive Data Visualization Platform",
+    "tagline": "Data Visualization Platform",
     "category": "admin",
     "featured": false,
-    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "Chart.js integration, exportable reports, KPI tracking",
-    "case": "Engineered an interactive reporting interface for visualizing business metrics and performance trends."
+    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "Charts, KPI tracking",
+    "case": "Interactive reporting interface."
   },
   {
     "id": 10,
@@ -95,8 +95,8 @@
     "tagline": "Dynamic Website Generator",
     "category": "web",
     "featured": false,
-    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1600&auto=format&fit=crop",
-    "breakdown": "Template engine, live preview, modular components",
-    "case": "Created a web-based platform that allows users to generate and customize portfolio websites dynamically."
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1400&q=75&fm=webp",
+    "breakdown": "Live preview system",
+    "case": "Dynamic portfolio generation platform."
   }
 ]

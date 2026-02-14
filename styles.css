@@ -137,3 +137,10 @@ body {
 .card:hover img {
   transform: scale(1.08);
 }
+[data-theme="dark"] .card img {
+  filter: brightness(0.75) contrast(1.1);
+}
+
+[data-theme="dark"] .card:hover img {
+  filter: brightness(0.9) contrast(1.15);
+}

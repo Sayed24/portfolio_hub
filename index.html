@@ -1,70 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Sayedrahim Sadat | Frontend & PWA Developer</title>
+<title>Portfolio Hub — Projects</title>
 
-  <!-- ATS + SEO -->
-  <meta name="description" content="Frontend Developer specializing in Dashboards, Admin Systems, Shopify, PWAs, and Web Applications." />
-  <meta name="keywords" content="Frontend Developer, Dashboard Developer, Admin Systems, Shopify Developer, PWA Developer, Web App Developer" />
+<meta name="description" content="Frontend Developer | Dashboard Systems | PWA Developer Portfolio">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Elite Frontend Portfolio – Sayedrahim Sadat" />
-  <meta property="og:description" content="Featured dashboards, PWAs, admin systems, and modern web apps." />
-  <meta property="og:image" content="assets/og-preview.png" />
-  <meta property="og:type" content="website" />
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
 
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="styles.css" />
+<meta property="og:title" content="Developer Portfolio">
+<meta property="og:description" content="Modern projects portfolio">
+<meta property="og:image" content="icons/icon-512.png">
+
 </head>
 
 <body>
-<header class="topbar">
+
+<div id="cursor"></div>
+
+<header class="nav">
   <h1>Portfolio</h1>
 
-  <div class="actions">
-    <select id="langSwitcher">
-      <option value="en">EN</option>
-      <option value="es">ES</option>
-    </select>
-
-    <button id="themeToggle">🌙</button>
-    <button id="recruiterToggle">🎯 Recruiter Mode</button>
-
-    <a href="resume/Resume_v2.pdf" download class="cta">
-      ⬇ Resume
-    </a>
+  <div class="nav-actions">
+    <button id="searchBtn">⌘K</button>
+    <button id="modeToggle">🌙</button>
   </div>
 </header>
 
 <section class="hero">
-  <h2 data-i18n="headline">Frontend & Dashboard Developer</h2>
-  <p data-i18n="sub">
-    Featured projects optimized for recruiters and hiring managers.
-  </p>
+  <h2>Selected Projects</h2>
+  <p>Frontend • Dashboards • PWAs • Admin Systems</p>
 </section>
 
-<section class="filters">
-  <button data-filter="all">All</button>
-  <button data-filter="featured">Featured</button>
-  <button data-filter="dashboard">Dashboard</button>
-  <button data-filter="admin">Admin</button>
-  <button data-filter="pwa">PWA</button>
-  <button data-filter="shopify">Shopify</button>
+<main id="projects" class="grid"></main>
+
+<!-- Command Palette -->
+<div id="commandPalette" class="palette hidden">
+  <input id="searchInput" placeholder="Search projects..." />
+  <div id="results"></div>
+</div>
+
+<!-- Recruiter Heatmap -->
+<section id="analyticsPanel" class="analytics hidden">
+  <h3>Recruiter View</h3>
+  <canvas id="heatmap"></canvas>
 </section>
-
-<section id="projects" class="grid"></section>
-
-<footer>
-  <p>© 2026 Sayedrahim Sadat</p>
-</footer>
-
-<!-- Project Modal -->
-<div id="modal" class="modal hidden"></div>
 
 <script src="app.js"></script>
-<script src="crud.js"></script>
 </body>
 </html>

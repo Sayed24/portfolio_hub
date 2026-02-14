@@ -4,16 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Portfolio Hub — Projects</title>
+<title>Portfolio — Projects</title>
 
-<meta name="description" content="Frontend Developer | Dashboard Systems | PWA Developer Portfolio">
+<meta name="description" content="Frontend Developer | Dashboard | PWA Engineer">
 
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="./manifest.json">
+<link rel="stylesheet" href="./styles.css">
 
 <meta property="og:title" content="Developer Portfolio">
-<meta property="og:description" content="Modern projects portfolio">
-<meta property="og:image" content="icons/icon-512.png">
+<meta property="og:image" content="./icons/icon-512.png">
 
 </head>
 
@@ -24,31 +23,30 @@
 <header class="nav">
   <h1>Portfolio</h1>
 
-  <div class="nav-actions">
+  <div>
     <button id="searchBtn">⌘K</button>
     <button id="modeToggle">🌙</button>
   </div>
 </header>
 
 <section class="hero">
-  <h2>Selected Projects</h2>
-  <p>Frontend • Dashboards • PWAs • Admin Systems</p>
+  <h2>Featured Projects</h2>
 </section>
 
 <main id="projects" class="grid"></main>
 
-<!-- Command Palette -->
+<!-- COMMAND PALETTE -->
 <div id="commandPalette" class="palette hidden">
-  <input id="searchInput" placeholder="Search projects..." />
+  <input id="searchInput" placeholder="Search projects…" />
   <div id="results"></div>
 </div>
 
-<!-- Recruiter Heatmap -->
-<section id="analyticsPanel" class="analytics hidden">
-  <h3>Recruiter View</h3>
+<!-- ANALYTICS -->
+<section id="analyticsPanel" class="analytics">
   <canvas id="heatmap"></canvas>
 </section>
 
-<script src="app.js"></script>
+<script defer src="./app.js"></script>
+
 </body>
 </html>

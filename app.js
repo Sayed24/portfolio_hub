@@ -30,7 +30,13 @@ function renderProjects(list) {
     card.dataset.category = p.category;
 
     card.innerHTML = `
-      <img src="${p.image}" alt="${p.title}">
+      <img
+  src="${p.image}&blur=40"
+  data-src="${p.image}"
+  alt="${p.title}"
+  class="lazy-img"
+/>
+
       <div class="card-content">
         <h3>${p.title}</h3>
         <p>${p.tagline}</p>

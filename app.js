@@ -1,140 +1,147 @@
-let projectsData = [];
+/* --------------------
+   DARK MODE
+---------------------*/
+const toggle = document.getElementById("modeToggle");
+toggle.onclick = () => {
+  document.body.classList.toggle("dark");
+  localStorage.theme =
+    document.body.classList.contains("dark") ? "dark":"light";
+};
 
-/* Load from localStorage first (admin), fallback to JSON */
-const localProjects = JSON.parse(localStorage.getItem("projects"));
-if (localProjects && localProjects.length) {
-  projectsData = localProjects;
-  renderProjects(projectsData);
-} else {
-  fetch("projects.json")
-    .then(res => res.json())
-    .then(data => {
-      projectsData = data;
-      renderProjects(data);
-    });
-}
+if(localStorage.theme==="dark")
+  document.body.classList.add("dark");
 
-const grid = document.getElementById("projects");
-const modal = document.getElementById("modal");
 
-/* Render */
-function renderProjects(list) {
-  if (!grid) return;
-  grid.innerHTML = "";
+/* --------------------
+   MAGNETIC CURSOR
+---------------------*/
+const cursor=document.getElementById("cursor");
 
-  const sorted = [...list].sort((a, b) => b.featured - a.featured);
+document.addEventListener("mousemove",e=>{
+  cursor.style.transform=`translate(${e.clientX}px,${e.clientY}px)`;
+});
 
-  sorted.forEach(p => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.dataset.category = p.category;
 
-    card.innerHTML = `
-      <img
-  src="${p.image}&blur=40"
-  data-src="${p.image}"
-  alt="${p.title}"
-  class="lazy-img"
-/>
+/* --------------------
+   LOAD PROJECTS
+---------------------*/
+let projectsData=[];
 
-      <div class="card-content">
+fetch("projects.json")
+.then(r=>r.json())
+.then(data=>{
+  projectsData=data;
+  renderProjects(data);
+});
+
+
+function renderProjects(data){
+  const container=document.getElementById("projects");
+  container.innerHTML="";
+
+  data.forEach(p=>{
+    const card=document.createElement("div");
+    card.className="card";
+
+    card.innerHTML=`
+      <div class="img-wrap">
+        <img loading="lazy" src="${p.image}">
+      </div>
+      <div style="padding:18px">
         <h3>${p.title}</h3>
-        <p>${p.tagline}</p>
-        <div class="details">${p.breakdown}</div>
-        <button onclick="openModal(${p.id})">View Project</button>
+        <p>${p.category}</p>
       </div>
     `;
 
-    grid.appendChild(card);
-  });
-}
-
-/* Modal */
-function openModal(id) {
-  const p = projectsData.find(x => x.id === id);
-  modal.innerHTML = `
-    <div>
-      <h2>${p.title}</h2>
-      <p>${p.case}</p>
-      <button onclick="closeModal()">Close</button>
-    </div>
-  `;
-  modal.classList.remove("hidden");
-}
-
-function closeModal() {
-  modal.classList.add("hidden");
-}
-
-/* Filters */
-document.querySelectorAll(".filters button").forEach(btn => {
-  btn.onclick = () => {
-    const f = btn.dataset.filter;
-    if (f === "all") renderProjects(projectsData);
-    else if (f === "featured") renderProjects(projectsData.filter(p => p.featured));
-    else renderProjects(projectsData.filter(p => p.category === f));
-  };
-});
-
-/* Dark Mode with memory */
-const themeToggle = document.getElementById("themeToggle");
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) document.documentElement.dataset.theme = savedTheme;
-
-themeToggle?.addEventListener("click", () => {
-  const current = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-  document.documentElement.dataset.theme = current;
-  localStorage.setItem("theme", current);
-});
-
-/* Recruiter Mode */
-document.getElementById("recruiterToggle")?.addEventListener("click", () => {
-  document.body.classList.toggle("recruiter");
-});
-
-/* Auto Language Detection */
-const userLang = navigator.language.startsWith("es") ? "es" : "en";
-
-fetch("i18n.json")
-  .then(r => r.json())
-  .then(data => {
-    const langData = data[userLang];
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.dataset.i18n;
-      el.textContent = langData[key];
+    // Parallax tilt
+    card.addEventListener("mousemove",e=>{
+      const rect=card.getBoundingClientRect();
+      const x=(e.clientX-rect.left)/rect.width-.5;
+      const y=(e.clientY-rect.top)/rect.height-.5;
+      card.style.transform=
+        `rotateY(${x*10}deg) rotateX(${-y*10}deg)`;
     });
-  });
 
-/* Privacy Analytics (local only) */
-const visits = Number(localStorage.getItem("visits") || 0) + 1;
-localStorage.setItem("visits", visits);
-console.log("Total Visits:", visits);
+    card.addEventListener("mouseleave",()=>{
+      card.style.transform="rotateY(0) rotateX(0)";
+    });
 
-/* PWA */
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
-}
-/* Progressive Image Loader */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-
-    const img = entry.target;
-    const realSrc = img.dataset.src;
-
-    const highRes = new Image();
-    highRes.src = realSrc;
-
-    highRes.onload = () => {
-      img.src = realSrc;
-      img.classList.add("loaded");
+    // analytics tracking
+    card.onclick=()=>{
+      trackClick(p.title);
+      window.open(p.link,"_blank");
     };
 
-    observer.unobserve(img);
+    container.appendChild(card);
   });
+}
+
+
+/* --------------------
+   COMMAND PALETTE
+---------------------*/
+const palette=document.getElementById("commandPalette");
+const input=document.getElementById("searchInput");
+const results=document.getElementById("results");
+
+document.getElementById("searchBtn").onclick=
+()=> palette.classList.toggle("hidden");
+
+document.addEventListener("keydown",e=>{
+  if((e.metaKey||e.ctrlKey)&&e.key==="k"){
+    e.preventDefault();
+    palette.classList.toggle("hidden");
+    input.focus();
+  }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".lazy-img")
-    .forEach(img => observer.observe(img));
-});
+input.oninput=()=>{
+  const q=input.value.toLowerCase();
+  results.innerHTML="";
+
+  projectsData
+   .filter(p=>p.title.toLowerCase().includes(q))
+   .forEach(p=>{
+     const div=document.createElement("div");
+     div.textContent=p.title;
+     div.onclick=()=>window.open(p.link);
+     results.appendChild(div);
+   });
+};
+
+
+/* --------------------
+   PRIVACY ANALYTICS
+---------------------*/
+let clicks=JSON.parse(localStorage.clicks||"{}");
+
+function trackClick(name){
+  clicks[name]=(clicks[name]||0)+1;
+  localStorage.clicks=JSON.stringify(clicks);
+  drawHeatmap();
+}
+
+function drawHeatmap(){
+  const canvas=document.getElementById("heatmap");
+  if(!canvas) return;
+
+  const ctx=canvas.getContext("2d");
+  canvas.width=600;
+  canvas.height=300;
+
+  let i=0;
+  for(const k in clicks){
+    ctx.fillRect(50*i,300-clicks[k]*20,30,clicks[k]*20);
+    i++;
+  }
+}
+
+drawHeatmap();
+
+
+/* --------------------
+   PWA
+---------------------*/
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("sw.js");
+}

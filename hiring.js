@@ -20,15 +20,11 @@ bar.innerHTML=`
 <option value="pwa">PWA</option>
 </select>
 `;
-
 document.body.prepend(bar);
-
 const select=document.getElementById("roleSelect");
 select.value=role;
-
 select.onchange=()=>{
  localStorage.role=select.value;
  location.reload();
 };
-
 })();

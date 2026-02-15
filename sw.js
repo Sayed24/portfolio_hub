@@ -1,21 +1,21 @@
-const CACHE="portfolio-cache-v2";
+const CACHE="portfolio-v1";
 
 self.addEventListener("install",e=>{
-  e.waitUntil(
-    caches.open(CACHE).then(cache=>{
-      return cache.addAll([
-        "./",
-        "./index.html",
-        "./styles.css",
-        "./app.js",
-        "./projects.json"
-      ]);
-    })
-  );
+ e.waitUntil(
+  caches.open(CACHE).then(c=>
+   c.addAll([
+    "./",
+    "./index.html",
+    "./styles.css",
+    "./app.js",
+    "./projects.json"
+   ])
+  )
+ );
 });
 
 self.addEventListener("fetch",e=>{
-  e.respondWith(
-    caches.match(e.request).then(r=>r||fetch(e.request))
-  );
+ e.respondWith(
+  caches.match(e.request).then(r=>r||fetch(e.request))
+ );
 });

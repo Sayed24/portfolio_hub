@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
-/* ---------------- DARK MODE ---------------- */
-
+/* DARK MODE */
 const toggle=document.getElementById("modeToggle");
-
 if(localStorage.theme==="dark")
-  document.body.classList.add("dark");
+ document.body.classList.add("dark");
 
 toggle.onclick=()=>{
  document.body.classList.toggle("dark");
@@ -13,17 +11,11 @@ toggle.onclick=()=>{
  document.body.classList.contains("dark")?"dark":"light";
 };
 
-
-/* ---------------- CURSOR ---------------- */
-
+/* CURSOR */
 const cursor=document.getElementById("cursor");
 document.addEventListener("mousemove",e=>{
- cursor.style.transform=
- `translate(${e.clientX}px,${e.clientY}px)`;
+ cursor.style.transform=`translate(${e.clientX}px,${e.clientY}px)`;
 });
-
-
-/* ---------------- LOAD PROJECTS ---------------- */
 
 let projects=[];
 
@@ -35,7 +27,6 @@ fetch("./projects.json")
 .then(data=>{
 
  const finalData=override||data;
-
  projects=finalData;
 
  renderProjects(finalData);
@@ -43,16 +34,14 @@ fetch("./projects.json")
  window.dispatchEvent(
    new CustomEvent("projectsLoaded",{detail:finalData})
  );
-
 });
 
-
+/* RENDER */
 function renderProjects(data){
  const container=document.getElementById("projects");
  container.innerHTML="";
 
  data.forEach(p=>{
-
   const card=document.createElement("div");
   card.className="card";
 
@@ -64,77 +53,36 @@ function renderProjects(data){
    </div>
   `;
 
-  card.onclick=()=>openCaseStudy(p);
+  card.onclick=()=>{
+    trackView(p.title);
+    openCaseStudy(p);
+  };
 
   container.appendChild(card);
  });
 }
 
-
-/* ---------------- AI CASE STUDY SYSTEM ---------------- */
-
+/* CASE STUDY */
 const modal=document.getElementById("caseModal");
 const caseBody=document.getElementById("caseBody");
 
 document.getElementById("closeCase").onclick=
 ()=>modal.classList.add("hidden");
 
-
-function openCaseStudy(project){
-
+function openCaseStudy(p){
  modal.classList.remove("hidden");
 
- caseBody.innerHTML=generateCaseStudy(project);
-}
-
-
-/* AI TEMPLATE ENGINE */
-
-function generateCaseStudy(p){
-
- return `
-   <h2>${p.title}</h2>
-
-   ${section("Problem",
-   p.problem || "Users needed a faster and more scalable interface.")}
-
-   ${section("Solution",
-   p.solution || "Built a modern responsive architecture using modular frontend components.")}
-
-   ${section("Architecture",
-   p.architecture || "Component-driven UI, JSON data layer, PWA caching and responsive layout.")}
-
-   ${section("Key Features",
-   list(p.features || [
-     "Responsive UI",
-     "Dark/Light mode",
-     "Performance optimized",
-     "Modern UX interactions"
-   ]))}
-
-   ${section("Impact",
-   p.impact || "Improved usability, performance, and recruiter readability.")}
-
-   ${section("Tech Stack",
-   list(p.stack || ["HTML","CSS","JavaScript","PWA"]))}
+ caseBody.innerHTML=`
+ <h2>${p.title}</h2>
+ <h3>Problem</h3><p>${p.problem}</p>
+ <h3>Solution</h3><p>${p.solution}</p>
+ <h3>Impact</h3><p>${p.impact}</p>
+ <h3>Stack</h3>
+ <ul>${(p.stack||[]).map(s=>`<li>${s}</li>`).join("")}</ul>
  `;
 }
 
-function section(title,content){
- return `
- <div class="case-section">
-   <h3>${title}</h3>
-   <p>${content}</p>
- </div>`;
-}
-
-function list(arr){
- return `<ul>${arr.map(i=>`<li>${i}</li>`).join("")}</ul>`;
-}
-
-
-/* ---------------- COMMAND PALETTE ---------------- */
-
+/* SEARCH */
 const palette=document.getElementById("commandPalette");
 const input=document.getElementById("searchInput");
 const results=document.getElementById("results");
@@ -145,22 +93,26 @@ document.getElementById("searchBtn").onclick=
 input.oninput=()=>{
  const q=input.value.toLowerCase();
  results.innerHTML="";
-
- projects
-  .filter(p=>p.title.toLowerCase().includes(q))
-  .forEach(p=>{
-    const div=document.createElement("div");
-    div.textContent=p.title;
-    div.onclick=()=>openCaseStudy(p);
-    results.appendChild(div);
-  });
+ projects.filter(p=>p.title.toLowerCase().includes(q))
+ .forEach(p=>{
+   const d=document.createElement("div");
+   d.textContent=p.title;
+   d.onclick=()=>openCaseStudy(p);
+   results.appendChild(d);
+ });
 };
 
+/* ANALYTICS */
+let timeline=
+JSON.parse(localStorage.timeline||"[]");
 
-/* ---------------- PWA ---------------- */
-
-if("serviceWorker" in navigator){
- navigator.serviceWorker.register("./sw.js");
+function trackView(name){
+ timeline.push({project:name,time:Date.now()});
+ localStorage.timeline=JSON.stringify(timeline);
 }
+
+/* PWA */
+if("serviceWorker" in navigator)
+ navigator.serviceWorker.register("./sw.js");
 
 });

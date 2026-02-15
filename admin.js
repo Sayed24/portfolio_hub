@@ -1,65 +1,40 @@
-let projects = JSON.parse(localStorage.getItem("projects")) || [];
+const form=document.getElementById("projectForm");
+const list=document.getElementById("projectList");
 
-const form = document.getElementById("projectForm");
-const list = document.getElementById("adminList");
+let projects=
+JSON.parse(localStorage.adminProjects||"[]");
 
-renderList();
+render();
 
-form.onsubmit = e => {
-  e.preventDefault();
+form.onsubmit=e=>{
+ e.preventDefault();
 
-  const id = document.getElementById("projectId").value;
-  const project = {
-    id: id ? Number(id) : Date.now(),
-    title: title.value,
-    tagline: tagline.value,
-    category: category.value,
-    image: image.value,
-    breakdown: breakdown.value,
-    case: case.value,
-    featured: featured.checked
-  };
+ projects.push({
+  title:title.value,
+  category:category.value,
+  image:image.value,
+  link:link.value
+ });
 
-  if (id) {
-    projects = projects.map(p => p.id === Number(id) ? project : p);
-  } else {
-    projects.push(project);
-  }
+ localStorage.adminProjects=
+ JSON.stringify(projects);
 
-  localStorage.setItem("projects", JSON.stringify(projects));
-  form.reset();
-  renderList();
+ render();
 };
 
-function renderList() {
-  list.innerHTML = "";
-  projects.forEach(p => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <strong>${p.title}</strong>
-      <button onclick="editProject(${p.id})">Edit</button>
-      <button onclick="deleteProject(${p.id})">Delete</button>
-      <hr>
-    `;
-    list.appendChild(div);
-  });
+function render(){
+ list.innerHTML="";
+ projects.forEach((p,i)=>{
+  const div=document.createElement("div");
+  div.innerHTML=`${p.title}
+  <button onclick="remove(${i})">Delete</button>`;
+  list.appendChild(div);
+ });
 }
 
-function editProject(id) {
-  const p = projects.find(x => x.id === id);
-  projectId.value = p.id;
-  title.value = p.title;
-  tagline.value = p.tagline;
-  category.value = p.category;
-  image.value = p.image;
-  breakdown.value = p.breakdown;
-  case.value = p.case;
-  featured.checked = p.featured;
+function remove(i){
+ projects.splice(i,1);
+ localStorage.adminProjects=
+ JSON.stringify(projects);
+ render();
 }
-
-function deleteProject(id) {
-  projects = projects.filter(p => p.id !== id);
-  localStorage.setItem("projects", JSON.stringify(projects));
-  renderList();
-}
-

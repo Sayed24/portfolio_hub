@@ -1,118 +1,94 @@
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-/* DARK MODE */
-const toggle=document.getElementById("modeToggle");
-if(localStorage.theme==="dark")
- document.body.classList.add("dark");
+    // ================= SAFE ELEMENT SELECT =================
+    const grid = document.getElementById("projectsGrid");
+    const searchInput = document.getElementById("searchInput");
+    const themeToggle = document.getElementById("themeToggle");
+    const totalProjects = document.getElementById("totalProjects");
 
-toggle.onclick=()=>{
- document.body.classList.toggle("dark");
- localStorage.theme=
- document.body.classList.contains("dark")?"dark":"light";
-};
+    const modal = document.getElementById("projectModal");
+    const closeModal = document.getElementById("closeModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalTech = document.getElementById("modalTech");
 
-/* CURSOR */
-const cursor=document.getElementById("cursor");
-document.addEventListener("mousemove",e=>{
- cursor.style.transform=`translate(${e.clientX}px,${e.clientY}px)`;
-});
+    if (!grid) {
+        console.error("Grid not found.");
+        return;
+    }
 
-let projects=[];
+    // ================= PROJECT DATA (10 PROJECTS) =================
+    const projects = [
+        {title:"SmartTask Dashboard",desc:"Role-based admin dashboard with charts.",tech:"HTML CSS JS"},
+        {title:"Finance Tracker PWA",desc:"Offline-first finance tracking system.",tech:"PWA"},
+        {title:"Drag & Drop Manager",desc:"Kanban productivity board.",tech:"Drag API"},
+        {title:"GitHub Analyzer",desc:"GitHub API profile insights.",tech:"Fetch API"},
+        {title:"FlowDesk CRUD",desc:"Full CRUD workspace system.",tech:"JavaScript"},
+        {title:"Calendar Planner",desc:"Interactive calendar scheduling.",tech:"Date API"},
+        {title:"Team Board",desc:"Team workflow collaboration UI.",tech:"Frontend"},
+        {title:"Portfolio Builder",desc:"Dynamic portfolio generator.",tech:"DOM"},
+        {title:"Realtime Notes",desc:"Auto-saving note system.",tech:"LocalStorage"},
+        {title:"Analytics Dashboard",desc:"KPI visualization dashboard.",tech:"Charts"}
+    ];
 
-const override=
-JSON.parse(localStorage.adminProjects||"null");
+    // ================= RENDER =================
+    function render(list) {
 
-fetch("./projects.json")
-.then(r=>r.json())
-.then(data=>{
+        grid.innerHTML = "";
 
- const finalData=override||data;
- projects=finalData;
+        list.forEach(project => {
 
- renderProjects(finalData);
+            const card = document.createElement("div");
+            card.className = "card";
 
- window.dispatchEvent(
-   new CustomEvent("projectsLoaded",{detail:finalData})
- );
-});
+            card.innerHTML = `
+                <h3>${project.title}</h3>
+                <p>${project.desc}</p>
+                <span class="tag">${project.tech}</span>
+            `;
 
-/* RENDER */
-function renderProjects(data){
- const container=document.getElementById("projects");
- container.innerHTML="";
+            card.addEventListener("click", () => openModal(project));
 
- data.forEach(p=>{
-  const card=document.createElement("div");
-  card.className="card";
+            grid.appendChild(card);
+        });
 
-  card.innerHTML=`
-   <img src="${p.image}" loading="lazy">
-   <div style="padding:18px">
-     <h3>${p.title}</h3>
-     <p>${p.category}</p>
-   </div>
-  `;
+        totalProjects.textContent = list.length;
+    }
 
-  card.onclick=()=>{
-    trackView(p.title);
-    openCaseStudy(p);
-  };
+    // ================= MODAL =================
+    function openModal(project){
+        modalTitle.textContent = project.title;
+        modalDesc.textContent = project.desc;
+        modalTech.textContent = project.tech;
+        modal.classList.remove("hidden");
+    }
 
-  container.appendChild(card);
- });
-}
+    closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
 
-/* CASE STUDY */
-const modal=document.getElementById("caseModal");
-const caseBody=document.getElementById("caseBody");
+    modal.addEventListener("click", e => {
+        if(e.target === modal) modal.classList.add("hidden");
+    });
 
-document.getElementById("closeCase").onclick=
-()=>modal.classList.add("hidden");
+    // ================= SEARCH =================
+    searchInput.addEventListener("input", () => {
+        const value = searchInput.value.toLowerCase();
 
-function openCaseStudy(p){
- modal.classList.remove("hidden");
+        const filtered = projects.filter(p =>
+            p.title.toLowerCase().includes(value) ||
+            p.tech.toLowerCase().includes(value)
+        );
 
- caseBody.innerHTML=`
- <h2>${p.title}</h2>
- <h3>Problem</h3><p>${p.problem}</p>
- <h3>Solution</h3><p>${p.solution}</p>
- <h3>Impact</h3><p>${p.impact}</p>
- <h3>Stack</h3>
- <ul>${(p.stack||[]).map(s=>`<li>${s}</li>`).join("")}</ul>
- `;
-}
+        render(filtered);
+    });
 
-/* SEARCH */
-const palette=document.getElementById("commandPalette");
-const input=document.getElementById("searchInput");
-const results=document.getElementById("results");
+    // ================= DARK MODE =================
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+    });
 
-document.getElementById("searchBtn").onclick=
-()=>palette.classList.toggle("hidden");
-
-input.oninput=()=>{
- const q=input.value.toLowerCase();
- results.innerHTML="";
- projects.filter(p=>p.title.toLowerCase().includes(q))
- .forEach(p=>{
-   const d=document.createElement("div");
-   d.textContent=p.title;
-   d.onclick=()=>openCaseStudy(p);
-   results.appendChild(d);
- });
-};
-
-/* ANALYTICS */
-let timeline=
-JSON.parse(localStorage.timeline||"[]");
-
-function trackView(name){
- timeline.push({project:name,time:Date.now()});
- localStorage.timeline=JSON.stringify(timeline);
-}
-
-/* PWA */
-if("serviceWorker" in navigator)
- navigator.serviceWorker.register("./sw.js");
+    // ================= INITIAL LOAD =================
+    render(projects);
 
 });

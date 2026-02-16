@@ -1,3 +1,5 @@
+/* ================= GLOBAL ================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,48 +8,94 @@
 }
 
 body {
-    background: #f4f6f8;
+    background: #f4f6f9;
     color: #222;
     transition: 0.3s;
 }
 
+/* DARK MODE */
 body.dark {
     background: #121212;
-    color: #fff;
+    color: white;
 }
+
+/* ================= HEADER ================= */
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: #1e88e5;
+    padding: 20px 40px;
+    background: #1976d2;
     color: white;
+    flex-wrap: wrap;
+}
+
+.subtitle {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
 }
 
 button {
     padding: 8px 14px;
-    border: none;
     border-radius: 6px;
+    border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
-.projects-container {
-    padding: 30px;
-}
+/* ================= STATS ================= */
 
-.grid {
+.stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+    padding: 25px 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,.1);
+}
+
+.dark .stat-card {
+    background: #1e1e1e;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-section {
+    padding: 20px 40px 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
     gap: 20px;
 }
 
 .card {
     background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,.1);
     transition: 0.25s;
+    cursor: pointer;
 }
 
 .dark .card {
@@ -55,7 +103,7 @@ button {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 .card h3 {
@@ -64,10 +112,53 @@ button {
 
 .tag {
     display: inline-block;
-    background: #1e88e5;
+    margin-top: 10px;
+    background: #1976d2;
     color: white;
-    padding: 4px 8px;
+    padding: 4px 10px;
     border-radius: 4px;
     font-size: 12px;
-    margin-top: 10px;
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.dark .modal-content {
+    background: #222;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 }

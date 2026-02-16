@@ -2,52 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>Portfolio — FAANG+ System</title>
-
-<link rel="manifest" href="./manifest.json">
-<link rel="stylesheet" href="./styles.css">
-
-<meta name="description"
-content="Frontend Developer | Dashboard | PWA Engineer">
-
-<script src="./recruiter.js"></script>
-<script src="./hiring.js"></script>
-<script src="./router.js"></script>
-<script src="./pdf.js"></script>
-<script defer src="./app.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Portfolio Dashboard</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<div id="cursor"></div>
-
-<header class="nav">
-<h1>Portfolio</h1>
-
-<div>
-<button onclick="generatePortfolioPDF()">PDF</button>
-<button id="searchBtn">⌘K</button>
-<button id="modeToggle">🌙</button>
-</div>
+<header class="header">
+    <h1>My Projects Dashboard</h1>
+    <button id="themeToggle">🌙 Toggle Theme</button>
 </header>
 
-<main id="projects" class="grid"></main>
+<main>
+    <section class="projects-container">
+        <h2>Projects</h2>
+        <div id="projectsGrid" class="grid"></div>
+    </section>
+</main>
 
-<!-- SEARCH -->
-<div id="commandPalette" class="palette hidden">
-<input id="searchInput" placeholder="Search projects">
-<div id="results"></div>
-</div>
-
-<!-- CASE STUDY -->
-<div id="caseModal" class="case-modal hidden">
-<div class="case-content">
-<button id="closeCase">✕</button>
-<div id="caseBody"></div>
-</div>
-</div>
-
+<script src="script.js"></script>
 </body>
 </html>

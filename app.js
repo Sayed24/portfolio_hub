@@ -43,3 +43,17 @@ async function renderHome(){
 html+=`</section>`;
 app.innerHTML=html;
 }
+function loadAnalytics(){
+
+const stats=JSON.parse(localStorage.analytics||"{}");
+
+let html="<ul>";
+
+Object.entries(stats).forEach(([k,v])=>{
+ html+=`<li>${k} — ${v} views</li>`;
+});
+
+html+="</ul>";
+
+document.getElementById("analytics").innerHTML=html;
+}

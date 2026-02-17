@@ -1,14 +1,26 @@
-document.addEventListener("click",e=>{
- const a=e.target.closest("a[data-route]");
- if(!a) return;
+const Router = {
 
- e.preventDefault();
+routes:{
+  home:"home",
+  admin:"admin.html",
+  analytics:"analytics.html"
+},
 
- document.body.animate([
-  {opacity:.5,transform:"translateY(10px)"},
-  {opacity:1,transform:"none"}
- ],{duration:300});
+async go(route){
 
- history.pushState({}, "", a.href);
-});
+ if(route==="home"){
+   renderHome();
+   return;
+ }
 
+ const html = await fetch(this.routes[route]).then(r=>r.text());
+ document.getElementById("app").innerHTML = html;
+
+ if(route==="admin") loadAdmin();
+ if(route==="analytics") loadAnalytics();
+},
+
+init(){
+ this.go("home");
+}
+};

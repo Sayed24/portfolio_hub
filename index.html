@@ -1,70 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Portfolio Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+<title>FAANG Portfolio</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#111111">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header class="header">
-        <div class="logo">
-            <h1>Elite Portfolio</h1>
-            <p class="subtitle">FAANG-Style Project Dashboard</p>
-        </div>
+<header class="nav">
+  <h2 class="logo">Sayedrahim Sadat</h2>
 
-        <div class="header-actions">
-            <input type="text" id="searchInput" placeholder="Search projects...">
-            <button id="themeToggle">🌙 Theme</button>
-        </div>
-    </header>
+  <div class="nav-actions">
+    <button onclick="Router.go('home')">Projects</button>
+    <button onclick="Router.go('analytics')">Analytics</button>
+    <button onclick="Router.go('admin')">Admin</button>
+    <button id="themeToggle">🌙</button>
+  </div>
+</header>
 
-    <!-- ================= MAIN ================= -->
-    <main>
+<main id="app"></main>
 
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="stat-card">
-                <h3 id="totalProjects">0</h3>
-                <p>Total Projects</p>
-            </div>
+<script src="router.js"></script>
+<script src="app.js"></script>
+<script src="hiring.js"></script>
+<script src="recruiter.js"></script>
 
-            <div class="stat-card">
-                <h3>Frontend</h3>
-                <p>Primary Stack</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Dynamic UI</h3>
-                <p>Architecture</p>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section class="projects-section">
-            <h2>Projects</h2>
-            <div id="projectsGrid" class="projects-grid"></div>
-        </section>
-
-    </main>
-
-    <!-- Modal -->
-    <div id="projectModal" class="modal hidden">
-        <div class="modal-content">
-            <span id="closeModal" class="close">&times;</span>
-            <h2 id="modalTitle"></h2>
-            <p id="modalDesc"></p>
-            <span id="modalTech" class="tag"></span>
-        </div>
-    </div>
-
-    <!-- JS -->
-    <script src="script.js"></script>
+<script>
+Router.init();
+</script>
 
 </body>
 </html>

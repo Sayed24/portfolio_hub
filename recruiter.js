@@ -1,13 +1,26 @@
-(function(){
-const params=new URLSearchParams(location.search);
-if(params.get("recruiter")!=="true") return;
+const Router = {
 
-const banner=document.createElement("div");
-banner.style.background="#111";
-banner.style.color="#fff";
-banner.style.padding="12px";
-banner.style.textAlign="center";
-banner.innerHTML="⭐ Recruiter Mode Enabled";
-document.body.prepend(banner);
-})();
+routes:{
+  home:"home",
+  admin:"admin.html",
+  analytics:"analytics.html"
+},
 
+async go(route){
+
+ if(route==="home"){
+   renderHome();
+   return;
+ }
+
+ const html = await fetch(this.routes[route]).then(r=>r.text());
+ document.getElementById("app").innerHTML = html;
+
+ if(route==="admin") loadAdmin();
+ if(route==="analytics") loadAnalytics();
+},
+
+init(){
+ this.go("home");
+}
+};

@@ -1,30 +1,42 @@
-(function(){
+function openCase(id){
 
-const roles={
-frontend:["UI","UX","Responsive"],
-dashboard:["Admin","Analytics","CRUD"],
-shopify:["Ecommerce","Checkout"],
-pwa:["Offline","Caching"]
-};
+const project = PROJECTS.find(p=>p.id===id);
 
-let role=localStorage.role||"frontend";
+trackView(project.title);
 
-const bar=document.createElement("div");
-bar.className="role-bar";
+document.getElementById("app").innerHTML = `
+<div class="case">
 
-bar.innerHTML=`
-<select id="roleSelect">
-<option value="frontend">Frontend</option>
-<option value="dashboard">Dashboard</option>
-<option value="shopify">Shopify</option>
-<option value="pwa">PWA</option>
-</select>
-`;
-document.body.prepend(bar);
-const select=document.getElementById("roleSelect");
-select.value=role;
-select.onchange=()=>{
- localStorage.role=select.value;
- location.reload();
-};
-})();
+<img class="case-img" src="${project.image}">
+
+<h1>${project.title}</h1>
+
+<h3>Problem</h3>
+<p>
+Modern applications require scalable UI architecture and optimized
+user workflows.
+</p>
+
+<h3>Solution</h3>
+<p>
+Implemented using ${project.tech.join(", ")}, modular UI components,
+dynamic rendering and performance-first design.
+</p>
+
+<h3>Impact</h3>
+<p>
+Improved usability, performance, and production readiness aligned
+with FAANG engineering standards.
+</p>
+
+<button onclick="Router.go('home')">← Back</button>
+
+</div>`;
+}
+
+function trackView(title){
+
+let stats = JSON.parse(localStorage.analytics || "{}");
+stats[title] = (stats[title] || 0) + 1;
+localStorage.analytics = JSON.stringify(stats);
+}

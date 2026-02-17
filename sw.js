@@ -1,7 +1,6 @@
 self.addEventListener("install",e=>{
  e.waitUntil(
-  caches.open("portfolio-cache")
-  .then(c=>c.addAll([
+  caches.open("faang-v5").then(c=>c.addAll([
    "./",
    "index.html",
    "styles.css",

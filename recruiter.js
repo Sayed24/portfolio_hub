@@ -1,26 +1,28 @@
-const Router = {
+function recruiterMode(){
 
-routes:{
-  home:"home",
-  admin:"admin.html",
-  analytics:"analytics.html"
-},
+let stats = JSON.parse(localStorage.analytics || "{}");
 
-async go(route){
+const sorted = [...PROJECTS].sort((a,b)=>
+ (stats[b.title]||0)-(stats[a.title]||0)
+);
 
- if(route==="home"){
-   renderHome();
-   return;
- }
-
- const html = await fetch(this.routes[route]).then(r=>r.text());
- document.getElementById("app").innerHTML = html;
-
- if(route==="admin") loadAdmin();
- if(route==="analytics") loadAnalytics();
-},
-
-init(){
- this.go("home");
+renderRecruiter(sorted);
 }
-};
+
+function renderRecruiter(list){
+
+let html=`<h2 class="page-title">Recruiter View</h2>
+<section class="grid">`;
+
+list.forEach(p=>{
+ html+=`
+ <div class="card">
+   <img src="${p.image}">
+   <h3>${p.title}</h3>
+ </div>`;
+});
+
+html+=`</section>`;
+
+document.getElementById("app").innerHTML=html;
+}

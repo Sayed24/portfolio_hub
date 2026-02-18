@@ -1,3 +1,5 @@
+importScripts("sw.js");
+
 const CACHE = 'portfolio-v3';
 const FILES = [
 './',

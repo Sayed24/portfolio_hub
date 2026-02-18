@@ -8,32 +8,37 @@
 
 <link rel="stylesheet" href="styles.css">
 <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#111">
 
-<meta name="theme-color" content="#111111">
+<meta property="og:title" content="Frontend Developer Portfolio">
+<meta property="og:description" content="FAANG-level modern portfolio">
+<meta property="og:type" content="website">
 </head>
 
 <body>
 
 <header class="nav">
-  <h2 class="logo">Sayedrahim Sadat</h2>
+  <h1>Portfolio</h1>
 
   <div class="nav-actions">
-    <button onclick="Router.go('home')">Projects</button>
-    <button onclick="Router.go('analytics')">Analytics</button>
-    <button onclick="Router.go('admin')">Admin</button>
     <button id="themeToggle">🌙</button>
+    <button id="recruiterToggle">Recruiter Mode</button>
+    <input id="search" placeholder="Search projects">
   </div>
 </header>
 
-<main id="app"></main>
+<main>
+  <section id="projectsGrid" class="grid"></section>
+</main>
 
 <script src="router.js"></script>
 <script src="app.js"></script>
-<script src="hiring.js"></script>
 <script src="recruiter.js"></script>
 
 <script>
-Router.init();
+if('serviceWorker' in navigator){
+ navigator.serviceWorker.register('sw.js');
+}
 </script>
 
 </body>

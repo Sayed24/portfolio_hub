@@ -1,59 +1,52 @@
-let PROJECTS=[];
+const grid = document.getElementById("projectsGrid");
 
 async function loadProjects(){
-
- const local = localStorage.getItem("projects");
-
- if(local){
-   PROJECTS = JSON.parse(local);
- }else{
-   PROJECTS = await fetch("projects.json").then(r=>r.json());
- }
-
- return PROJECTS;
+ const res = await fetch("projects.json");
+ const projects = await res.json();
+ renderProjects(projects);
 }
 
-async function renderHome(){
+function renderProjects(list){
+ grid.innerHTML="";
 
- const app=document.getElementById("app");
- const projects=await loadProjects();
+ list.forEach(p=>{
+  const card=document.createElement("div");
+  card.className="card";
 
- let html=`<section class="grid">`;
+  card.innerHTML=`
+    <img loading="lazy" src="${p.image}">
+    <div class="card-content">
+      <h3>${p.title}</h3>
+      <p>${p.description}</p>
+    </div>
+  `;
 
- projects.forEach(p=>{
- html+=`
- <div class="card" onclick="openCase('${p.id}')">
+  card.onclick=()=>Router.go(`case.html?id=${p.id}`);
+  grid.appendChild(card);
+ });
+}
 
-   <div class="img-wrap">
-     <img src="${p.image}" loading="lazy">
-   </div>
+/* SEARCH */
+document.getElementById("search").addEventListener("input", async e=>{
+ const res = await fetch("projects.json");
+ let data = await res.json();
 
-   <div class="card-body">
-     <h3>${p.title}</h3>
-     <p>${p.description}</p>
+ const val = e.target.value.toLowerCase();
+ data = data.filter(p=>p.title.toLowerCase().includes(val));
 
-     <div class="tags">
-       ${p.tech.map(t=>`<span>${t}</span>`).join("")}
-     </div>
-   </div>
-
- </div>`;
+ renderProjects(data);
 });
 
-html+=`</section>`;
-app.innerHTML=html;
+/* THEME */
+const toggle=document.getElementById("themeToggle");
+
+toggle.onclick=()=>{
+ document.body.classList.toggle("dark");
+ localStorage.theme=document.body.classList.contains("dark");
+};
+
+if(localStorage.theme==="true"){
+ document.body.classList.add("dark");
 }
-function loadAnalytics(){
 
-const stats=JSON.parse(localStorage.analytics||"{}");
-
-let html="<ul>";
-
-Object.entries(stats).forEach(([k,v])=>{
- html+=`<li>${k} — ${v} views</li>`;
-});
-
-html+="</ul>";
-
-document.getElementById("analytics").innerHTML=html;
-}
+loadProjects();

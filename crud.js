@@ -15,3 +15,4 @@ localStorage.projects=JSON.stringify(projects);
 
 renderAdminList();
 }
+console.log("CRUD ready");

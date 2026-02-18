@@ -1,11 +1,12 @@
+const CACHE="portfolio-v6";
+
 self.addEventListener("install",e=>{
  e.waitUntil(
-  caches.open("faang-v5").then(c=>c.addAll([
+  caches.open(CACHE).then(c=>c.addAll([
    "./",
-   "index.html",
-   "styles.css",
-   "app.js",
-   "projects.json"
+   "./index.html",
+   "./styles.css",
+   "./app.js"
   ]))
  );
 });

@@ -1,9 +1,16 @@
-
 [
   {
     "title": "AI Dashboard",
-    "description": "Advanced analytics dashboard with real-time data.",
+    "description": "Real-time AI analytics.",
     "image": "assets/images/ai.jpg",
-    "url": "https://example.com"
+    "url": "https://example.com",
+    "tags": ["AI", "Dashboard"]
+  },
+  {
+    "title": "E-Commerce Pro",
+    "description": "Stripe integrated store.",
+    "image": "assets/images/shop.jpg",
+    "url": "https://example.com",
+    "tags": ["Ecommerce", "Fullstack"]
   }
 ]

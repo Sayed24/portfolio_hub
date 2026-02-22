@@ -49,3 +49,18 @@
   background: rgba(0,0,0,0.6);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+.recruiter-banner {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(0,113,227,0.08),
+    rgba(0,113,227,0.02)
+  );
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.recruiter-banner h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}

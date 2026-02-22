@@ -8,3 +8,17 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* PAGE TRANSITIONS */
+
+#pageTransition {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  transform: translateY(100%);
+  transition: transform .45s cubic-bezier(.22,1,.36,1);
+  z-index: 9999;
+}
+
+#pageTransition.active {
+  transform: translateY(0);
+}

@@ -47,8 +47,8 @@ export function renderProjects(projects) {
       });
     }
 
-    card.onclick = () => openModal(project);
-
+    card.onclick = () =>
+  window.location.href = `project.html?id=${project.id}`;
     container.appendChild(card);
   });
 }

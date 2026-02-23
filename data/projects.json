@@ -1,9 +1,8 @@
 {
+  "id": "ai-dashboard",
   "title": "AI Dashboard",
-  "description": "Real-time analytics dashboard.",
+  "description": "Real-time analytics dashboard",
   "image": "assets/images/ai.jpg",
-  "video": "assets/videos/ai-preview.mp4",
   "featured": true,
-  "url": "https://example.com",
-  "tags": ["Dashboard","AI"]
+  "tags": ["JavaScript","Dashboard"]
 }

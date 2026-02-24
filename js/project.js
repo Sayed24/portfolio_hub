@@ -1,46 +1,30 @@
-const container = document.getElementById("projectContent");
+const container=document.getElementById("projectContent");
 
-const params = new URLSearchParams(window.location.search);
-const projectId = params.get("id");
+const params=new URLSearchParams(window.location.search);
+const id=params.get("id");
 
-async function loadProject() {
+async function loadProject(){
 
-  const res = await fetch("./data/projects.json");
-  const projects = await res.json();
+  const res=await fetch("./data/projects.json");
+  const projects=await res.json();
 
-  const project = projects.find(p => p.id === projectId);
+  const project=projects.find(p=>p.id===id);
 
-  if (!project) {
-    container.innerHTML = "<h2>Project not found</h2>";
+  if(!project){
+    container.innerHTML="<h2>Project not found</h2>";
     return;
   }
 
-  trackProjectView(project.id);
+  let heat=JSON.parse(localStorage.getItem("heatmap"))||{};
+  heat[id]=(heat[id]||0)+1;
+  localStorage.setItem("heatmap",JSON.stringify(heat));
 
-  container.innerHTML = `
-    <section class="project-hero">
-      <h1>${project.title}</h1>
-      <p>${project.description}</p>
-    </section>
-
-    <img class="project-image"
-         src="${project.image}"
-         loading="lazy">
-
-    <div class="project-details">
-      <h3>Technologies</h3>
-      <p>${project.tags.join(", ")}</p>
-
-      <a href="${project.url}" target="_blank"
-         class="primary-btn">Visit Live Project</a>
-    </div>
+  container.innerHTML=`
+    <h1>${project.title}</h1>
+    <p>${project.description}</p>
+    <img class="project-image" src="${project.image}">
+    <p><strong>Tech:</strong> ${project.tags.join(", ")}</p>
   `;
-}
-
-function trackProjectView(id){
-  let heat = JSON.parse(localStorage.getItem("heatmap")) || {};
-  heat[id] = (heat[id] || 0) + 1;
-  localStorage.setItem("heatmap", JSON.stringify(heat));
 }
 
 loadProject();

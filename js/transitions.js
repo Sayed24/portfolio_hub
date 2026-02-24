@@ -1,15 +1,10 @@
-const overlay = document.getElementById("pageTransition");
+const links=document.querySelectorAll(".nav-link");
 
-document.querySelectorAll(".nav-link").forEach(link => {
-  link.addEventListener("click", e => {
+links.forEach(link=>{
+  link.addEventListener("click",e=>{
     e.preventDefault();
-
-    const href = link.getAttribute("href");
-
-    overlay.classList.add("active");
-
-    setTimeout(() => {
-      window.location.href = href;
-    }, 400);
+    const href=link.getAttribute("href");
+    document.body.style.opacity="0";
+    setTimeout(()=>window.location.href=href,250);
   });
 });

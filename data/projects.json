@@ -1,8 +1,18 @@
-{
-  "id": "ai-dashboard",
-  "title": "AI Dashboard",
-  "description": "Real-time analytics dashboard",
-  "image": "assets/images/ai.jpg",
-  "featured": true,
-  "tags": ["JavaScript","Dashboard"]
-}
+[
+  {
+    "id":"dashboard",
+    "title":"Smart Dashboard",
+    "description":"Dynamic analytics dashboard with charts.",
+    "image":"assets/images/sample.jpg",
+    "featured":true,
+    "tags":["JavaScript","UI"]
+  },
+  {
+    "id":"portfolio",
+    "title":"Portfolio System",
+    "description":"Apple-style portfolio architecture.",
+    "image":"assets/images/sample.jpg",
+    "featured":false,
+    "tags":["HTML","CSS"]
+  }
+]

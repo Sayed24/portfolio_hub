@@ -2,69 +2,42 @@
 <html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Portfolio Hub</title>
 
 <link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/themes.css">
 <link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/themes.css">
 
-<meta name="theme-color" content="#ffffff">
+<link rel="manifest" href="manifest.json">
 </head>
 
 <body>
 
-<!-- Smooth Page Transition Overlay -->
 <div id="pageTransition"></div>
 
 <header class="navbar glass-nav">
-  <div class="logo">Portfolio Hub</div>
+  <h2>Portfolio Hub</h2>
 
-  <div class="nav-controls">
-    <input id="search" placeholder="Search projects...">
+  <div>
     <button id="themeToggle">🌙</button>
-    <a href="blog.html" class="nav-link">Blog</a>
-    <a href="dashboard.html" class="nav-link">Recruiter</a>
+    <a class="nav-link" href="skills.html">Skills</a>
   </div>
 </header>
 
-<!-- Recruiter Quick Summary -->
-<section class="recruiter-banner reveal">
+<section class="recruiter-banner">
   <h2>Available for Hire</h2>
-  <p>
-    Front-End Developer • Dynamic Dashboards • UI/UX Focused • JavaScript Specialist
-  </p>
-</section>
-
-<section class="hero reveal">
-  <h1>Building Digital Experiences.</h1>
-  <p>Precision engineering with Apple-level interaction.</p>
-</section>
-
-<section class="filters">
-  <div id="tagFilters"></div>
+  <p>Front-End Developer • Dashboard Specialist • UI/UX Focused</p>
 </section>
 
 <main>
   <section class="projects-grid"></section>
 </main>
 
-<div id="projectModal" class="modal hidden"></div>
-<div class="cursor"></div>
-
 <script type="module" src="js/app.js"></script>
 <script type="module" src="js/theme.js"></script>
-<script type="module" src="js/filter.js"></script>
-<script type="module" src="js/search.js"></script>
-<script type="module" src="js/modal.js"></script>
-<script type="module" src="js/motion.js"></script>
-<script type="module" src="js/scroll.js"></script>
-<script type="module" src="js/pwa.js"></script>
 <script type="module" src="js/transitions.js"></script>
-<script type="module" src="js/navbar.js"></script>
 
 </body>
 </html>

@@ -1,18 +1,20 @@
 [
   {
-    "id":"dashboard",
-    "title":"Smart Dashboard",
-    "description":"Dynamic analytics dashboard with charts.",
-    "image":"assets/images/sample.jpg",
-    "featured":true,
-    "tags":["JavaScript","UI"]
+    "id": "ai-dashboard",
+    "title": "AI Dashboard",
+    "description": "Real-time analytics dashboard with charts and admin controls.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+    "featured": true,
+    "tags": ["JavaScript", "Dashboard", "Chart.js"],
+    "url": "#"
   },
   {
-    "id":"portfolio",
-    "title":"Portfolio System",
-    "description":"Apple-style portfolio architecture.",
-    "image":"assets/images/sample.jpg",
-    "featured":false,
-    "tags":["HTML","CSS"]
+    "id": "task-manager",
+    "title": "Smart Task Manager",
+    "description": "Dynamic task and project management application.",
+    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1600&auto=format&fit=crop",
+    "featured": false,
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "url": "#"
   }
 ]

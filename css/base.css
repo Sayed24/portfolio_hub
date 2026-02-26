@@ -14,3 +14,14 @@ padding:80px 20px;
 }
 
 a{text-decoration:none;color:inherit}
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.reveal.visible{
+opacity:1;
+transform:translateY(0);
+}

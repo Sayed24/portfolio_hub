@@ -1,3 +1,17 @@
-:root{
-  --accent:#5b8cff;
+.gradient-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background:
+radial-gradient(circle at 20% 20%,#5b8cff33,transparent 40%),
+radial-gradient(circle at 80% 70%,#7b5bff33,transparent 40%);
+animation:moveGradient 12s infinite alternate ease-in-out;
+}
+
+@keyframes moveGradient{
+from{transform:translateY(-20px)}
+to{transform:translateY(20px)}
 }

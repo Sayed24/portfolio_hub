@@ -15,83 +15,72 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<div class="gradient-bg"></div>
+
 <header class="header glass-nav">
+<div class="nav-container">
 
-  <div class="nav-container">
+<a href="index.html" class="logo">Portfolio</a>
 
-    <div class="logo">Portfolio</div>
+<nav class="nav-links" id="navLinks">
+<a href="#">Home</a>
+<a href="#projects">Projects</a>
+<a href="skills.html">Skills</a>
+<a href="#contact" class="cta-btn magnetic">Contact Me</a>
+</nav>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="#contact" class="cta-btn">Contact Me</a>
-    </nav>
+<div class="menu-toggle" id="menuToggle">☰</div>
 
-    <div class="menu-toggle" id="menuToggle">
-      ☰
-    </div>
-
-  </div>
-
+</div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
+<section class="hero reveal">
+<div class="hero-content">
+<h1>Frontend Developer & UI Engineer</h1>
 
-  <div class="hero-content">
-    <h1>Frontend Developer & UI Engineer</h1>
-    <p>
-      Building modern, high-performance web experiences with clean design
-      and scalable architecture.
-    </p>
+<p>
+Building modern, fast, and beautiful web applications focused on performance,
+design systems, and scalable architecture.
+</p>
 
-    <div class="hero-actions">
-      <a href="#projects" class="primary-btn">View Projects</a>
-      <a href="#contact" class="secondary-btn">Hire Me</a>
-    </div>
-  </div>
-
+<div class="hero-actions">
+<a href="#projects" class="primary-btn magnetic">View Projects</a>
+<a href="#contact" class="secondary-btn magnetic">Hire Me</a>
+</div>
+</div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
-<section id="projects" class="projects-section">
-
-  <h2>Featured Projects</h2>
-
-  <div id="projectsGrid" class="projects-grid"></div>
-
+<section id="projects" class="projects-section reveal">
+<h2>Projects</h2>
+<div id="projectsGrid" class="projects-grid"></div>
 </section>
 
-<!-- ===== CONTACT CTA ===== -->
-<section id="contact" class="contact-section">
-
-  <div class="contact-card">
-    <h2>Let’s Work Together</h2>
-    <p>
-      I’m available for frontend development, UI design,
-      and web application projects.
-    </p>
-
-    <a href="mailto:your@email.com" class="primary-btn">
-      Contact Me
-    </a>
-  </div>
-
+<section id="contact" class="contact-section reveal">
+<div class="contact-card">
+<h2>Let’s Work Together</h2>
+<p>I’m available for frontend development and UI engineering projects.</p>
+<a href="mailto:your@email.com" class="primary-btn magnetic">
+Contact Me
+</a>
+</div>
 </section>
 
 <footer class="footer">
-  © 2026 Portfolio Hub
+© 2026 Portfolio Hub
 </footer>
 
+<!-- Recruiter Card -->
+<div class="recruiter-card">
+<h4>Quick Summary</h4>
+<p>Frontend Developer specializing in modern UI, dashboards, and scalable web apps.</p>
+<a href="#contact" class="mini-cta">Contact</a>
+</div>
+
 <script type="module" src="js/app.js"></script>
+<script type="module" src="js/ui-effects.js"></script>
 
 <script>
-const toggle = document.getElementById("menuToggle");
-const nav = document.getElementById("navLinks");
-
-toggle.onclick = () => nav.classList.toggle("active");
+menuToggle.onclick=()=>navLinks.classList.toggle("active");
 </script>
 
 </body>

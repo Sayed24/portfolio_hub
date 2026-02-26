@@ -1,23 +1,16 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family:'Inter',sans-serif;
-  background:#0b0f19;
-  color:#fff;
-  line-height:1.6;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
+font-family:'Inter',sans-serif;
+background:#0b0f19;
+color:#fff;
+overflow-x:hidden;
 }
 
 section{
-  padding:80px 20px;
-  max-width:1200px;
-  margin:auto;
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
 }
+
+a{text-decoration:none;color:inherit}

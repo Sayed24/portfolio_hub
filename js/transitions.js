@@ -1,10 +1,28 @@
-const links=document.querySelectorAll(".nav-link");
+const overlay=document.createElement("div");
+overlay.className="page-transition";
+document.body.appendChild(overlay);
 
-links.forEach(link=>{
-  link.addEventListener("click",e=>{
-    e.preventDefault();
-    const href=link.getAttribute("href");
-    document.body.style.opacity="0";
-    setTimeout(()=>window.location.href=href,250);
-  });
+document.querySelectorAll("a[href]").forEach(link=>{
+
+if(link.target==="_blank") return;
+
+link.addEventListener("click",e=>{
+const url=link.getAttribute("href");
+
+if(!url || url.startsWith("#")) return;
+
+e.preventDefault();
+
+overlay.classList.add("active");
+
+setTimeout(()=>{
+window.location.href=url;
+},300);
+
+});
+
+});
+
+window.addEventListener("pageshow",()=>{
+overlay.classList.remove("active");
 });

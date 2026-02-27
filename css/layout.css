@@ -156,3 +156,39 @@ bottom:15px;
 }
 
 }
+/* PROJECT PAGE */
+.project-wrapper{
+padding:40px 16px;
+display:flex;
+justify-content:center;
+}
+
+.project-container{
+max-width:900px;
+width:100%;
+}
+
+.project-container h1{
+font-size:clamp(26px,5vw,42px);
+margin-bottom:20px;
+}
+
+.project-hero{
+width:100%;
+border-radius:16px;
+overflow:hidden;
+margin:25px 0;
+}
+
+.project-hero img{
+width:100%;
+height:auto;
+display:block;
+object-fit:cover;
+}
+
+.project-section{
+margin-top:30px;
+line-height:1.7;
+font-size:clamp(15px,2vw,18px);
+}

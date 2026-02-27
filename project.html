@@ -6,21 +6,39 @@
 
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/transitions.css">
 
 <title>Project</title>
 </head>
 
 <body>
 
-<header class="navbar glass-nav">
-  <a href="index.html" class="nav-link">← Back</a>
+<header class="header glass-nav">
+<div class="nav-container">
+<a href="index.html" class="logo">Portfolio</a>
+</div>
 </header>
 
-<main class="project-page">
-  <div id="projectContent"></div>
+<main class="project-wrapper">
+
+<div id="projectContent" class="project-container"></div>
+
 </main>
 
+<!-- AI Recruiter Assistant -->
+<div class="ai-chat">
+<div class="chat-header">Recruiter Assistant</div>
+<div id="chatMessages" class="chat-messages"></div>
+
+<div class="chat-input">
+<input id="chatInput" placeholder="Ask about skills, projects...">
+<button id="sendChat">Send</button>
+</div>
+</div>
+
 <script type="module" src="js/project.js"></script>
+<script type="module" src="js/transitions.js"></script>
+<script type="module" src="js/ai-chat.js"></script>
 
 </body>
 </html>

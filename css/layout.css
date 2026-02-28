@@ -257,3 +257,13 @@ footer{
 position:relative;
 z-index:2;
 }
+.analytics-box{
+position:fixed;
+left:20px;
+bottom:20px;
+background:#111827;
+padding:14px;
+border-radius:12px;
+font-size:13px;
+z-index:10;
+}

@@ -242,3 +242,18 @@ background:#5b8cff;
 color:white;
 padding:8px 12px;
 }
+.contact-section{
+position:relative;
+z-index:2;
+margin-top:60px;
+}
+
+.recruiter-card,
+.ai-chat{
+z-index:10;
+}
+
+footer{
+position:relative;
+z-index:2;
+}

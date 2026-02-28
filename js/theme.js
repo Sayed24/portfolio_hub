@@ -1,7 +1,9 @@
-const btn=document.getElementById("themeToggle");
+const prefersDark=
+window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-btn?.addEventListener("click",()=>{
-  const html=document.documentElement;
-  html.dataset.theme=
-    html.dataset.theme==="dark"?"light":"dark";
-});
+document.body.dataset.theme=prefersDark?"dark":"light";
+
+export function toggleTheme(){
+const current=document.body.dataset.theme;
+document.body.dataset.theme=current==="dark"?"light":"dark";
+}

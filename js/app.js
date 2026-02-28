@@ -1,32 +1,38 @@
-const grid = document.getElementById("projectsGrid");
+import {setupFilters} from "./filters.js";
+import {renderAnalytics} from "./analytics.js";
 
-async function loadProjects(){
+const grid=document.getElementById("projectsGrid");
 
-  const res = await fetch("./data/projects.json");
-  const projects = await res.json();
+let allProjects=[];
 
-  projects.forEach(project => {
+function render(projects){
+grid.innerHTML="";
 
-    const card = document.createElement("div");
-    card.className = "project-card";
+projects.forEach(p=>{
+const card=document.createElement("div");
+card.className="project-card reveal";
 
-    card.innerHTML = `
-      <img src="${project.image}" loading="lazy">
-      <div class="project-info">
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-      </div>
-    `;
-document.getElementById("resumeToggle").onclick=()=>{
-document.body.classList.toggle("resume-mode");
-};
-    card.onclick = () =>
-      window.location.href =
-        `project.html?id=${project.id}`;
+card.innerHTML=`
+<img src="${p.image}" loading="lazy">
+<div class="project-info">
+<h3>${p.title}</h3>
+<p>${p.description}</p>
+</div>
+`;
 
-    grid.appendChild(card);
-  });
+card.onclick=()=>location.href=`project.html?id=${p.id}`;
 
+grid.appendChild(card);
+});
 }
 
-loadProjects();
+async function load(){
+const res=await fetch("./data/projects.json");
+allProjects=await res.json();
+
+render(allProjects);
+setupFilters(allProjects,render);
+renderAnalytics();
+}
+
+load();

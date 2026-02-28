@@ -17,7 +17,9 @@ async function loadProjects(){
         <p>${project.description}</p>
       </div>
     `;
-
+document.getElementById("resumeToggle").onclick=()=>{
+document.body.classList.toggle("resume-mode");
+};
     card.onclick = () =>
       window.location.href =
         `project.html?id=${project.id}`;

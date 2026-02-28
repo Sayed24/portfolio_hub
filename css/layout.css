@@ -267,3 +267,18 @@ border-radius:12px;
 font-size:13px;
 z-index:10;
 }
+.skill{margin:25px 0}
+
+.bar{
+background:#1f2937;
+height:10px;
+border-radius:8px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+width:0;
+background:linear-gradient(90deg,#5b8cff,#7b5bff);
+transition:width 1.2s ease;
+}

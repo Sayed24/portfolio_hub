@@ -1,22 +1,15 @@
-const points = JSON.parse(localStorage.getItem("heatmap") || "[]");
+document.addEventListener("mousemove",e=>{
+const dot=document.createElement("div");
+dot.style.position="fixed";
+dot.style.width="6px";
+dot.style.height="6px";
+dot.style.background="red";
+dot.style.borderRadius="50%";
+dot.style.left=e.clientX+"px";
+dot.style.top=e.clientY+"px";
+dot.style.opacity="0.3";
+dot.style.pointerEvents="none";
 
-document.addEventListener("mousemove", e => {
-  points.push({ x: e.clientX, y: e.clientY });
-
-  if (points.length % 20 === 0) {
-    localStorage.setItem("heatmap", JSON.stringify(points.slice(-500)));
-  }
+document.body.appendChild(dot);
+setTimeout(()=>dot.remove(),800);
 });
-
-/* visual dots (debug view) */
-export function showHeatmap() {
-  const data = JSON.parse(localStorage.getItem("heatmap") || "[]");
-
-  data.forEach(p => {
-    const dot = document.createElement("div");
-    dot.className = "heat-dot";
-    dot.style.left = p.x + "px";
-    dot.style.top = p.y + "px";
-    document.body.appendChild(dot);
-  });
-}

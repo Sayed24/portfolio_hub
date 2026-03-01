@@ -1,53 +1,39 @@
-const container=document.getElementById("projectContent");
+const projects = [];
 
-const params=new URLSearchParams(location.search);
-const id=params.get("id");
-
-async function loadProject(){
-
-const res=await fetch("./data/projects.json");
-const projects=await res.json();
-
-const project=projects.find(p=>p.id===id);
-
-if(!project){
-container.innerHTML="<h2>Project not found</h2>";
-return;
+for(let i=1;i<=12;i++){
+projects.push({
+id:i,
+title:`Project ${i}`,
+image:`https://picsum.photos/900/600?random=${i}`,
+views:Math.floor(Math.random()*200)
+});
 }
 
-container.innerHTML=`
-<h1>${project.title}</h1>
+function renderProjects(){
+const container=document.querySelector(".projects");
+if(!container) return;
 
-<div class="project-hero">
-<img src="${project.image}" loading="lazy">
-</div>
+container.innerHTML="";
 
-<div class="project-section">
-<h3>Overview</h3>
-<p>${project.description}</p>
-</div>
+const featured=[...projects].sort((a,b)=>b.views-a.views)[0];
 
-<div class="project-section">
-<h3>Challenge</h3>
-<p>
-Designed to solve scalability and usability challenges while maintaining
-high performance across devices.
-</p>
-</div>
+projects.forEach(p=>{
+const card=document.createElement("div");
+card.className="project-card glass";
 
-<div class="project-section">
-<h3>Solution</h3>
-<p>
-Implemented responsive UI architecture, optimized rendering,
-and modular component design.
-</p>
-</div>
+if(p.id===featured.id){
+card.style.outline="2px solid gold";
+}
 
-<div class="project-section">
-<h3>Technologies</h3>
-<p>${project.tags.join(", ")}</p>
-</div>
+card.innerHTML=`
+<img src="${p.image}">
+<h3 style="padding:15px">${p.title}</h3>
 `;
+
+card.onclick=()=>location.href=`project.html?id=${p.id}`;
+
+container.appendChild(card);
+});
 }
 
-loadProject();
+renderProjects();

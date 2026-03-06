@@ -1,32 +1,36 @@
-export async function loadProjects() {
-  const res = await fetch("data/projects.json");
-  return await res.json();
+export async function renderProjects(){
+
+const res=await fetch("/data/projects.json")
+const projects=await res.json()
+
+const app=document.getElementById("app")
+app.innerHTML=""
+
+projects.forEach(p=>{
+
+const card=document.createElement("div")
+card.className="card"
+
+card.innerHTML=`
+
+<img src="${p.image}">
+
+<div class="cardContent">
+
+<h3>${p.title}</h3>
+<p>${p.description}</p>
+
+</div>
+`
+
+card.onclick=()=>{
+
+location.href="/project/"+p.id
+
 }
 
-export function renderProjects(projects) {
-  const app = document.getElementById("app");
-  app.innerHTML = "";
+app.appendChild(card)
 
-  projects.sort((a,b)=> b.views - a.views);
+})
 
-  projects.forEach(project => {
-    const card = document.createElement("div");
-    card.className = "project-card";
-
-    card.innerHTML = `
-      <img src="${project.image}" alt="${project.title}" />
-      <div class="project-content">
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-      </div>
-    `;
-
-    card.onclick = () => {
-      project.views++;
-      localStorage.setItem("views", JSON.stringify(projects));
-      window.open(project.link, "_blank");
-    };
-
-    app.appendChild(card);
-  });
 }

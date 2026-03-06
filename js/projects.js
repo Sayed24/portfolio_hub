@@ -1,39 +1,32 @@
-const projects = [];
-
-for(let i=1;i<=12;i++){
-projects.push({
-id:i,
-title:`Project ${i}`,
-image:`https://picsum.photos/900/600?random=${i}`,
-views:Math.floor(Math.random()*200)
-});
+export async function loadProjects() {
+  const res = await fetch("data/projects.json");
+  return await res.json();
 }
 
-function renderProjects(){
-const container=document.querySelector(".projects");
-if(!container) return;
+export function renderProjects(projects) {
+  const app = document.getElementById("app");
+  app.innerHTML = "";
 
-container.innerHTML="";
+  projects.sort((a,b)=> b.views - a.views);
 
-const featured=[...projects].sort((a,b)=>b.views-a.views)[0];
+  projects.forEach(project => {
+    const card = document.createElement("div");
+    card.className = "project-card";
 
-projects.forEach(p=>{
-const card=document.createElement("div");
-card.className="project-card glass";
+    card.innerHTML = `
+      <img src="${project.image}" alt="${project.title}" />
+      <div class="project-content">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+      </div>
+    `;
 
-if(p.id===featured.id){
-card.style.outline="2px solid gold";
+    card.onclick = () => {
+      project.views++;
+      localStorage.setItem("views", JSON.stringify(projects));
+      window.open(project.link, "_blank");
+    };
+
+    app.appendChild(card);
+  });
 }
-
-card.innerHTML=`
-<img src="${p.image}">
-<h3 style="padding:15px">${p.title}</h3>
-`;
-
-card.onclick=()=>location.href=`project.html?id=${p.id}`;
-
-container.appendChild(card);
-});
-}
-
-renderProjects();

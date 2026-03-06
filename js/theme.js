@@ -1,9 +1,13 @@
-const prefersDark=
-window.matchMedia("(prefers-color-scheme: dark)").matches;
+export function initTheme() {
+  const toggle = document.getElementById("themeToggle");
 
-document.body.dataset.theme=prefersDark?"dark":"light";
+  const saved = localStorage.getItem("theme");
+  if (saved) document.documentElement.setAttribute("data-theme", saved);
 
-export function toggleTheme(){
-const current=document.body.dataset.theme;
-document.body.dataset.theme=current==="dark"?"light":"dark";
+  toggle.onclick = () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const newTheme = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 }

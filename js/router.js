@@ -1,14 +1,26 @@
-const params=new URLSearchParams(window.location.search);
-const id=params.get("id");
+const routes={}
 
-if(id){
-const container=document.getElementById("projectContainer");
+export function addRoute(path,component){
+routes[path]=component
+}
 
-if(container){
-container.innerHTML=`
-<h1>Project ${id}</h1>
-<p>Dynamic storytelling project page.</p>
-<img src="https://picsum.photos/1200/700?random=${id}">
-`;
+export function navigate(path){
+history.pushState({},'',path)
+render()
 }
+
+export function render(){
+
+const path=location.pathname
+
+if(routes[path]){
+routes[path]()
+}else if(path.startsWith("/project/")){
+import("./projectPage.js").then(m=>m.renderProject())
+}else{
+routes["/"]()
 }
+
+}
+
+window.onpopstate=render

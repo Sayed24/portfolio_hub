@@ -1,17 +1,32 @@
-import { loadProjects, renderProjects } from "./projects.js";
-import { initSearch } from "./search.js";
-import { initTheme } from "./theme.js";
-import { initMagnetic } from "./magnetic.js";
+import * as router from "./router.js"
+import {renderProjects} from "./projects.js"
+import {initSearch} from "./search.js"
+import {initCursor} from "./cursor3d.js"
+import {initHeatmap} from "./heatmap.js"
+import {initInterview} from "./interviewAI.js"
+import {initAdmin} from "./admin.js"
+import {optimize} from "./performance.js"
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const projects = await loadProjects();
+window.router=router
 
-  renderProjects(projects);
-  initSearch(projects, renderProjects);
-  initTheme();
-  initMagnetic();
+router.addRoute("/",renderProjects)
+router.addRoute("/interview",initInterview)
+router.addRoute("/admin",initAdmin)
 
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
-  }
-});
+document.addEventListener("DOMContentLoaded",()=>{
+
+router.render()
+
+initSearch()
+
+initCursor()
+
+initHeatmap()
+
+optimize()
+
+if("serviceWorker" in navigator){
+navigator.serviceWorker.register("/sw.js")
+}
+
+})

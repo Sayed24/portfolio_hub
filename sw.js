@@ -1,11 +1,16 @@
+self.addEventListener("install",e=>{
 
-self.addEventListener("install", e => {
-  e.waitUntil(
-    caches.open("portfolio-cache").then(cache => {
-      return cache.addAll([
-        "/",
-        "/index.html",
-      ]);
-    })
-  );
-});
+e.waitUntil(
+
+caches.open("portfolio").then(cache=>{
+
+return cache.addAll([
+"/",
+"/index.html"
+])
+
+})
+
+)
+
+})

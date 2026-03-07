@@ -12,34 +12,38 @@
 
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/motion.css">
-<link rel="stylesheet" href="css/heatmap.css">
-<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/vision.css">
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 
 </head>
 
 <body>
 
-<div id="cursor3d"></div>
-<canvas id="heatmapCanvas"></canvas>
+<div id="cursor"></div>
+<canvas id="heatmap"></canvas>
 
 <header>
 
-<div class="logo" onclick="router.navigate('/')">SS</div>
-
-<input id="searchInput" placeholder="Search Projects">
+<div class="logo">SS</div>
 
 <nav>
+
 <button onclick="router.navigate('/')">Projects</button>
-<button onclick="router.navigate('/interview')">AI Interview</button>
+<button onclick="router.navigate('/analytics')">Analytics</button>
+<button onclick="router.navigate('/chat')">AI Recruiter</button>
 <button onclick="router.navigate('/admin')">Admin</button>
+
 </nav>
 
 </header>
+
+<section id="hero3d"></section>
 
 <main id="app"></main>
 
 <script type="module" src="js/app.js"></script>
 
 </body>
+
 </html>

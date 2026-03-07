@@ -1,23 +1,29 @@
 export async function renderProjects(){
 
-const res=await fetch("/data/projects.json")
+const res=await fetch("data/projects.json")
+
 const projects=await res.json()
 
 const app=document.getElementById("app")
-app.innerHTML=""
+
+app.innerHTML=`<div class="projects"></div>`
+
+const grid=document.querySelector(".projects")
 
 projects.forEach(p=>{
 
 const card=document.createElement("div")
+
 card.className="card"
 
 card.innerHTML=`
 
-<img src="${p.image}">
+<img src="https://api.microlink.io/?url=${p.link}&screenshot=true">
 
 <div class="cardContent">
 
 <h3>${p.title}</h3>
+
 <p>${p.description}</p>
 
 </div>
@@ -29,7 +35,7 @@ location.href="/project/"+p.id
 
 }
 
-app.appendChild(card)
+grid.appendChild(card)
 
 })
 

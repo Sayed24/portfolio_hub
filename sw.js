@@ -2,14 +2,9 @@ self.addEventListener("install",e=>{
 
 e.waitUntil(
 
-caches.open("portfolio").then(cache=>{
+caches.open("portfolio")
 
-return cache.addAll([
-"/",
-"/index.html"
-])
-
-})
+.then(cache=>cache.add("/"))
 
 )
 

@@ -1,12 +1,11 @@
-
 export function initCursor(){
 
-const cursor=document.getElementById("cursor3d")
+const cursor=document.getElementById("cursor")
 
 document.addEventListener("mousemove",e=>{
 
-cursor.style.transform=
-`translate3d(${e.clientX}px,${e.clientY}px,0)`
+cursor.style.left=e.clientX+"px"
+cursor.style.top=e.clientY+"px"
 
 })
 

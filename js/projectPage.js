@@ -1,22 +1,22 @@
-
 export async function renderProject(){
 
 const id=location.pathname.split("/project/")[1]
 
 const res=await fetch("/data/projects.json")
-const projects=await res.json()
 
-const p=projects.find(x=>x.id===id)
+const data=await res.json()
+
+const p=data.find(x=>x.id===id)
 
 const app=document.getElementById("app")
 
 app.innerHTML=`
 
-<div class="projectPage">
-
-<img src="${p.image}">
+<div class="vision-panel">
 
 <h1>${p.title}</h1>
+
+<img src="https://api.microlink.io/?url=${p.link}&screenshot=true">
 
 <p>${p.description}</p>
 

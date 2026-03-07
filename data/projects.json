@@ -1,29 +1,14 @@
 [
-  {
-    "id": "apple-clone",
-    "title": "Apple Product Showcase",
-    "description": "High-end Apple-style product landing page with animations.",
-    "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35d2",
-    "tags": ["ui", "landing", "animation"],
-    "link": "https://example.com",
-    "views": 0
-  },
-  {
-    "id": "smart-dashboard",
-    "title": "Smart Analytics Dashboard",
-    "description": "Dynamic admin dashboard with charts and user roles.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-    "tags": ["dashboard", "charts", "admin"],
-    "link": "https://example.com",
-    "views": 0
-  },
-  {
-    "id": "task-manager",
-    "title": "Task Management App",
-    "description": "Kanban board with drag-and-drop system.",
-    "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe",
-    "tags": ["productivity", "app"],
-    "link": "https://example.com",
-    "views": 0
-  }
+{
+"id":"project1",
+"title":"SmartTask Dashboard",
+"description":"Task management dashboard",
+"link":"https://example.com"
+},
+{
+"id":"project2",
+"title":"Portfolio Website",
+"description":"Modern developer portfolio",
+"link":"https://example.com"
+}
 ]

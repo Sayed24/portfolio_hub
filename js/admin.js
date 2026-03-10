@@ -8,11 +8,11 @@ app.innerHTML=`
 
 <h2>Add Project</h2>
 
-<input id="title" placeholder="Title">
+<input id="title" placeholder="Project Title">
 
 <input id="link" placeholder="Project URL">
 
-<textarea id="desc"></textarea>
+<textarea id="desc" placeholder="Description"></textarea>
 
 <button id="save">Save</button>
 
@@ -22,7 +22,7 @@ app.innerHTML=`
 
 document.getElementById("save").onclick=()=>{
 
-alert("Admin demo — static GitHub Pages cannot save files.")
+alert("Static GitHub Pages demo — saving disabled.")
 
 }
 

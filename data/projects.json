@@ -1,14 +1,14 @@
 [
 {
-"id":"project1",
+"id":"smarttask",
 "title":"SmartTask Dashboard",
-"description":"Task management dashboard",
+"description":"Task management dashboard project.",
 "link":"https://example.com"
 },
 {
-"id":"project2",
-"title":"Portfolio Website",
-"description":"Modern developer portfolio",
+"id":"portfolio",
+"title":"Developer Portfolio",
+"description":"Modern developer portfolio site.",
 "link":"https://example.com"
 }
 ]

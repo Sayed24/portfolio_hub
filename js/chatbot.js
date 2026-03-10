@@ -1,4 +1,3 @@
-
 export function initChatbot(){
 
 const app=document.getElementById("app")
@@ -11,7 +10,7 @@ app.innerHTML=`
 
 <div id="messages"></div>
 
-<input id="chatInput">
+<input id="chatInput" placeholder="Ask about skills or projects">
 
 <button id="send">Send</button>
 
@@ -21,13 +20,15 @@ app.innerHTML=`
 
 document.getElementById("send").onclick=()=>{
 
-const q=document.getElementById("chatInput").value
+const input=document.getElementById("chatInput")
 
 const msg=document.createElement("p")
 
-msg.innerHTML="<b>You:</b> "+q
+msg.innerHTML="<b>You:</b> "+input.value
 
 document.getElementById("messages").appendChild(msg)
+
+input.value=""
 
 }
 

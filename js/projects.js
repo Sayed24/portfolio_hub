@@ -1,4 +1,3 @@
-
 export async function renderProjects(){
 
 const res=await fetch("data/projects.json")

@@ -1,4 +1,3 @@
-
 export async function renderProject(){
 
 const id=location.pathname.split("/project/")[1]

@@ -1,4 +1,3 @@
-
 import * as router from "./router.js"
 import {renderProjects} from "./projects.js"
 import {renderProject} from "./projectPage.js"

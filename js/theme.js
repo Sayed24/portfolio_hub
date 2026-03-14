@@ -1,4 +1,3 @@
-
 export function initTheme(){
 
 const btn=document.getElementById("themeToggle")

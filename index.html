@@ -11,7 +11,10 @@
 <link rel="manifest" href="manifest.json">
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -19,7 +22,9 @@
 
 <header>
 
-<div class="logo">Sayedrahim Sadat</div>
+<div class="logo" onclick="router.navigate('/')">
+Sayedrahim Sadat
+</div>
 
 <nav>
 
@@ -27,6 +32,7 @@
 <a onclick="router.navigate('/projects')">Projects</a>
 <a onclick="router.navigate('/about')">About</a>
 <a onclick="router.navigate('/contact')">Contact</a>
+<a onclick="router.navigate('/admin')">Admin</a>
 
 <button id="themeToggle">🌙</button>
 
@@ -38,7 +44,7 @@
 
 <h1>Full Stack Web Developer</h1>
 
-<p>I build modern web applications and dashboards.</p>
+<p>I design modern web applications and dashboards.</p>
 
 <button onclick="router.navigate('/projects')">
 View My Projects

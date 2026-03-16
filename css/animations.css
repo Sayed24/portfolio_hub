@@ -1,1 +1,21 @@
+.card{
+opacity:0;
+transform:translateY(20px);
+animation:fadeUp .6s forwards;
+}
 
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.page{
+animation:fadePage .4s;
+}
+
+@keyframes fadePage{
+from{opacity:0}
+to{opacity:1}
+}

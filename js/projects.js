@@ -1,3 +1,6 @@
+import {initSearch} from "./search.js"
+import {updateViews} from "./stats.js"
+
 export async function renderProjects(){
 
 const res=await fetch("data/projects.json")
@@ -5,7 +8,17 @@ const projects=await res.json()
 
 const app=document.getElementById("app")
 
-app.innerHTML=`<div class="projects-grid"></div>`
+app.innerHTML=`
+
+<div class="search-bar">
+
+<input id="searchInput" placeholder="Search projects">
+
+</div>
+
+<div class="projects-grid"></div>
+
+`
 
 const grid=document.querySelector(".projects-grid")
 
@@ -21,18 +34,23 @@ card.innerHTML=`
 <div class="card-content">
 
 <h3>${project.title}</h3>
-
 <p>${project.description}</p>
 
 </div>
 `
 
 card.onclick=()=>{
+
+updateViews(project.id)
+
 router.navigate("/project/"+project.id)
+
 }
 
 grid.appendChild(card)
 
 })
+
+initSearch()
 
 }

@@ -1,9 +1,5 @@
 export function initTheme(){
-
-const btn=document.getElementById("themeToggle")
-
-btn.onclick=()=>{
+document.getElementById("themeToggle").onclick=()=>{
 document.body.classList.toggle("dark")
 }
-
 }

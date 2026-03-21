@@ -1,11 +1,3 @@
-self.addEventListener("install",event=>{
-
-event.waitUntil(
-
-caches.open("portfolio").then(cache=>{
-return cache.add("/")
-})
-
-)
-
+self.addEventListener("install",e=>{
+e.waitUntil(caches.open("app").then(c=>c.add("/")))
 })

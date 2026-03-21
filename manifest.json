@@ -1,8 +1,6 @@
 {
-"name":"Sayedrahim Portfolio",
+"name":"Portfolio",
 "short_name":"Portfolio",
 "display":"standalone",
-"start_url":"/",
-"background_color":"#ffffff",
-"theme_color":"#000000"
+"start_url":"/"
 }

@@ -7,20 +7,16 @@ routes[path]=view
 export function navigate(path){
 history.pushState({},'',path)
 render()
+window.scrollTo(0,0)
 }
 
 export function render(){
-
 const path=location.pathname
 
-if(routes[path]){
-routes[path]()
-}
-
+if(routes[path]) routes[path]()
 else if(path.startsWith("/project/")){
 import("./projectPage.js").then(m=>m.renderProject())
 }
-
 }
 
 window.onpopstate=render

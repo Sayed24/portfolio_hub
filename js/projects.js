@@ -1,4 +1,5 @@
 import {initSearch} from "./search.js"
+import {initFilter} from "./filter.js"
 import {updateViews} from "./stats.js"
 
 export async function renderProjects(){
@@ -9,48 +10,40 @@ const projects=await res.json()
 const app=document.getElementById("app")
 
 app.innerHTML=`
-
-<div class="search-bar">
-
-<input id="searchInput" placeholder="Search projects">
-
+<div class="filter-bar">
+<input id="searchInput" placeholder="Search">
+<br><br>
+<button onclick="filterTag('all')">All</button>
+<button onclick="filterTag('dashboard')">Dashboard</button>
+<button onclick="filterTag('ui')">UI</button>
 </div>
 
 <div class="projects-grid"></div>
-
 `
 
 const grid=document.querySelector(".projects-grid")
 
-projects.forEach(project=>{
-
+projects.forEach(p=>{
 const card=document.createElement("div")
 card.className="card"
+card.dataset.tags=p.tags.join(" ")
 
 card.innerHTML=`
-
-<img src="${project.image}">
-
+<img src="https://api.microlink.io/?url=${p.link}&screenshot=true">
 <div class="card-content">
-
-<h3>${project.title}</h3>
-<p>${project.description}</p>
-
+<h3>${p.title}</h3>
+<p>${p.description}</p>
 </div>
 `
 
 card.onclick=()=>{
-
-updateViews(project.id)
-
-router.navigate("/project/"+project.id)
-
+updateViews(p.id)
+router.navigate("/project/"+p.id)
 }
 
 grid.appendChild(card)
-
 })
 
 initSearch()
-
+initFilter()
 }

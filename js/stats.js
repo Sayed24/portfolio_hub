@@ -1,18 +1,10 @@
-
 export function updateViews(id){
-
-let stats=JSON.parse(localStorage.getItem("views")||"{}")
-
-stats[id]=(stats[id]||0)+1
-
-localStorage.setItem("views",JSON.stringify(stats))
-
+let v=JSON.parse(localStorage.getItem("views")||"{}")
+v[id]=(v[id]||0)+1
+localStorage.setItem("views",JSON.stringify(v))
 }
 
 export function getViews(id){
-
-let stats=JSON.parse(localStorage.getItem("views")||"{}")
-
-return stats[id]||0
-
+let v=JSON.parse(localStorage.getItem("views")||"{}")
+return v[id]||0
 }

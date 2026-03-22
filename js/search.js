@@ -1,20 +1,9 @@
-
 export function initSearch(){
+document.getElementById("searchInput").oninput=e=>{
+const term=e.target.value.toLowerCase()
 
-const input=document.getElementById("searchInput")
-
-input.addEventListener("input",()=>{
-
-const term=input.value.toLowerCase()
-
-document.querySelectorAll(".card").forEach(card=>{
-
-const text=card.innerText.toLowerCase()
-
-card.style.display=text.includes(term)?"block":"none"
-
+document.querySelectorAll(".card").forEach(c=>{
+c.style.display=c.innerText.toLowerCase().includes(term)?"block":"none"
 })
-
-})
-
+}
 }

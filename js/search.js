@@ -1,9 +1,9 @@
-export function initSearch(){
-document.getElementById("searchInput").oninput=e=>{
-const term=e.target.value.toLowerCase()
+document.getElementById("search").addEventListener("input", e => {
+  const val = e.target.value.toLowerCase();
 
-document.querySelectorAll(".card").forEach(c=>{
-c.style.display=c.innerText.toLowerCase().includes(term)?"block":"none"
-})
-}
-}
+  const filtered = projects.filter(p =>
+    p.title.toLowerCase().includes(val)
+  );
+
+  renderProjects(filtered);
+});

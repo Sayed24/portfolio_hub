@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>Portfolio Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/theme.css">
 
-<title>Sayedrahim Sadat Portfolio</title>
-
-<link rel="manifest" href="manifest.json">
-
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/responsive.css">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
 
-<header>
-<div class="logo" onclick="router.navigate('/')">Sayedrahim Sadat</div>
+<header class="header">
+  <h1>Portfolio Hub</h1>
 
-<nav>
-<a onclick="router.navigate('/')">Home</a>
-<a onclick="router.navigate('/projects')">Projects</a>
-<a onclick="router.navigate('/about')">About</a>
-<a onclick="router.navigate('/contact')">Contact</a>
-<a onclick="router.navigate('/recruiter')">Recruiter</a>
-<a onclick="router.navigate('/admin')">Admin</a>
-
-<button id="themeToggle">🌙</button>
-</nav>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search projects...">
+    <button id="themeToggle">🌙</button>
+  </div>
 </header>
 
-<section class="hero">
-<h1>Full Stack Developer</h1>
-<p>Building modern, scalable, and dynamic web applications.</p>
-<button onclick="router.navigate('/projects')">View Projects</button>
-</section>
+<main>
+  <section id="projectsContainer"></section>
+</main>
 
-<main id="app"></main>
-
-<footer>
-<p>© 2026 Sayedrahim Sadat</p>
-</footer>
-
-<script type="module" src="js/app.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/search.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>

@@ -1,9 +1,14 @@
-.card{
-opacity:0;
-transform:translateY(20px);
-animation:fadeUp .5s forwards;
+:root {
+  --bg: #ffffff;
+  --text: #111;
 }
 
-@keyframes fadeUp{
-to{opacity:1;transform:translateY(0);}
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --text: #fff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
 }

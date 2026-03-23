@@ -1,49 +1,34 @@
-import {initSearch} from "./search.js"
-import {initFilter} from "./filter.js"
-import {updateViews} from "./stats.js"
+const container = document.getElementById("projectsContainer");
+let projects = [];
 
-export async function renderProjects(){
-
-const res=await fetch("data/projects.json")
-const projects=await res.json()
-
-const app=document.getElementById("app")
-
-app.innerHTML=`
-<div class="filter-bar">
-<input id="searchInput" placeholder="Search">
-<br><br>
-<button onclick="filterTag('all')">All</button>
-<button onclick="filterTag('dashboard')">Dashboard</button>
-<button onclick="filterTag('ui')">UI</button>
-</div>
-
-<div class="projects-grid"></div>
-`
-
-const grid=document.querySelector(".projects-grid")
-
-projects.forEach(p=>{
-const card=document.createElement("div")
-card.className="card"
-card.dataset.tags=p.tags.join(" ")
-
-card.innerHTML=`
-<img src="https://api.microlink.io/?url=${p.link}&screenshot=true">
-<div class="card-content">
-<h3>${p.title}</h3>
-<p>${p.description}</p>
-</div>
-`
-
-card.onclick=()=>{
-updateViews(p.id)
-router.navigate("/project/"+p.id)
+async function loadProjects() {
+  const res = await fetch("./data/projects.json");
+  projects = await res.json();
+  renderProjects(projects);
 }
 
-grid.appendChild(card)
-})
+function renderProjects(data) {
+  container.innerHTML = "";
 
-initSearch()
-initFilter()
+  data.forEach(project => {
+    const card = document.createElement("div");
+    card.className = "project-card";
+
+    card.innerHTML = `
+      <div class="card-image">
+        <img src="${project.image}">
+      </div>
+      <div class="card-content">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+      </div>
+    `;
+
+    card.onclick = () => {
+      window.open(project.link, "_blank");
+      trackView(project.id);
+    };
+
+    container.appendChild(card);
+  });
 }

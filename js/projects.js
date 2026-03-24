@@ -24,10 +24,9 @@ function renderProjects(data) {
       </div>
     `;
 
-    card.onclick = () => {
-      window.open(project.link, "_blank");
-      trackView(project.id);
-    };
+card.onclick = () => {
+  navigateToProject(project.id);
+};
 
     container.appendChild(card);
   });

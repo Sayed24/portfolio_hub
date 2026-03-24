@@ -13,3 +13,4 @@ function fadeInElements() {
     }, 100);
   });
 }
+fadeInElements();

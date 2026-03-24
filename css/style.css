@@ -35,3 +35,34 @@ button {
   border: none;
   cursor: pointer;
 }
+
+.project-page {
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+.project-hero img {
+  width: 100%;
+  border-radius: 20px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.project-info {
+  margin-top: 20px;
+}
+
+.visit-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+.back-btn {
+  margin-bottom: 15px;
+  cursor: pointer;
+}

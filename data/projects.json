@@ -16,5 +16,14 @@
     "link": "https://example.com",
     "tags": ["shop","frontend"],
     "views": 0
+  },
+  {
+    "id": 3,
+    "title": "Finance Tracker",
+    "description": "Track all Your Finances.",
+    "image": "https://source.unsplash.com/600x400/?Finance",
+    "link": "https://example.com",
+    "tags": ["finance","accounting"],
+    "views": 0
   }
 ]

@@ -1,4 +1,3 @@
-
 function renderProjectPage(id) {
   const project = projects.find(p => p.id == id);
 

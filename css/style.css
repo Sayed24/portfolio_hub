@@ -66,3 +66,13 @@ button {
   margin-bottom: 15px;
   cursor: pointer;
 }
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s;
+}

@@ -1,5 +1,8 @@
-loadProjects();
+loadProjects().then(() => {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("project");
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
-}
+  if (id) {
+    renderProjectPage(id);
+  }
+});

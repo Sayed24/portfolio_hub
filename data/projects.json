@@ -1,29 +1,142 @@
 [
   {
     "id": 1,
-    "title": "SmartTask Dashboard",
-    "description": "Task manager with charts and roles.",
-    "image": "https://thesawarkar.com/wp-content/uploads/2025/11/Dash-board-2-scaled.png",
-    "link": "https://example.com",
-    "tags": ["dashboard","ui"],
-    "views": 0
+    "title": "Dashboard App",
+    "description": "Analytics dashboard",
+    "image": "https://source.unsplash.com/600x400/?dashboard",
+    "link": "https://example.com"
   },
   {
     "id": 2,
-    "title": "E-Commerce UI",
-    "description": "Modern shopping experience.",
-    "image": "https://source.unsplash.com/600x400/?ecommerce",
-    "link": "https://example.com",
-    "tags": ["shop","frontend"],
-    "views": 0
+    "title": "Ecommerce UI",
+    "description": "Online store",
+    "image": "https://source.unsplash.com/600x400/?shopping",
+    "link": "https://example.com"
   },
   {
     "id": 3,
+    "title": "Portfolio Website",
+    "description": "Personal portfolio",
+    "image": "https://source.unsplash.com/600x400/?website",
+    "link": "https://example.com"
+  },
+  {
+    "id": 4,
+    "title": "Task Manager",
+    "description": "Manage tasks",
+    "image": "https://source.unsplash.com/600x400/?tasks",
+    "link": "https://example.com"
+  },
+  {
+    "id": 5,
+    "title": "Weather App",
+    "description": "Weather forecast",
+    "image": "https://source.unsplash.com/600x400/?weather",
+    "link": "https://example.com"
+  },
+  {
+    "id": 6,
+    "title": "Chat App",
+    "description": "Realtime chat",
+    "image": "https://source.unsplash.com/600x400/?chat",
+    "link": "https://example.com"
+  },
+  {
+    "id": 7,
     "title": "Finance Tracker",
-    "description": "Track all Your Finances.",
-    "image": "https://source.unsplash.com/600x400/?Finance",
-    "link": "https://example.com",
-    "tags": ["finance","accounting"],
-    "views": 0
+    "description": "Track expenses",
+    "image": "https://source.unsplash.com/600x400/?finance",
+    "link": "https://example.com"
+  },
+  {
+    "id": 8,
+    "title": "Blog Platform",
+    "description": "Write blogs",
+    "image": "https://source.unsplash.com/600x400/?blog",
+    "link": "https://example.com"
+  },
+  {
+    "id": 9,
+    "title": "Music App",
+    "description": "Play music",
+    "image": "https://source.unsplash.com/600x400/?music",
+    "link": "https://example.com"
+  },
+  {
+    "id": 10,
+    "title": "Fitness App",
+    "description": "Workout tracker",
+    "image": "https://source.unsplash.com/600x400/?fitness",
+    "link": "https://example.com"
+  },
+  {
+    "id": 11,
+    "title": "Travel Site",
+    "description": "Travel booking",
+    "image": "https://source.unsplash.com/600x400/?travel",
+    "link": "https://example.com"
+  },
+  {
+    "id": 12,
+    "title": "Recipe App",
+    "description": "Cooking recipes",
+    "image": "https://source.unsplash.com/600x400/?food",
+    "link": "https://example.com"
+  },
+  {
+    "id": 13,
+    "title": "Job Finder",
+    "description": "Search jobs",
+    "image": "https://source.unsplash.com/600x400/?career",
+    "link": "https://example.com"
+  },
+  {
+    "id": 14,
+    "title": "Map App",
+    "description": "Navigation system",
+    "image": "https://source.unsplash.com/600x400/?map",
+    "link": "https://example.com"
+  },
+  {
+    "id": 15,
+    "title": "Video Platform",
+    "description": "Streaming videos",
+    "image": "https://source.unsplash.com/600x400/?video",
+    "link": "https://example.com"
+  },
+  {
+    "id": 16,
+    "title": "Education App",
+    "description": "Learning platform",
+    "image": "https://source.unsplash.com/600x400/?education",
+    "link": "https://example.com"
+  },
+  {
+    "id": 17,
+    "title": "Crypto Dashboard",
+    "description": "Crypto tracking",
+    "image": "https://source.unsplash.com/600x400/?crypto",
+    "link": "https://example.com"
+  },
+  {
+    "id": 18,
+    "title": "News App",
+    "description": "Latest news",
+    "image": "https://source.unsplash.com/600x400/?news",
+    "link": "https://example.com"
+  },
+  {
+    "id": 19,
+    "title": "Photo Gallery",
+    "description": "Image viewer",
+    "image": "https://source.unsplash.com/600x400/?gallery",
+    "link": "https://example.com"
+  },
+  {
+    "id": 20,
+    "title": "AI Tool",
+    "description": "AI assistant",
+    "image": "https://source.unsplash.com/600x400/?ai",
+    "link": "https://example.com"
   }
 ]

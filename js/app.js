@@ -8,7 +8,7 @@ async function loadProjects() {
   renderProjects(projects);
 }
 
-/* RENDER GRID */
+/* SHOW GRID */
 function renderProjects(data) {
   app.innerHTML = "";
 
@@ -17,44 +17,53 @@ function renderProjects(data) {
     card.className = "card";
 
     card.innerHTML = `
-      <img src="${p.image}">
+      <img src="${p.image}" loading="lazy">
       <div class="card-content">
         <h3>${p.title}</h3>
         <p>${p.description}</p>
       </div>
     `;
 
-    card.onclick = () => showProject(p);
+    card.onclick = () => openProject(p);
 
     app.appendChild(card);
   });
 }
 
 /* PROJECT PAGE */
-function showProject(p) {
+function openProject(p) {
   app.innerHTML = `
     <div class="project-page">
-      <button onclick="renderProjects(projects)">← Back</button>
+      <button id="backBtn">← Back</button>
       <img src="${p.image}">
       <h1>${p.title}</h1>
       <p>${p.description}</p>
       <a href="${p.link}" target="_blank">Visit Project</a>
     </div>
   `;
+
+  document.getElementById("backBtn").onclick = () => {
+    renderProjects(projects);
+  };
 }
 
 /* SEARCH */
-document.getElementById("search").oninput = e => {
+document.getElementById("search").addEventListener("input", e => {
   const val = e.target.value.toLowerCase();
-  renderProjects(projects.filter(p =>
+
+  const filtered = projects.filter(p =>
     p.title.toLowerCase().includes(val)
-  ));
-};
+  );
+
+  renderProjects(filtered);
+});
 
 /* THEME */
 document.getElementById("themeToggle").onclick = () => {
-  const t = document.documentElement.getAttribute("data-theme");
-  document.documentElement.setAttribute("data-theme", t === "dark" ? "light" : "dark");
+  const current = document.documentElement.getAttribute("data-theme");
+
+  const newTheme = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", newTheme);
 };
 
 /* RECRUITER MODE */
@@ -64,10 +73,10 @@ document.getElementById("recruiterBtn").onclick = () => {
 
 /* ANALYTICS */
 document.getElementById("dashboardBtn").onclick = () => {
-  app.innerHTML = "<h2>Analytics (Basic)</h2>";
+  app.innerHTML = "<h2>Analytics Coming Soon</h2>";
 };
 
-/* CHATBOT */
+/* CHAT */
 const chatBtn = document.getElementById("chatBtn");
 const chatBox = document.getElementById("chatBox");
 
@@ -75,8 +84,12 @@ chatBtn.onclick = () => chatBox.classList.toggle("open");
 
 document.getElementById("chatInput").addEventListener("keydown", e => {
   if (e.key === "Enter") {
-    const msg = e.target.value;
-    document.getElementById("messages").innerHTML += `<p>${msg}</p>`;
+    const text = e.target.value;
+
+    const msg = document.createElement("p");
+    msg.innerText = text;
+
+    document.getElementById("messages").appendChild(msg);
     e.target.value = "";
   }
 });

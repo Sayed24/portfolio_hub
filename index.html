@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Hub</title>
+  <meta charset="UTF-8">
+  <title>Portfolio Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="manifest" href="manifest.json">
-
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -16,7 +15,7 @@
   <h1>Portfolio Hub</h1>
 
   <div class="controls">
-    <input type="text" id="search" placeholder="Search...">
+    <input id="search" placeholder="Search projects...">
     <button id="themeToggle">🌙</button>
     <button id="recruiterBtn">Recruiter</button>
     <button id="dashboardBtn">Analytics</button>
@@ -25,12 +24,13 @@
 
 <main id="app"></main>
 
+<!-- Chat -->
 <button id="chatBtn">💬</button>
 
 <div id="chatBox">
   <div class="chat-header">AI Recruiter</div>
   <div id="messages"></div>
-  <input id="chatInput" placeholder="Ask something...">
+  <input id="chatInput" placeholder="Ask about skills...">
 </div>
 
 <script src="js/app.js"></script>

@@ -1,81 +1,87 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Arial;
+  transition:0.3s;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(10px);
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
 }
 
 .controls {
-  display: flex;
-  gap: 10px;
+  display:flex;
+  gap:10px;
 }
 
-input {
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: none;
+#app {
+  padding:20px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
 }
 
-button {
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
+.card {
+  border-radius:15px;
+  overflow:hidden;
+  cursor:pointer;
+  background:#eee;
+  transition:0.3s;
 }
 
-.project-page {
-  padding: 20px;
-  animation: fadeIn 0.5s ease;
+.card:hover {
+  transform:scale(1.03);
 }
 
-.project-hero img {
-  width: 100%;
-  border-radius: 20px;
-  max-height: 400px;
-  object-fit: cover;
+.card img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
 }
 
-.project-info {
-  margin-top: 20px;
+.card-content {
+  padding:10px;
 }
 
-.visit-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  background: black;
-  color: white;
-  text-decoration: none;
+/* Dark Mode */
+[data-theme="dark"] {
+  background:#111;
+  color:#fff;
 }
 
-.back-btn {
-  margin-bottom: 15px;
-  cursor: pointer;
+[data-theme="dark"] .card {
+  background:#222;
 }
-.cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s;
+
+/* Project Page */
+.project-page img {
+  width:100%;
+  border-radius:15px;
 }
-.recruiter .project-card {
-  border: 2px solid gold;
+
+/* Chat */
+#chatBtn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+}
+
+#chatBox {
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  width:250px;
+  display:none;
+  background:white;
+  padding:10px;
+}
+
+#chatBox.open {
+  display:block;
 }

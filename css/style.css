@@ -5,33 +5,45 @@
 }
 
 body {
-  font-family: Arial;
-  transition:0.3s;
+  font-family: Arial, sans-serif;
+  transition: 0.3s;
 }
 
+/* HEADER */
 header {
   display:flex;
   justify-content:space-between;
+  align-items:center;
   padding:15px;
+  flex-wrap:wrap;
 }
 
 .controls {
   display:flex;
   gap:10px;
+  flex-wrap:wrap;
 }
 
+input, button {
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+}
+
+/* GRID */
 #app {
   padding:20px;
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap:20px;
 }
 
+/* CARD */
 .card {
+  background:#f2f2f2;
   border-radius:15px;
   overflow:hidden;
   cursor:pointer;
-  background:#eee;
   transition:0.3s;
 }
 
@@ -49,7 +61,22 @@ header {
   padding:10px;
 }
 
-/* Dark Mode */
+/* PROJECT PAGE */
+.project-page {
+  max-width:800px;
+  margin:auto;
+}
+
+.project-page img {
+  width:100%;
+  border-radius:15px;
+}
+
+.project-page button {
+  margin-bottom:10px;
+}
+
+/* DARK MODE */
 [data-theme="dark"] {
   background:#111;
   color:#fff;
@@ -59,13 +86,7 @@ header {
   background:#222;
 }
 
-/* Project Page */
-.project-page img {
-  width:100%;
-  border-radius:15px;
-}
-
-/* Chat */
+/* CHAT */
 #chatBtn {
   position:fixed;
   bottom:20px;
@@ -76,12 +97,21 @@ header {
   position:fixed;
   bottom:80px;
   right:20px;
-  width:250px;
-  display:none;
+  width:260px;
   background:white;
   padding:10px;
+  display:none;
+  border-radius:10px;
 }
 
 #chatBox.open {
   display:block;
+}
+
+/* MOBILE FIX */
+@media(max-width:600px){
+  header {
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }

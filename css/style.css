@@ -16,6 +16,9 @@ body {
   color: #111;
   transition: all 0.3s ease;
 }
+a {
+  text-decoration: none;
+}
 
 /* DARK MODE */
 [data-theme="dark"] {

@@ -1,84 +1,111 @@
+/* =========================
+   RESET
+========================= */
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* =========================
+   BODY / GLOBAL
+========================= */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial, sans-serif;
   background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
-  color:#111;
+  color: #111;
   transition: all 0.3s ease;
 }
 
 /* DARK MODE */
 [data-theme="dark"] {
   background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-  color:#fff;
+  color: #fff;
 }
 
-/* HEADER (APPLE STYLE) */
+/* =========================
+   HEADER (APPLE STYLE)
+========================= */
 header {
   position: sticky;
   top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 25px;
+
   backdrop-filter: blur(20px);
-  background: rgba(255,255,255,0.6);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 25px;
-  z-index:1000;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 [data-theme="dark"] header {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
-/* CONTROLS */
+/* =========================
+   CONTROLS
+========================= */
 .controls {
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
+/* INPUT */
 input {
-  padding:10px;
-  border-radius:12px;
-  border:none;
-  outline:none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
   background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
 }
 
+/* BUTTON */
 button {
-  padding:10px 14px;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
   background: rgba(255,255,255,0.6);
   backdrop-filter: blur(10px);
-  transition:0.3s;
+
+  transition: all 0.3s ease;
 }
 
 button:hover {
   transform: scale(1.05);
 }
 
-/* GRID */
+/* =========================
+   GRID (PROJECTS)
+========================= */
 #app {
-  padding:30px;
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap:25px;
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-/* CARD (GLASS STYLE) */
+/* =========================
+   CARD (GLASSMORPHISM)
+========================= */
 .card {
-  border-radius:20px;
-  overflow:hidden;
-  background: rgba(255,255,255,0.25);
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
+
+  cursor: pointer;
+
   transition: all 0.4s ease;
-  cursor:pointer;
   transform: translateY(0);
 }
 
@@ -87,91 +114,165 @@ button:hover {
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
+/* IMAGE */
 .card img {
-  width:100%;
-  height:180px;
-  object-fit:cover;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
+/* CONTENT */
 .card-content {
-  padding:15px;
+  padding: 15px;
 }
 
 .card-content h3 {
-  font-size:18px;
-  margin-bottom:6px;
+  font-size: 18px;
+  margin-bottom: 6px;
 }
 
-/* PROJECT PAGE (PREMIUM) */
+.card-content p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* =========================
+   PROJECT PAGE
+========================= */
 .project-page {
-  max-width:900px;
-  margin:auto;
+  max-width: 900px;
+  margin: auto;
   animation: fadeIn 0.5s ease;
 }
 
 .project-page img {
-  width:100%;
-  border-radius:20px;
-  margin-bottom:15px;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 15px;
 }
 
 .project-page h1 {
-  font-size:28px;
-  margin-bottom:10px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
+.project-page p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* BUTTON (VISIT) */
 .project-page a {
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 16px;
-  border-radius:12px;
-  background:black;
-  color:white;
-  text-decoration:none;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+
+  background: black;
+  color: white;
+  transition: 0.3s;
+}
+
+.project-page a:hover {
+  transform: scale(1.05);
 }
 
 [data-theme="dark"] .project-page a {
-  background:white;
-  color:black;
+  background: white;
+  color: black;
 }
 
-/* CHAT */
+/* BACK BUTTON */
+.project-page button {
+  margin-bottom: 15px;
+}
+
+/* =========================
+   CHAT SYSTEM
+========================= */
 #chatBtn {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  border-radius:50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  font-size: 18px;
 }
 
+/* CHAT BOX */
 #chatBox {
-  position:fixed;
-  bottom:80px;
-  right:20px;
-  width:260px;
-  border-radius:15px;
-  padding:10px;
-  display:none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+
+  width: 260px;
+  border-radius: 15px;
+  padding: 10px;
+
+  display: none;
+
   background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 #chatBox.open {
-  display:block;
+  display: block;
 }
 
-/* ANIMATIONS */
+.chat-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#messages {
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
 @keyframes fadeIn {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1; transform:translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* MOBILE */
-@media(max-width:600px){
+/* =========================
+   SCROLL SMOOTH
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
   header {
-    flex-direction:column;
-    align-items:flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   #app {
-    padding:15px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .card img {
+    height: 150px;
   }
 }

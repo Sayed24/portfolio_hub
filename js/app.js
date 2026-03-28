@@ -12,9 +12,12 @@ async function loadProjects() {
 function renderProjects(data) {
   app.innerHTML = "";
 
-  data.forEach(p => {
+  data.forEach((p, i) => {
     const card = document.createElement("div");
     card.className = "card";
+
+    card.style.animation = `fadeIn 0.5s ease ${i * 0.05}s forwards`;
+    card.style.opacity = "0";
 
     card.innerHTML = `
       <img src="${p.image}" loading="lazy">
@@ -23,6 +26,12 @@ function renderProjects(data) {
         <p>${p.description}</p>
       </div>
     `;
+
+    card.onclick = () => openProject(p);
+
+    app.appendChild(card);
+  });
+}
 
     card.onclick = () => openProject(p);
 

@@ -1,6 +1,9 @@
 const app = document.getElementById("app");
 let projects = [];
-
+(function () {
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+})();
 /* LOAD PROJECTS */
 async function loadProjects() {
   const res = await fetch("data/projects.json");

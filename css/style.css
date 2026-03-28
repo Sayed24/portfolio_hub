@@ -5,50 +5,86 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  transition: 0.3s;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  color:#111;
+  transition: all 0.3s ease;
 }
 
-/* HEADER */
+/* DARK MODE */
+[data-theme="dark"] {
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color:#fff;
+}
+
+/* HEADER (APPLE STYLE) */
 header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.6);
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px;
-  flex-wrap:wrap;
+  padding:15px 25px;
+  z-index:1000;
 }
 
+[data-theme="dark"] header {
+  background: rgba(0,0,0,0.6);
+}
+
+/* CONTROLS */
 .controls {
   display:flex;
   gap:10px;
   flex-wrap:wrap;
 }
 
-input, button {
-  padding:8px 12px;
-  border-radius:8px;
+input {
+  padding:10px;
+  border-radius:12px;
   border:none;
+  outline:none;
+  background: rgba(255,255,255,0.7);
+}
+
+button {
+  padding:10px 14px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  transition:0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
 
 /* GRID */
 #app {
-  padding:20px;
+  padding:30px;
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap:25px;
 }
 
-/* CARD */
+/* CARD (GLASS STYLE) */
 .card {
-  background:#f2f2f2;
-  border-radius:15px;
+  border-radius:20px;
   overflow:hidden;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(20px);
+  transition: all 0.4s ease;
   cursor:pointer;
-  transition:0.3s;
+  transform: translateY(0);
 }
 
 .card:hover {
-  transform:scale(1.03);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -58,32 +94,45 @@ input, button {
 }
 
 .card-content {
-  padding:10px;
+  padding:15px;
 }
 
-/* PROJECT PAGE */
+.card-content h3 {
+  font-size:18px;
+  margin-bottom:6px;
+}
+
+/* PROJECT PAGE (PREMIUM) */
 .project-page {
-  max-width:800px;
+  max-width:900px;
   margin:auto;
+  animation: fadeIn 0.5s ease;
 }
 
 .project-page img {
   width:100%;
-  border-radius:15px;
+  border-radius:20px;
+  margin-bottom:15px;
 }
 
-.project-page button {
+.project-page h1 {
+  font-size:28px;
   margin-bottom:10px;
 }
 
-/* DARK MODE */
-[data-theme="dark"] {
-  background:#111;
-  color:#fff;
+.project-page a {
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 16px;
+  border-radius:12px;
+  background:black;
+  color:white;
+  text-decoration:none;
 }
 
-[data-theme="dark"] .card {
-  background:#222;
+[data-theme="dark"] .project-page a {
+  background:white;
+  color:black;
 }
 
 /* CHAT */
@@ -91,6 +140,7 @@ input, button {
   position:fixed;
   bottom:20px;
   right:20px;
+  border-radius:50%;
 }
 
 #chatBox {
@@ -98,20 +148,30 @@ input, button {
   bottom:80px;
   right:20px;
   width:260px;
-  background:white;
+  border-radius:15px;
   padding:10px;
   display:none;
-  border-radius:10px;
+  background: rgba(255,255,255,0.9);
 }
 
 #chatBox.open {
   display:block;
 }
 
-/* MOBILE FIX */
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
 @media(max-width:600px){
   header {
     flex-direction:column;
     align-items:flex-start;
+  }
+
+  #app {
+    padding:15px;
   }
 }

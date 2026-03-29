@@ -4,6 +4,18 @@ document.getElementById("viewProjectsBtn").onclick = () => {
     behavior: "smooth"
   });
 };
+const titleText = "Crafting Scalable & Modern Web Applications";
+let index = 0;
+
+function typeEffect() {
+  if (index < titleText.length) {
+    document.getElementById("heroTitle").innerHTML += titleText.charAt(index);
+    index++;
+    setTimeout(typeEffect, 40);
+  }
+}
+
+typeEffect();
 let projects = [];
 
 /* =========================

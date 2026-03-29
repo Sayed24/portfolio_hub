@@ -1,5 +1,9 @@
 const app = document.getElementById("app");
-
+document.getElementById("viewProjectsBtn").onclick = () => {
+  document.getElementById("app").scrollIntoView({
+    behavior: "smooth"
+  });
+};
 let projects = [];
 
 /* =========================

@@ -6,7 +6,71 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
 
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button {
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 16px;
+}
+
+/* PRIMARY BUTTON */
+.hero-buttons button:first-child {
+  background: black;
+  color: white;
+}
+
+[data-theme="dark"] .hero-buttons button:first-child {
+  background: white;
+  color: black;
+}
+
+/* SECONDARY */
+.hero-buttons .secondary {
+  background: rgba(255,255,255,0.6);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
 /* =========================
    BODY / GLOBAL
 ========================= */

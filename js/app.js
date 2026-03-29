@@ -1,9 +1,5 @@
 const app = document.getElementById("app");
-document.getElementById("viewProjectsBtn").onclick = () => {
-  document.getElementById("app").scrollIntoView({
-    behavior: "smooth"
-  });
-};
+
 const titleText = "Crafting Scalable & Modern Web Applications";
 let index = 0;
 
@@ -16,6 +12,13 @@ function typeEffect() {
 }
 
 typeEffect();
+
+document.getElementById("viewProjectsBtn").onclick = () => {
+  document.getElementById("app").scrollIntoView({
+    behavior: "smooth"
+  });
+};
+
 let projects = [];
 
 /* =========================

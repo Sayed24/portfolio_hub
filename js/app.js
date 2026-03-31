@@ -19,6 +19,10 @@ document.getElementById("viewProjectsBtn").onclick = () => {
   });
 };
 
+document.querySelector("header h1").onclick = () => {
+  renderProjects(projects);
+};
+
 let projects = [];
 
 /* =========================

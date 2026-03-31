@@ -19,10 +19,6 @@ document.getElementById("viewProjectsBtn").onclick = () => {
   });
 };
 
-document.querySelector("header h1").onclick = () => {
-  renderProjects(projects);
-};
-
 let projects = [];
 
 /* =========================
@@ -165,6 +161,10 @@ document.getElementById("chatInput").addEventListener("keydown", e => {
     messages.scrollTop = messages.scrollHeight;
   }
 });
+
+document.querySelector("header h1").onclick = () => {
+  renderProjects(projects);
+};
 
 /* SIMPLE AI RESPONSES */
 function getAIResponse(input) {

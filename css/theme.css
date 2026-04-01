@@ -12,3 +12,4 @@ body {
   background: var(--bg);
   color: var(--text);
 }
+--card: rgba(255,255,255,0.05);

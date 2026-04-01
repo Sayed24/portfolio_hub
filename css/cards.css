@@ -1,48 +1,63 @@
-#projectsContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
-
-.project-card {
-  border-radius: 20px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(20px);
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.project-card:hover {
-  transform: scale(1.03);
-}
-
-.card-image img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.tags span {
-  font-size: 12px;
-  margin-right: 5px;
-}
+/* =========================
+   PREMIUM CARD
+========================= */
 .card {
+  position: relative;
   border-radius: 18px;
   overflow: hidden;
 
   background: var(--card);
   border: 1px solid var(--border);
 
-  transition: all 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
+
+  /* DEPTH */
+  box-shadow: 
+    0 4px 12px rgba(0,0,0,0.08),
+    0 10px 30px rgba(0,0,0,0.06);
 }
 
+/* HOVER EFFECT */
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.15),
+    0 40px 80px rgba(0,0,0,0.10);
+}
+
+/* DARK MODE SHADOW FIX */
+[data-theme="dark"] .card {
+  box-shadow:
+    0 6px 20px rgba(0,0,0,0.6),
+    0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* IMAGE ZOOM */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* CONTENT */
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.card-content p {
+  font-size: 14px;
+  opacity: 0.75;
 }

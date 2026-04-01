@@ -13,9 +13,9 @@
 :root {
   --bg: #ffffff;
   --text: #111111;
-  --card: rgba(255,255,255,0.7);
-  --glass: rgba(255,255,255,0.6);
-  --border: rgba(0,0,0,0.05);
+  --card: #ffffff;
+  --glass: rgba(255,255,255,0.85);
+  --border: rgba(0,0,0,0.08);
   --primary: #000000;
   --primary-text: #ffffff;
 }
@@ -24,8 +24,8 @@
 [data-theme="dark"] {
   --bg: #000000;
   --text: #f5f5f5;
-  --card: rgba(255,255,255,0.05);
-  --glass: rgba(255,255,255,0.08);
+  --card: #111111;
+  --glass: rgba(20,20,20,0.9);
   --border: rgba(255,255,255,0.08);
   --primary: #ffffff;
   --primary-text: #000000;
@@ -60,7 +60,7 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
-/* LOGO (NOT LINK STYLE) */
+/* LOGO (CLEAN CLICKABLE TEXT) */
 header h1 {
   font-size: 20px;
   font-weight: 600;
@@ -118,7 +118,7 @@ button:hover {
 
 .hero p {
   font-size: 18px;
-  opacity: 0.8;
+  opacity: 0.85;
   margin-bottom: 30px;
 }
 
@@ -152,14 +152,14 @@ button:hover {
 }
 
 /* =========================
-   CARD
+   CARD (FIXED VISIBILITY)
 ========================= */
 .card {
   border-radius: 18px;
   overflow: hidden;
 
   background: var(--card);
-  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
 
   transition: all 0.3s ease;
   cursor: pointer;
@@ -181,6 +181,16 @@ button:hover {
   padding: 15px;
 }
 
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.card-content p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
 /* =========================
    PROJECT PAGE
 ========================= */
@@ -195,6 +205,15 @@ button:hover {
   margin-bottom: 15px;
 }
 
+.project-page h1 {
+  margin-bottom: 10px;
+}
+
+.project-page p {
+  opacity: 0.9;
+}
+
+/* VISIT BUTTON */
 .project-page a {
   display: inline-block;
   margin-top: 15px;
@@ -204,6 +223,11 @@ button:hover {
 
   background: var(--primary);
   color: var(--primary-text);
+}
+
+/* BACK BUTTON */
+.project-page button {
+  margin-bottom: 15px;
 }
 
 /* =========================
@@ -230,11 +254,39 @@ button:hover {
   border-radius: 12px;
 
   background: var(--card);
+  border: 1px solid var(--border);
+
   display: none;
 }
 
 #chatBox.open {
   display: block;
+}
+
+.chat-header {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#messages {
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================
@@ -250,7 +302,16 @@ button:hover {
     font-size: 30px;
   }
 
+  .hero p {
+    font-size: 16px;
+  }
+
   #app {
     padding: 15px;
+    gap: 15px;
+  }
+
+  .card img {
+    height: 150px;
   }
 }

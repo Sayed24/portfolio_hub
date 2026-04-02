@@ -93,17 +93,3 @@
     transform: translateY(0);
   }
 }
-.card {
-  border-radius: 18px;
-  overflow: hidden;
-
-  background: var(--card);
-  border: 1px solid var(--border);
-
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}

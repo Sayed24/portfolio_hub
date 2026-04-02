@@ -25,7 +25,7 @@ let projects = [];
    LOAD PROJECTS
 ========================= */
 async function loadProjects() {
-  const res = await fetch("data/projects.json");
+  const res = await fetch("./data/projects.json");
   projects = await res.json();
   renderProjects(projects);
 }

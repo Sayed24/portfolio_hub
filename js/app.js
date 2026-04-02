@@ -40,6 +40,8 @@ function renderProjects(data) {
     const card = document.createElement("div");
     card.className = "card";
 
+    card.style.animationDelay = `${i * 0.07}s`;
+
     // Apple-style animation delay
     card.style.animation = `fadeIn 0.5s ease ${i * 0.05}s forwards`;
     card.style.opacity = "0";

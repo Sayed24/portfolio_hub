@@ -24,26 +24,6 @@
   transform: translateY(30px);
   animation: cardFadeIn 0.6s ease forwards;
 }
-.card {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-
-  background: var(--card);
-  border: 1px solid var(--border);
-
-  cursor: pointer;
-
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-
-  box-shadow: 
-    0 4px 12px rgba(0,0,0,0.08),
-    0 10px 30px rgba(0,0,0,0.06);
-
-  /* ✅ FIX: make visible by default */
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* HOVER */
 .card:hover {
@@ -106,10 +86,3 @@
   opacity: 1;
 }
 
-/* ANIMATION */
-@keyframes cardFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

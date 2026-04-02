@@ -20,7 +20,7 @@
     0 10px 30px rgba(0,0,0,0.06);
 
   /* animation start */
-  opacity: 0;
+  opacity: 1;
   transform: translateY(30px);
   animation: cardFadeIn 0.6s ease forwards;
 }

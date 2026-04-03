@@ -160,25 +160,29 @@ button:hover {
 /* =========================
    PREMIUM CARD
 ========================= */
+/* =========================
+   CARD (FIXED + VISIBLE)
+========================= */
 .card {
-  position: relative;
+  display: block;
+
   border-radius: 18px;
   overflow: hidden;
 
   background: var(--card);
   border: 1px solid var(--border);
 
-  cursor: pointer;
+  padding-bottom: 10px;
 
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  /* FORCE visibility */
+  opacity: 1 !important;
+  visibility: visible !important;
 
+  /* depth */
   box-shadow: 
-    0 4px 12px rgba(0,0,0,0.08),
-    0 10px 30px rgba(0,0,0,0.06);
+    0 4px 12px rgba(0,0,0,0.1);
 
-  /* ✅ FIX: make visible by default */
-  opacity: 1;
-  transform: translateY(0);
+  cursor: pointer;
 }
 
 /* HOVER */

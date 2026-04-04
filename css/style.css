@@ -14,19 +14,16 @@
   --bg: #ffffff;
   --text: #111111;
   --card: #ffffff;
-  --glass: rgba(255,255,255,0.85);
-  --border: rgba(0,0,0,0.08);
+  --border: #e5e5e5;
   --primary: #000000;
   --primary-text: #ffffff;
 }
 
-/* DARK MODE */
 [data-theme="dark"] {
   --bg: #000000;
   --text: #f5f5f5;
-  --card: #111111;
-  --glass: rgba(20,20,20,0.9);
-  --border: rgba(255,255,255,0.08);
+  --card: #121212;
+  --border: #222;
   --primary: #ffffff;
   --primary-text: #000000;
 }
@@ -38,32 +35,23 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  transition: all 0.3s ease;
 }
 
 /* =========================
    HEADER
 ========================= */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 15px 25px;
-
-  backdrop-filter: blur(20px);
-  background: var(--glass);
+  padding: 15px 20px;
   border-bottom: 1px solid var(--border);
 }
 
 /* LOGO */
 header h1 {
   font-size: 20px;
-  font-weight: 600;
   cursor: pointer;
 }
 
@@ -78,209 +66,124 @@ header h1 {
 
 /* INPUT */
 input {
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
   background: var(--card);
   color: var(--text);
 }
 
 /* BUTTON */
 button {
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
   background: var(--card);
   color: var(--text);
-
-  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 button:hover {
-  transform: scale(1.05);
+  opacity: 0.85;
 }
 
 /* =========================
    HERO SECTION
 ========================= */
 .hero {
-  padding: 100px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 44px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 18px;
-  opacity: 0.85;
-  margin-bottom: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-/* CTA BUTTONS */
+/* CTA */
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
-.hero-buttons button {
-  padding: 14px 20px;
-  border-radius: 14px;
-  font-size: 16px;
-}
-
-/* PRIMARY CTA */
 .hero-buttons button:first-child {
   background: var(--primary);
   color: var(--primary-text);
-}
-
-/* SECONDARY */
-.hero-buttons .secondary {
-  background: var(--card);
 }
 
 /* =========================
    GRID
 ========================= */
 #app {
-  padding: 30px;
+  padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 /* =========================
-   PREMIUM CARD
-========================= */
-/* =========================
-   CARD (FIXED + VISIBLE)
+   CARD (STABLE VERSION)
 ========================= */
 .card {
-  display: block;
-
-  border-radius: 18px;
-  overflow: hidden;
-
   background: var(--card);
   border: 1px solid var(--border);
-
-  padding-bottom: 10px;
-
-  /* FORCE visibility */
-  opacity: 1 !important;
-  visibility: visible !important;
-
-  /* depth */
-  box-shadow: 
-    0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
 
   cursor: pointer;
-}
-
-/* HOVER */
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.15),
-    0 40px 80px rgba(0,0,0,0.10);
-}
-
-/* DARK MODE SHADOW */
-[data-theme="dark"] .card {
-  box-shadow:
-    0 6px 20px rgba(0,0,0,0.6),
-    0 20px 50px rgba(0,0,0,0.5);
 }
 
 /* IMAGE */
 .card img {
   width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-/* IMAGE ZOOM */
-.card:hover img {
-  transform: scale(1.08);
 }
 
 /* CONTENT */
 .card-content {
-  padding: 15px;
+  padding: 10px;
 }
 
 .card-content h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
 .card-content p {
   font-size: 14px;
-  opacity: 0.75;
-}
-
-/* GLOW */
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-
-  opacity: 0;
-  transition: opacity 0.3s ease;
-
-  box-shadow: 0 0 40px rgba(0, 120, 255, 0.25);
-}
-
-.card:hover::after {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 /* =========================
    PROJECT PAGE
 ========================= */
 .project-page {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
 }
 
 .project-page img {
   width: 100%;
-  border-radius: 16px;
-  margin-bottom: 15px;
-}
-
-.project-page h1 {
+  border-radius: 10px;
   margin-bottom: 10px;
-}
-
-.project-page p {
-  opacity: 0.9;
 }
 
 .project-page a {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 16px;
-  border-radius: 12px;
-  text-decoration: none;
-
+  margin-top: 10px;
+  padding: 8px 12px;
   background: var(--primary);
   color: var(--primary-text);
-}
-
-.project-page button {
-  margin-bottom: 15px;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 /* =========================
@@ -290,24 +193,16 @@ button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
 }
 
 #chatBox {
   position: fixed;
-  bottom: 80px;
+  bottom: 70px;
   right: 20px;
-
-  width: 260px;
+  width: 250px;
   padding: 10px;
-  border-radius: 12px;
-
-  background: var(--card);
   border: 1px solid var(--border);
-
+  background: var(--card);
   display: none;
 }
 
@@ -315,51 +210,16 @@ button:hover {
   display: block;
 }
 
-.chat-header {
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-#messages {
-  max-height: 150px;
-  overflow-y: auto;
-  font-size: 13px;
-  margin-bottom: 5px;
-}
-
-/* =========================
-   ANIMATION
-========================= */
-@keyframes cardFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* =========================
    MOBILE
 ========================= */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   header {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .hero h1 {
-    font-size: 30px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  #app {
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .card img {
-    height: 150px;
+    font-size: 24px;
   }
 }

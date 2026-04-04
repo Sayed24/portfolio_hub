@@ -131,11 +131,27 @@ button:hover {
 /* =========================
    CARD (STABLE VERSION)
 ========================= */
+/* =========================
+   CARD (FIXED + VISIBLE)
+========================= */
 .card {
+  display: block;
+
+  border-radius: 18px;
+  overflow: hidden;
+
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
+
+  padding-bottom: 10px;
+
+  /* FORCE visibility */
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  /* depth */
+  box-shadow: 
+    0 4px 12px rgba(0,0,0,0.1);
 
   cursor: pointer;
 }

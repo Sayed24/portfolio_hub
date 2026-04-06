@@ -253,19 +253,17 @@ button:hover {
   position: absolute;
   inset: 0;
 
-  background: radial-gradient(circle at 20% 30%, #4facfe33, transparent),
-              radial-gradient(circle at 80% 70%, #00c6ff33, transparent),
-              radial-gradient(circle at 50% 50%, #3a7bd533, transparent);
+  background: radial-gradient(circle at 30% 30%, #4facfe33, transparent),
+              radial-gradient(circle at 70% 70%, #00c6ff33, transparent);
 
   z-index: 0;
 }
 
-/* DARK MODE BG */
 [data-theme="dark"] .hero-bg {
-  background: radial-gradient(circle at 20% 30%, #4facfe22, transparent),
-              radial-gradient(circle at 80% 70%, #00c6ff22, transparent),
-              radial-gradient(circle at 50% 50%, #3a7bd522, transparent);
+  background: radial-gradient(circle at 30% 30%, #4facfe22, transparent),
+              radial-gradient(circle at 70% 70%, #00c6ff22, transparent);
 }
+
 /* CONTENT CENTER */
 .hero-content {
   position: relative;

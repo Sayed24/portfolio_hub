@@ -239,3 +239,130 @@ button:hover {
     font-size: 24px;
   }
 }
+/* =========================
+   HERO (FULL FIX)
+========================= */
+.hero {
+  position: relative;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+/* BACKGROUND EFFECT */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(circle at 20% 30%, #6dd5ed33, transparent),
+              radial-gradient(circle at 80% 70%, #c471ed33, transparent),
+              radial-gradient(circle at 50% 50%, #f64f5933, transparent);
+
+  z-index: 0;
+}
+
+/* DARK MODE BG */
+[data-theme="dark"] .hero-bg {
+  background: radial-gradient(circle at 20% 30%, #6dd5ed22, transparent),
+              radial-gradient(circle at 80% 70%, #c471ed22, transparent),
+              radial-gradient(circle at 50% 50%, #f64f5922, transparent);
+}
+
+/* CONTENT CENTER */
+.hero-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* TITLE */
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* TEXT */
+.hero p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.hero-buttons button {
+  padding: 12px 18px;
+  border-radius: 10px;
+}
+
+/* PRIMARY BUTTON */
+.hero-buttons button:first-child {
+  background: var(--primary);
+  color: var(--primary-text);
+}
+
+/* SECONDARY BUTTON */
+.hero-buttons .secondary {
+  background: var(--card);
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-stats div {
+  text-align: center;
+}
+
+/* NUMBER */
+.hero-stats h3 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+/* LABEL */
+.hero-stats p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .hero-stats h3 {
+    font-size: 20px;
+  }
+}

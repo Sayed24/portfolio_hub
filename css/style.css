@@ -250,6 +250,7 @@ button:hover {
 
 /* BACKGROUND EFFECT */
 .hero-bg {
+   filter: blur(40px);
   position: absolute;
   inset: 0;
 

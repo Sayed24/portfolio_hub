@@ -253,20 +253,19 @@ button:hover {
   position: absolute;
   inset: 0;
 
-  background: radial-gradient(circle at 20% 30%, #6dd5ed33, transparent),
-              radial-gradient(circle at 80% 70%, #c471ed33, transparent),
-              radial-gradient(circle at 50% 50%, #f64f5933, transparent);
+  background: radial-gradient(circle at 20% 30%, #4facfe33, transparent),
+              radial-gradient(circle at 80% 70%, #00c6ff33, transparent),
+              radial-gradient(circle at 50% 50%, #3a7bd533, transparent);
 
   z-index: 0;
 }
 
 /* DARK MODE BG */
 [data-theme="dark"] .hero-bg {
-  background: radial-gradient(circle at 20% 30%, #6dd5ed22, transparent),
-              radial-gradient(circle at 80% 70%, #c471ed22, transparent),
-              radial-gradient(circle at 50% 50%, #f64f5922, transparent);
+  background: radial-gradient(circle at 20% 30%, #4facfe22, transparent),
+              radial-gradient(circle at 80% 70%, #00c6ff22, transparent),
+              radial-gradient(circle at 50% 50%, #3a7bd522, transparent);
 }
-
 /* CONTENT CENTER */
 .hero-content {
   position: relative;

@@ -249,20 +249,18 @@ button:hover {
 }
 
 /* BACKGROUND EFFECT */
+/* LIGHT MODE (SOFT PREMIUM NEUTRAL) */
 .hero-bg {
-   filter: blur(40px);
   position: absolute;
   inset: 0;
 
-  background: radial-gradient(circle at 20% 30%, #4facfe33, transparent),
-              radial-gradient(circle at 80% 70%, #00c6ff33, transparent),
-              radial-gradient(circle at 50% 50%, #3a7bd533, transparent);
+  background: radial-gradient(circle at 20% 30%, #f5f7fa, transparent),
+              radial-gradient(circle at 80% 70%, #e4ecf7, transparent),
+              radial-gradient(circle at 50% 50%, #dfe9f3, transparent);
 
   z-index: 0;
 
-  /* ANIMATION */
   animation: heroMove 18s ease-in-out infinite alternate;
-  will-change: transform;
 }
 
 [data-theme="dark"] .hero-bg {

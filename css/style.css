@@ -249,14 +249,14 @@ button:hover {
 }
 
 /* BACKGROUND EFFECT */
-/* LIGHT MODE (PREMIUM WARM NEUTRAL) */
+/* LIGHT MODE (PROFESSIONAL BLUE) */
 .hero-bg {
   position: absolute;
   inset: 0;
 
-  background: radial-gradient(circle at 20% 30%, #f8f6f2, transparent),
-              radial-gradient(circle at 80% 70%, #f1ece6, transparent),
-              radial-gradient(circle at 50% 50%, #ece7df, transparent);
+  background: radial-gradient(circle at 25% 30%, #1877f233, transparent),
+              radial-gradient(circle at 75% 70%, #4267B233, transparent),
+              radial-gradient(circle at 50% 50%, #5b8def22, transparent);
 
   z-index: 0;
 

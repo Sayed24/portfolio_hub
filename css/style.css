@@ -126,7 +126,7 @@ button {
   position: relative;
   z-index: 1;
 
-  max-width: 900px;
+  max-width: 100%;
   margin: auto;
   text-align: center;
 

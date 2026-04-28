@@ -13,7 +13,7 @@
   { "id":12,"title":"English Learning AI Agent","description":"English Learning AI Agent","image":"https://source.unsplash.com/600x400/?food","link":"https://example.com"},
   { "id":13,"title":"Modern Interactive Image Slider","description":"Modern Interactive Image Slider","image":"https://source.unsplash.com/600x400/?career","link":"https://example.com"},
   { "id":14,"title":"User Management Dashboard","description":"A modern, responsive, fully interactive frontend-only web application built with HTML, CSS, and Vanilla JavaScript, deployed on GitHub Pages.","image":"https://source.unsplash.com/600x400/?map","link":"https://example.com"},
-  { "id":15,"title":"Portfolio Platform","description":"Streaming","image":"https://source.unsplash.com/600x400/?video","link":"https://example.com"},
+  { "id":15,"title":"Portfolio Platform","description":"Full-Stack Developer Portfolio Platform Think of this as: “A real web app that represents me as a developer and manages my projects professionally.”","image":"https://source.unsplash.com/600x400/?video","link":"https://example.com"},
   { "id":16,"title":"Education","description":"Learning","image":"https://source.unsplash.com/600x400/?education","link":"https://example.com"},
   { "id":17,"title":"Crypto","description":"Tracking","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"},
   { "id":18,"title":"News","description":"Latest news","image":"https://source.unsplash.com/600x400/?news","link":"https://example.com"},

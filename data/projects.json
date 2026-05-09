@@ -21,5 +21,6 @@
   { "id":20,"title":"Learnify Modern Learning Platform","description":"Learnify — Modern Learning Platform A complete interactive learning website","image":"https://source.unsplash.com/600x400/?ai","link":"https://example.com"},
   { "id":21,"title":"Random User Generator","description":"A modern, responsive, interactive web app that fetches random users from an API and allows you to save favorites. Perfect for demonstrating API integration, modern UI/UX, and portfolio-ready projects.","image":"https://source.unsplash.com/600x400/?ai","link":"https://example.com"},
   { "id":22,"title":"Project Management Kanban Board","description":"Project Idea: SmartTask — Kanban Board (Portfolio Project) Professional Trello-style Kanban board built with vanilla HTML, CSS and JavaScript.","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"},
-  { "id":23,"title":"Real Time Weather","description":"Real-time weather dashboard using OpenWeatherMap API.","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"}
+  { "id":23,"title":"Real Time Weather","description":"Real-time weather dashboard using OpenWeatherMap API.","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"},
+  { "id":24,"title":"Modern Social Media Mini-App","description":"Real-time weather dashboard using OpenWeatherMap API.","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"}
 ]

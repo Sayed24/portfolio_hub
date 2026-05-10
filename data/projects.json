@@ -23,5 +23,5 @@
   { "id":22,"title":"Project Management Kanban Board","description":"Project Idea: SmartTask — Kanban Board (Portfolio Project) Professional Trello-style Kanban board built with vanilla HTML, CSS and JavaScript.","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"},
   { "id":23,"title":"Real Time Weather","description":"Real-time weather dashboard using OpenWeatherMap API.","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"},
   { "id":24,"title":"Modern Social Media Mini-App","description":"Project: Social Sadat — Modern Social Media Mini-App (Front-End Only).","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"},
-  { "id":25,"title":"Sudoku","description":"The goal is to fill a \(9 \times 9\) grid with digits so that each column, each row, and each of the nine \(3 \times 3\) subgrids (also called "boxes") contains all of the digits from 1 to 9, without repetition.","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"}
+  { "id":25,"title":"Sudoku","description":"The goal is to fill a grid with digits so that each column, each row, and each of the nine subgrids (also called boxes) contains all of the digits from 1 to 9, without repetition","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"}
 ]

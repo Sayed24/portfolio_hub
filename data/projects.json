@@ -24,6 +24,6 @@
   { "id":23,"title":"Real Time Weather","description":"Real-time weather dashboard using OpenWeatherMap API.","image":"https://source.unsplash.com/600x400/?crypto","link":"https://sayed24.github.io/Real-Time-Weather/"},
   { "id":24,"title":"Modern Social Media Mini-App","description":"Project: Social Sadat — Modern Social Media Mini-App (Front-End Only).","image":"https://source.unsplash.com/600x400/?crypto","link":"https://sayed24.github.io/Modern-Social-Media-Mini-App/"},
   { "id":25,"title":"Sudoku","description":"The goal is to fill a grid with digits so that each column, each row, and each of the nine subgrids (also called boxes) contains all of the digits from 1 to 9, without repetition","image":"https://source.unsplash.com/600x400/?crypto","link":"https://sayed24.github.io/Sudoku/"},
-  { "id":26,"title":"Personal Finance Tracker","description":"Personal Finance Tracker","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"},
+  { "id":26,"title":"Personal Finance Tracker","description":"Personal Finance Tracker","image":"https://source.unsplash.com/600x400/?crypto","link":"https://sayed24.github.io/Personal-Finance-Tracker/"},
   { "id":26,"title":"Interactive resume / cv builder","description":"Interactive resume cv builder","image":"https://source.unsplash.com/600x400/?crypto","link":"https://example.com"}
 ]

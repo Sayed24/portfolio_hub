@@ -1,76 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Portfolio Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="manifest" href="manifest.json">
+<head>
+
+    <!-- ==================================================
+         BASIC META
+    =================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge">
+
+    <title>Portfolio Hub | Sayed Rahim Sadat</title>
+
+    <meta
+        name="description"
+        content="Portfolio Hub showcases modern web applications, frontend engineering, UI/UX design, software projects and technical experience.">
+
+    <meta
+        name="keywords"
+        content="Portfolio, Frontend Developer, JavaScript, HTML, CSS, SQL, GitHub, UI UX, Software Engineer">
+
+    <meta
+        name="author"
+        content="Sayed Rahim Sadat">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+    <!-- ==================================================
+         OPEN GRAPH
+    =================================================== -->
+
+    <meta
+        property="og:title"
+        content="Portfolio Hub">
+
+    <meta
+        property="og:description"
+        content="Explore my software engineering projects, UI design, and web applications.">
+
+    <meta
+        property="og:type"
+        content="website">
+
+    <meta
+        property="og:image"
+        content="assets/images/hero/cover.jpg">
+
+    <!-- ==================================================
+         TWITTER
+    =================================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image">
+
+    <!-- ==================================================
+         FAVICON
+    =================================================== -->
+
+    <link
+        rel="icon"
+        href="favicon.ico">
+
+    <!-- ==================================================
+         PWA
+    =================================================== -->
+
+    <link
+        rel="manifest"
+        href="manifest.json">
+
+    <!-- ==================================================
+         CSS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
 </head>
 
 <body>
 
-<header>
-  <h1> Portfolio Hub</h1>
+<!-- ==================================================
+     SKIP LINK
+=================================================== -->
 
-  <div class="controls">
-    <input id="search" placeholder="Search projects...">
-    <button id="themeToggle">🌙</button>
-    <button id="recruiterBtn">Recruiter</button>
-    <button id="dashboardBtn">Analytics</button>
-  </div>
+<a
+    class="skip-link"
+    href="#mainContent">
+
+    Skip to Content
+
+</a>
+
+<!-- ==================================================
+     APPLICATION
+=================================================== -->
+
+<div id="app">
+
+<!-- ==================================================
+     HEADER
+=================================================== -->
+
+<header
+    class="site-header">
+
+    <div class="container">
+
+        <!-- LOGO -->
+
+        <a
+            href="#hero"
+            class="logo"
+            aria-label="Portfolio Hub Home">
+
+            Portfolio Hub
+
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav
+            class="desktop-nav"
+            aria-label="Primary Navigation">
+
+            <a href="#hero">Home</a>
+
+            <a href="#featured">Featured</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-actions">
+
+            <!-- SEARCH -->
+
+            <button
+                id="searchButton"
+                class="icon-button"
+                aria-label="Search">
+
+                Search
+
+            </button>
+
+            <!-- THEME -->
+
+            <button
+                id="themeToggle"
+                class="icon-button"
+                aria-label="Toggle Theme">
+
+                Theme
+
+            </button>
+
+            <!-- RESUME -->
+
+            <a
+                href="#"
+                class="resume-button">
+
+                Resume
+
+            </a>
+
+            <!-- MOBILE -->
+
+            <button
+                id="mobileMenuButton"
+                class="mobile-menu-button"
+                aria-label="Open Navigation">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </div>
+
 </header>
-<section class="hero">
 
-  <div class="hero-bg"></div>
+<!-- ==================================================
+     MOBILE NAVIGATION
+=================================================== -->
 
-  <div class="hero-content">
+<aside
+    id="mobileNavigation"
+    class="mobile-navigation"
+    aria-label="Mobile Navigation">
 
-    <h1 id="heroTitle">Crafting Modern Web Applications</h1>
+    <nav>
 
-    <p>
-      This portfolio showcases dynamic web applications, modern UI systems, 
-      and real-world projects built with scalable frontend architecture.
-    </p>
+        <a href="#hero">Home</a>
 
-    <div class="hero-buttons">
-      <button id="viewProjectsBtn">Explore Projects</button>
-      <a href="https://github.com/YOUR_USERNAME" target="_blank">
-        <button class="secondary">GitHub</button>
-      </a>
+        <a href="#featured">Featured</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</aside>
+
+<!-- ==================================================
+     MAIN
+=================================================== -->
+
+<main
+    id="mainContent">
+
+<!-- ==================================================
+     HERO
+=================================================== -->
+
+<section
+    id="hero"
+    class="hero"
+    data-section="hero">
+
+    <!-- BACKGROUND -->
+
+    <div class="hero-background"></div>
+
+    <!-- CONTENT -->
+
+    <div class="container hero-content">
+
+        <span class="hero-label">
+
+            Software Developer • Frontend Engineer
+
+        </span>
+
+        <h1>
+
+            Building Modern
+            Digital Experiences
+
+        </h1>
+
+        <p>
+
+            Welcome to Portfolio Hub.
+
+            Explore modern web applications,
+            frontend engineering projects,
+            UI/UX systems,
+            and technical work built using
+            scalable web technologies.
+
+        </p>
+
+        <!-- BUTTONS -->
+
+        <div class="hero-buttons">
+
+            <button
+                id="exploreProjects"
+                class="btn btn-primary">
+
+                Explore Projects
+
+            </button>
+
+            <a
+                href="#"
+                class="btn btn-secondary">
+
+                Download Resume
+
+            </a>
+
+        </div>
+
+        <!-- STATS -->
+
+        <div class="hero-stats">
+
+            <article>
+
+                <h2>20+</h2>
+
+                <span>Projects</span>
+
+            </article>
+
+            <article>
+
+                <h2>15+</h2>
+
+                <span>Technologies</span>
+
+            </article>
+
+            <article>
+
+                <h2>100%</h2>
+
+                <span>Responsive</span>
+
+            </article>
+
+            <article>
+
+                <h2>Open</h2>
+
+                <span>Source</span>
+
+            </article>
+
+        </div>
+
     </div>
 
-    <!-- STATS -->
-    <div class="hero-stats">
-      <div>
-        <h3>20+</h3>
-        <p>Projects</p>
-      </div>
-      <div>
-        <h3>10+</h3>
-        <p>Technologies</p>
-      </div>
-      <div>
-        <h3>100%</h3>
-        <p>Responsive</p>
-      </div>
-    </div>
-
-  </div>
 </section>
-<main id="app"></main>
-
-<!-- Chat -->
-<button id="chatBtn">💬</button>
-
-<div id="chatBox">
-  <div class="chat-header">AI Recruiter</div>
-  <div id="messages"></div>
-  <input id="chatInput" placeholder="Ask about skills...">
-</div>
-
-<script src="js/app.js"></script>
-
-</body>
-</html>

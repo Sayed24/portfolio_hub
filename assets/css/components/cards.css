@@ -1,1 +1,1231 @@
 
+/* ==========================================================================
+   PORTFOLIO HUB V2
+   Card Component System
+   File: assets/css/components/cards.css
+   ========================================================================== */
+
+
+/* ==========================================================================
+   BASE CARD
+   ========================================================================== */
+
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  border: var(--card-border-width) solid var(--color-card-border);
+  border-radius: var(--card-radius);
+
+  background: var(--color-card);
+
+  box-shadow: var(--shadow-card);
+
+  overflow: hidden;
+
+  transition:
+    border-color var(--duration-normal) var(--ease-standard),
+    background-color var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard),
+    transform var(--duration-normal) var(--ease-emphasized);
+}
+
+.card:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-card-hover);
+
+  box-shadow: var(--shadow-card-hover);
+
+  transform: translateY(-4px);
+}
+
+
+/* ==========================================================================
+   PROJECT CARD
+   ========================================================================== */
+
+.project-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--card-radius);
+
+  background: var(--color-card);
+
+  box-shadow: var(--shadow-card);
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  transition:
+    border-color var(--duration-normal) var(--ease-standard),
+    background-color var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard),
+    transform var(--duration-normal) var(--ease-emphasized);
+}
+
+.project-card:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-card-hover);
+
+  box-shadow: var(--shadow-card-hover);
+
+  transform: translateY(-5px);
+}
+
+.project-card:focus-within {
+  border-color: var(--color-border-focus);
+
+  box-shadow:
+    var(--shadow-card-hover),
+    var(--shadow-focus);
+}
+
+
+/* ==========================================================================
+   PROJECT CARD IMAGE
+   ========================================================================== */
+
+.project-card__media,
+.project-card-image,
+.card-media {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: var(--aspect-video);
+
+  overflow: hidden;
+
+  background: var(--color-surface-subtle);
+}
+
+.project-card__media img,
+.project-card-image img,
+.card-media img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1);
+
+  transition:
+    transform var(--duration-slower) var(--ease-emphasized),
+    filter var(--duration-normal) var(--ease-standard);
+}
+
+.project-card:hover .project-card__media img,
+.project-card:hover .project-card-image img,
+.project-card:hover .card-media img {
+  transform: scale(1.035);
+}
+
+
+/* ==========================================================================
+   IMAGE FALLBACK
+   ========================================================================== */
+
+.project-card__media::before,
+.project-card-image::before,
+.card-media::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      circle at 25% 20%,
+      rgba(59, 130, 246, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      var(--color-surface-subtle),
+      var(--color-page-muted)
+    );
+}
+
+.project-card__media img,
+.project-card-image img,
+.card-media img {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ==========================================================================
+   PROJECT CARD IMAGE OVERLAY
+   ========================================================================== */
+
+.project-card__media::after,
+.project-card-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(15, 23, 42, 0.16) 100%
+    );
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity var(--duration-normal) var(--ease-standard);
+}
+
+.project-card:hover .project-card__media::after,
+.project-card:hover .project-card-image::after {
+  opacity: 1;
+}
+
+
+/* ==========================================================================
+   PROJECT BADGES
+   ========================================================================== */
+
+.project-card__badges,
+.card-badges {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 3;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--space-2);
+
+  max-width: calc(100% - (var(--space-6)));
+}
+
+.project-badge,
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 1.75rem;
+
+  padding-inline: var(--space-3);
+
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: var(--radius-pill);
+
+  background: rgba(255, 255, 255, 0.86);
+
+  color: #0f172a;
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+
+  box-shadow: var(--shadow-xs);
+
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+}
+
+.project-badge--featured {
+  background: var(--color-primary);
+
+  border-color: var(--color-primary);
+
+  color: var(--color-primary-text);
+}
+
+
+/* ==========================================================================
+   PROJECT CONTENT
+   ========================================================================== */
+
+.project-card__content,
+.project-card-content,
+.card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: var(--space-4);
+
+  padding: var(--card-padding);
+}
+
+.project-card__header {
+  display: grid;
+
+  gap: var(--space-2);
+}
+
+.project-card__title {
+  margin: 0;
+
+  color: var(--color-text-strong);
+
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.project-card:hover .project-card__title {
+  color: var(--color-primary);
+}
+
+.project-card__description {
+  display: -webkit-box;
+
+  overflow: hidden;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  color: var(--color-text-muted);
+}
+
+
+/* ==========================================================================
+   PROJECT META
+   ========================================================================== */
+
+.project-card__meta,
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: var(--space-2) var(--space-4);
+
+  color: var(--color-text-subtle);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.project-card__meta-item,
+.card-meta-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: var(--space-1);
+}
+
+.project-card__meta svg,
+.card-meta svg {
+  width: var(--size-icon-xs);
+  height: var(--size-icon-xs);
+}
+
+
+/* ==========================================================================
+   TAGS
+   ========================================================================== */
+
+.project-card__tags,
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--space-2);
+}
+
+.project-tag,
+.card-tag {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 1.75rem;
+
+  padding-inline: var(--space-3);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+
+  background: var(--color-surface-soft);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+
+  transition: var(--transition-color);
+}
+
+.project-tag:hover,
+.card-tag:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+
+/* ==========================================================================
+   PROJECT ACTIONS
+   ========================================================================== */
+
+.project-card__actions,
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.project-card__actions a,
+.project-card__actions button,
+.card-actions a,
+.card-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 2.5rem;
+
+  gap: var(--space-2);
+  padding-inline: var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+
+  background: var(--color-surface);
+
+  color: var(--color-text);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  transition: var(--transition-default);
+}
+
+.project-card__actions a:hover,
+.project-card__actions button:hover,
+.card-actions a:hover,
+.card-actions button:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-surface-raised);
+
+  color: var(--color-primary);
+
+  box-shadow: var(--shadow-xs);
+}
+
+.project-card__actions .primary,
+.card-actions .primary {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary);
+
+  color: var(--color-primary-text);
+}
+
+.project-card__actions .primary:hover,
+.card-actions .primary:hover {
+  border-color: var(--color-primary-hover);
+
+  background: var(--color-primary-hover);
+
+  color: var(--color-primary-text);
+}
+
+
+/* ==========================================================================
+   CARD LINK OVERLAY
+   Allows the entire card to be clickable without breaking nested actions.
+   ========================================================================== */
+
+.card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  border-radius: inherit;
+}
+
+.project-card__content,
+.project-card__actions,
+.project-card__badges {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ==========================================================================
+   FEATURED PROJECT CARD
+   ========================================================================== */
+
+.featured-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  min-width: 0;
+
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-2xl);
+
+  background: var(--color-card);
+
+  box-shadow: var(--shadow-card);
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  transition:
+    border-color var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard),
+    transform var(--duration-normal) var(--ease-emphasized);
+}
+
+.featured-card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-card-hover);
+
+  transform: translateY(-4px);
+}
+
+.featured-card__media {
+  position: relative;
+
+  min-height: 15rem;
+
+  overflow: hidden;
+
+  background: var(--color-surface-subtle);
+}
+
+.featured-card__media img {
+  width: 100%;
+  height: 100%;
+
+  aspect-ratio: var(--aspect-video);
+
+  object-fit: cover;
+
+  transition: transform var(--duration-slower) var(--ease-emphasized);
+}
+
+.featured-card:hover .featured-card__media img {
+  transform: scale(1.03);
+}
+
+.featured-card__content {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: var(--space-5);
+
+  padding:
+    clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.featured-card__header {
+  display: grid;
+
+  gap: var(--space-3);
+}
+
+.featured-card__eyebrow {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: var(--letter-spacing-widest);
+
+  text-transform: uppercase;
+}
+
+.featured-card__title {
+  max-width: 18ch;
+
+  color: var(--color-text-strong);
+}
+
+.featured-card__description {
+  max-width: 58ch;
+
+  color: var(--color-text-muted);
+}
+
+
+/* ==========================================================================
+   TECHNOLOGY CARD
+   ========================================================================== */
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 7rem;
+
+  gap: var(--space-3);
+
+  padding: var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  text-align: center;
+
+  transition: var(--transition-default);
+}
+
+.tech-card:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-surface-raised);
+
+  box-shadow: var(--shadow-sm);
+
+  transform: translateY(-2px);
+}
+
+.tech-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.75rem;
+  height: 2.75rem;
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.tech-card__icon img,
+.tech-card__icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+
+  object-fit: contain;
+}
+
+.tech-card__name {
+  color: var(--color-text-strong);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* ==========================================================================
+   SKILL CARD
+   ========================================================================== */
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: var(--space-5);
+
+  padding: var(--card-padding);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+
+  background: var(--color-card);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition-default);
+}
+
+.skill-card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-3px);
+}
+
+.skill-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-4);
+}
+
+.skill-card__title {
+  color: var(--color-text-strong);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.skill-card__value {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+
+/* ==========================================================================
+   SKILL PROGRESS
+   ========================================================================== */
+
+.skill-card__progress {
+  position: relative;
+
+  width: 100%;
+  height: 0.5rem;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--color-surface-subtle);
+}
+
+.skill-card__progress-bar {
+  width: var(--progress, 0%);
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: var(--gradient-brand);
+
+  transform-origin: left;
+
+  transition:
+    width var(--duration-slower) var(--ease-emphasized);
+}
+
+
+/* ==========================================================================
+   CERTIFICATE CARD
+   ========================================================================== */
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  gap: var(--space-4);
+
+  padding: var(--card-padding);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+
+  background: var(--color-card);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition-default);
+}
+
+.certificate-card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-3px);
+}
+
+.certificate-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.certificate-card__title {
+  color: var(--color-text-strong);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: var(--line-height-snug);
+}
+
+.certificate-card__issuer,
+.certificate-card__date {
+  color: var(--color-text-subtle);
+
+  font-size: var(--font-size-sm);
+}
+
+
+/* ==========================================================================
+   CONTACT CARD
+   ========================================================================== */
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: var(--space-4);
+
+  padding: var(--card-padding);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+
+  background: var(--color-card);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition-default);
+}
+
+.contact-card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-3px);
+}
+
+.contact-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.contact-card__icon svg {
+  width: var(--size-icon-lg);
+  height: var(--size-icon-lg);
+}
+
+.contact-card__title {
+  color: var(--color-text-strong);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.contact-card__value {
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-sm);
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================================
+   TIMELINE CARD
+   ========================================================================== */
+
+.timeline-card {
+  display: grid;
+
+  gap: var(--space-3);
+
+  padding: var(--card-padding);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+
+  background: var(--color-card);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    border-color var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.timeline-card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-card__date {
+  color: var(--color-primary);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: var(--letter-spacing-wide);
+
+  text-transform: uppercase;
+}
+
+.timeline-card__title {
+  color: var(--color-text-strong);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.timeline-card__company {
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.timeline-card__description {
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+
+/* ==========================================================================
+   EMPTY CARD STATE
+   ========================================================================== */
+
+.empty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 1 / -1;
+
+  min-height: 18rem;
+
+  gap: var(--space-4);
+
+  padding: var(--space-8);
+
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--card-radius);
+
+  background: var(--color-surface-soft);
+
+  text-align: center;
+}
+
+.empty-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  border-radius: var(--radius-circle);
+
+  background: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.empty-card h3 {
+  color: var(--color-text-strong);
+}
+
+.empty-card p {
+  max-width: 32rem;
+
+  color: var(--color-text-muted);
+}
+
+
+/* ==========================================================================
+   SKELETON CARD
+   ========================================================================== */
+
+.skeleton-card {
+  min-height: 22rem;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+
+  background: var(--color-card);
+}
+
+.skeleton {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--color-surface-subtle);
+}
+
+.skeleton::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.42),
+      transparent
+    );
+
+  transform: translateX(-100%);
+
+  animation: skeleton-loading 1.5s infinite;
+}
+
+html[data-theme="dark"] .skeleton::after {
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.06),
+      transparent
+    );
+}
+
+.skeleton-card__image {
+  width: 100%;
+
+  aspect-ratio: var(--aspect-video);
+}
+
+.skeleton-card__content {
+  display: grid;
+
+  gap: var(--space-3);
+
+  padding: var(--card-padding);
+}
+
+.skeleton-line {
+  height: 0.875rem;
+
+  border-radius: var(--radius-pill);
+}
+
+.skeleton-line--title {
+  width: 68%;
+  height: 1.25rem;
+}
+
+.skeleton-line--short {
+  width: 42%;
+}
+
+
+/* ==========================================================================
+   SKELETON ANIMATION
+   ========================================================================== */
+
+@keyframes skeleton-loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+html[data-theme="dark"] .project-card__media::after,
+html[data-theme="dark"] .project-card-image::after {
+  background:
+    linear-gradient(
+      180deg,
+      transparent 50%,
+      rgba(0, 0, 0, 0.42) 100%
+    );
+}
+
+html[data-theme="dark"] .project-badge,
+html[data-theme="dark"] .card-badge {
+  border-color: rgba(255, 255, 255, 0.12);
+
+  background: rgba(24, 24, 27, 0.84);
+
+  color: #fafafa;
+}
+
+
+/* ==========================================================================
+   TABLET — 768px+
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+  .featured-card {
+    grid-template-columns:
+      minmax(0, 1.1fr)
+      minmax(18rem, 0.9fr);
+  }
+
+  .featured-card__media {
+    min-height: 100%;
+  }
+
+  .featured-card__media img {
+    height: 100%;
+
+    aspect-ratio: auto;
+  }
+
+  .featured-card__content {
+    justify-content: center;
+  }
+}
+
+
+/* ==========================================================================
+   DESKTOP — 992px+
+   ========================================================================== */
+
+@media (min-width: 62rem) {
+  .project-card__content,
+  .project-card-content,
+  .card-content {
+    padding: var(--space-6);
+  }
+
+  .featured-card__content {
+    padding: var(--space-10);
+  }
+
+  .featured-card__media {
+    min-height: 26rem;
+  }
+}
+
+
+/* ==========================================================================
+   TOUCH DEVICES
+   ========================================================================== */
+
+@media (hover: none) {
+  .card:hover,
+  .project-card:hover,
+  .featured-card:hover,
+  .tech-card:hover,
+  .skill-card:hover,
+  .certificate-card:hover,
+  .contact-card:hover {
+    transform: none;
+  }
+
+  .project-card:hover .project-card__media img,
+  .project-card:hover .project-card-image img,
+  .project-card:hover .card-media img,
+  .featured-card:hover .featured-card__media img {
+    transform: none;
+  }
+}
+
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .project-card,
+  .featured-card,
+  .tech-card,
+  .skill-card,
+  .certificate-card,
+  .contact-card,
+  .timeline-card,
+  .project-card__media img,
+  .project-card-image img,
+  .card-media img,
+  .featured-card__media img,
+  .skill-card__progress-bar {
+    transition: none;
+  }
+
+  .skeleton::after {
+    animation: none;
+
+    display: none;
+  }
+}
+
+
+/* ==========================================================================
+   PRINT
+   ========================================================================== */
+
+@media print {
+  .card,
+  .project-card,
+  .featured-card,
+  .skill-card,
+  .certificate-card,
+  .contact-card,
+  .timeline-card {
+    border: 1px solid #cccccc;
+
+    background: #ffffff !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+
+    break-inside: avoid;
+  }
+
+  .project-card__actions,
+  .card-actions {
+    display: none;
+  }
+}

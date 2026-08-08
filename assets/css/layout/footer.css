@@ -1,1 +1,405 @@
 
+/* ==========================================================================
+   PORTFOLIO HUB V2
+   Footer System
+   File: assets/css/layout/footer.css
+   ========================================================================== */
+
+
+/* ==========================================================================
+   FOOTER ROOT
+   ========================================================================== */
+
+.site-footer {
+  position: relative;
+  z-index: var(--z-content);
+
+  width: 100%;
+
+  margin-top: auto;
+
+  border-top: 1px solid var(--color-border);
+
+  background: var(--color-surface);
+
+  color: var(--color-text-muted);
+}
+
+
+/* ==========================================================================
+   FOOTER INNER LAYOUT
+   ========================================================================== */
+
+.site-footer > .container {
+  display: grid;
+
+  gap: var(--space-8);
+
+  padding-block:
+    clamp(3rem, 7vw, 5rem)
+    clamp(2rem, 5vw, 3rem);
+}
+
+
+/* ==========================================================================
+   FOOTER TOP
+   ========================================================================== */
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  align-items: start;
+
+  gap: var(--space-8);
+}
+
+.footer-top > div {
+  display: grid;
+
+  gap: var(--space-3);
+
+  max-width: 34rem;
+}
+
+.footer-top h3 {
+  margin: 0;
+
+  color: var(--color-text-strong);
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.footer-top p {
+  max-width: 42rem;
+
+  color: var(--color-text-subtle);
+
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+
+/* ==========================================================================
+   FOOTER NAVIGATION
+   ========================================================================== */
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--space-2) var(--space-4);
+}
+
+.footer-nav a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: var(--size-touch-target);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.footer-nav a:hover {
+  color: var(--color-primary);
+
+  transform: translateY(-1px);
+}
+
+.footer-nav a:active {
+  transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   FOOTER NAV LINK UNDERLINE
+   ========================================================================== */
+
+.footer-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+
+  width: 100%;
+  height: 1px;
+
+  border-radius: var(--radius-pill);
+
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform var(--duration-normal) var(--ease-emphasized);
+}
+
+.footer-nav a:hover::after,
+.footer-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+
+/* ==========================================================================
+   FOOTER BOTTOM
+   ========================================================================== */
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-4);
+
+  padding-top: var(--space-6);
+
+  border-top: 1px solid var(--color-divider);
+}
+
+.footer-bottom p {
+  color: var(--color-text-subtle);
+
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-relaxed);
+}
+
+
+/* ==========================================================================
+   OPTIONAL SOCIAL LINKS
+   ========================================================================== */
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: var(--space-2);
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--size-control-md);
+  height: var(--size-control-md);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-circle);
+
+  background: var(--color-surface);
+
+  color: var(--color-text-muted);
+
+  box-shadow: var(--shadow-xs);
+
+  transition: var(--transition-default);
+}
+
+.footer-socials a:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-surface-raised);
+
+  color: var(--color-primary);
+
+  box-shadow: var(--shadow-sm);
+
+  transform: translateY(-2px);
+}
+
+.footer-socials a:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.footer-socials svg {
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+
+
+/* ==========================================================================
+   OPTIONAL FOOTER META
+   ========================================================================== */
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: var(--space-3);
+
+  color: var(--color-text-subtle);
+
+  font-size: var(--font-size-xs);
+}
+
+.footer-meta a {
+  color: inherit;
+
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.footer-meta a:hover {
+  color: var(--color-primary);
+}
+
+
+/* ==========================================================================
+   OPTIONAL FOOTER STATUS
+   ========================================================================== */
+
+.footer-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  width: fit-content;
+
+  color: var(--color-text-subtle);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.footer-status::before {
+  content: "";
+
+  width: 0.5rem;
+  height: 0.5rem;
+
+  border-radius: var(--radius-circle);
+
+  background: var(--color-success-500);
+
+  box-shadow:
+    0 0 0 3px rgba(34, 197, 94, 0.12);
+}
+
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+html[data-theme="dark"] .site-footer {
+  background: var(--color-surface-soft);
+}
+
+
+/* ==========================================================================
+   TABLET — 768px+
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+  .footer-top {
+    grid-template-columns:
+      minmax(0, 1.2fr)
+      minmax(16rem, 0.8fr);
+
+    align-items: start;
+
+    gap: var(--space-10);
+  }
+
+  .footer-nav {
+    justify-content: flex-end;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+/* ==========================================================================
+   DESKTOP — 992px+
+   ========================================================================== */
+
+@media (min-width: 62rem) {
+  .site-footer > .container {
+    gap: var(--space-10);
+  }
+
+  .footer-top {
+    gap: var(--space-16);
+  }
+}
+
+
+/* ==========================================================================
+   SMALL MOBILE DEVICES
+   ========================================================================== */
+
+@media (max-width: 25rem) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0;
+  }
+
+  .footer-nav a {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-nav a,
+  .footer-nav a::after,
+  .footer-socials a,
+  .footer-meta a {
+    transition: none;
+  }
+}
+
+
+/* ==========================================================================
+   PRINT
+   ========================================================================== */
+
+@media print {
+  .site-footer {
+    margin-top: 2rem;
+
+    border-top: 1px solid #000000;
+
+    background: transparent !important;
+  }
+
+  .site-footer > .container {
+    padding-block: 1rem;
+  }
+
+  .footer-nav,
+  .footer-socials,
+  .footer-status {
+    display: none !important;
+  }
+
+  .footer-bottom {
+    display: block;
+
+    padding-top: 0.75rem;
+  }
+}

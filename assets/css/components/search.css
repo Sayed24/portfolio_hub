@@ -1,1 +1,445 @@
 
+/* ==========================================================================
+   PORTFOLIO HUB V2
+   Search & Filter Controls
+   File: assets/css/components/search.css
+   ========================================================================== */
+
+/* ==========================================================================
+   SEARCH WRAPPER
+   ========================================================================== */
+
+.search-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==========================================================================
+   SEARCH INPUT
+   ========================================================================== */
+
+.search-wrapper input[type="search"],
+.project-toolbar input[type="search"],
+.search-input {
+  width: 100%;
+  min-height: var(--input-height);
+
+  padding:
+    0
+    var(--space-11)
+    0
+    var(--input-padding-x);
+
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--input-radius);
+
+  background: var(--color-input);
+  color: var(--color-text);
+
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1;
+
+  box-shadow: var(--shadow-xs);
+
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.search-wrapper input[type="search"]:hover,
+.project-toolbar input[type="search"]:hover,
+.search-input:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-input-hover);
+}
+
+.search-wrapper input[type="search"]:focus,
+.project-toolbar input[type="search"]:focus,
+.search-input:focus {
+  border-color: var(--color-border-focus);
+
+  background: var(--color-input);
+
+  box-shadow: var(--shadow-focus);
+}
+
+.search-wrapper input[type="search"]::placeholder,
+.project-toolbar input[type="search"]::placeholder,
+.search-input::placeholder {
+  color: var(--color-input-placeholder);
+}
+
+/* ==========================================================================
+   SEARCH ICON
+   ========================================================================== */
+
+.search-wrapper::after {
+  content: "⌕";
+
+  position: absolute;
+  top: 50%;
+  right: var(--space-4);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.25rem;
+  height: 1.25rem;
+
+  color: var(--color-text-subtle);
+
+  font-size: 1rem;
+  line-height: 1;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   SEARCH CLEAR BUTTON
+   ========================================================================== */
+
+.search-clear {
+  position: absolute;
+  top: 50%;
+  right: 2.75rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.75rem;
+  height: 1.75rem;
+
+  border-radius: var(--radius-circle);
+
+  background: transparent;
+  color: var(--color-text-subtle);
+
+  transform: translateY(-50%);
+
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.search-clear:hover {
+  background: var(--color-surface-subtle);
+  color: var(--color-text-strong);
+}
+
+/* ==========================================================================
+   FILTER CONTAINER
+   ========================================================================== */
+
+.filter-container {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  min-width: 0;
+}
+
+/* ==========================================================================
+   FILTER CHIPS
+   ========================================================================== */
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 2.375rem;
+
+  padding-inline: var(--space-4);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+
+  white-space: nowrap;
+
+  box-shadow: var(--shadow-xs);
+
+  transition: var(--transition-default);
+}
+
+.filter-chip:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-surface-raised);
+
+  color: var(--color-text-strong);
+}
+
+.filter-chip.is-active,
+.filter-chip[aria-pressed="true"] {
+  border-color: var(--color-primary);
+
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+
+  box-shadow:
+    0 6px 16px rgba(37, 99, 235, 0.16),
+    var(--shadow-xs);
+}
+
+/* ==========================================================================
+   SORT SELECT
+   ========================================================================== */
+
+.project-toolbar select,
+.sort-select {
+  min-height: var(--input-height);
+
+  padding:
+    0
+    2.75rem
+    0
+    var(--input-padding-x);
+
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--input-radius);
+
+  background-color: var(--color-input);
+  color: var(--color-text);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+
+  box-shadow: var(--shadow-xs);
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      var(--color-text-subtle) 50%
+    ),
+    linear-gradient(
+      135deg,
+      var(--color-text-subtle) 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 1.1rem) 50%,
+    calc(100% - 0.8rem) 50%;
+
+  background-size:
+    0.35rem 0.35rem,
+    0.35rem 0.35rem;
+
+  background-repeat: no-repeat;
+
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.project-toolbar select:hover,
+.sort-select:hover {
+  border-color: var(--color-border-strong);
+
+  background-color: var(--color-input-hover);
+}
+
+.project-toolbar select:focus,
+.sort-select:focus {
+  border-color: var(--color-border-focus);
+
+  box-shadow: var(--shadow-focus);
+}
+
+/* ==========================================================================
+   SEARCH RESULTS META
+   ========================================================================== */
+
+.search-results-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-3);
+
+  margin-bottom: var(--space-5);
+
+  color: var(--color-text-subtle);
+
+  font-size: var(--font-size-sm);
+}
+
+.search-results-meta strong {
+  color: var(--color-text-strong);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ==========================================================================
+   EMPTY SEARCH STATE
+   ========================================================================== */
+
+.search-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 1 / -1;
+
+  min-height: 18rem;
+
+  gap: var(--space-4);
+
+  padding: var(--space-8);
+
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-xl);
+
+  background: var(--color-surface-soft);
+
+  text-align: center;
+}
+
+.search-empty h3 {
+  color: var(--color-text-strong);
+}
+
+.search-empty p {
+  max-width: 34rem;
+
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   SEARCH HIGHLIGHT
+   ========================================================================== */
+
+.search-highlight {
+  padding-inline: 0.12em;
+
+  border-radius: var(--radius-xs);
+
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   TOOLBAR DIVIDER
+   ========================================================================== */
+
+.toolbar-divider {
+  width: 1px;
+  height: 1.75rem;
+
+  background: var(--color-divider);
+}
+
+/* ==========================================================================
+   MOBILE TOOLBAR
+   ========================================================================== */
+
+@media (max-width: 47.99rem) {
+  .project-toolbar {
+    gap: var(--space-3);
+  }
+
+  .filter-container {
+    margin-inline:
+      calc(var(--container-gutter) * -1);
+
+    padding-inline: var(--container-gutter);
+  }
+
+  .project-toolbar select,
+  .sort-select {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+  .search-wrapper input[type="search"],
+  .project-toolbar input[type="search"],
+  .search-input {
+    min-width: 14rem;
+  }
+
+  .project-toolbar select,
+  .sort-select {
+    min-width: 10rem;
+  }
+}
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+html[data-theme="dark"] .filter-chip.is-active,
+html[data-theme="dark"] .filter-chip[aria-pressed="true"] {
+  box-shadow:
+    0 6px 18px rgba(59, 130, 246, 0.18),
+    var(--shadow-xs);
+}
+
+/* ==========================================================================
+   TOUCH DEVICES
+   ========================================================================== */
+
+@media (hover: none) {
+  .filter-chip:hover,
+  .search-clear:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .search-wrapper input[type="search"],
+  .project-toolbar input[type="search"],
+  .search-input,
+  .search-clear,
+  .filter-chip,
+  .project-toolbar select,
+  .sort-select {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   PRINT
+   ========================================================================== */
+
+@media print {
+  .project-toolbar,
+  .search-results-meta,
+  .search-clear {
+    display: none !important;
+  }
+}

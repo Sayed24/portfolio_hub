@@ -1,0 +1,501 @@
+/* ==========================================================================
+   PORTFOLIO HUB V2
+   Lightbox / Image Viewer
+   File: assets/css/components/lightbox.css
+   ========================================================================== */
+
+
+/* ==========================================================================
+   LIGHTBOX ROOT
+   ========================================================================== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100dvh;
+
+  padding:
+    max(var(--space-4), env(safe-area-inset-top))
+    max(var(--space-4), env(safe-area-inset-right))
+    max(var(--space-4), env(safe-area-inset-bottom))
+    max(var(--space-4), env(safe-area-inset-left));
+
+  background: rgba(2, 6, 23, 0.92);
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity var(--duration-normal) var(--ease-standard),
+    visibility var(--duration-normal) var(--ease-standard);
+
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+}
+
+
+/* ==========================================================================
+   OPEN STATE
+   ========================================================================== */
+
+.lightbox.is-open,
+.lightbox[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+
+/* ==========================================================================
+   LIGHTBOX IMAGE
+   ========================================================================== */
+
+#lightboxImage,
+.lightbox__image {
+  display: block;
+
+  width: auto;
+  max-width: min(100%, 90rem);
+  max-height:
+    calc(
+      100dvh
+      - max(7rem, env(safe-area-inset-top))
+      - max(7rem, env(safe-area-inset-bottom))
+    );
+
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-xl);
+
+  opacity: 0;
+
+  transform: scale(0.97);
+
+  transition:
+    opacity var(--duration-normal) var(--ease-standard),
+    transform var(--duration-normal) var(--ease-emphasized);
+}
+
+.lightbox.is-open #lightboxImage,
+.lightbox[aria-hidden="false"] #lightboxImage,
+.lightbox.is-open .lightbox__image,
+.lightbox[aria-hidden="false"] .lightbox__image {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+
+/* ==========================================================================
+   CLOSE BUTTON
+   ========================================================================== */
+
+#closeLightbox,
+.lightbox__close {
+  position: absolute;
+
+  top:
+    max(
+      var(--space-4),
+      env(safe-area-inset-top)
+    );
+
+  right:
+    max(
+      var(--space-4),
+      env(safe-area-inset-right)
+    );
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.75rem;
+  height: 2.75rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-circle);
+
+  background: rgba(15, 23, 42, 0.72);
+
+  color: #ffffff;
+
+  font-size: var(--font-size-xl);
+  line-height: 1;
+
+  box-shadow: var(--shadow-md);
+
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+#closeLightbox:hover,
+.lightbox__close:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+
+  background: rgba(30, 41, 59, 0.88);
+
+  transform: scale(1.04);
+}
+
+#closeLightbox:active,
+.lightbox__close:active {
+  transform: scale(0.96);
+}
+
+
+/* ==========================================================================
+   NAVIGATION BUTTONS
+   ========================================================================== */
+
+.lightbox__previous,
+.lightbox__next {
+  position: absolute;
+  top: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-circle);
+
+  background: rgba(15, 23, 42, 0.68);
+
+  color: #ffffff;
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-50%);
+
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.lightbox__previous {
+  left:
+    max(
+      var(--space-4),
+      env(safe-area-inset-left)
+    );
+}
+
+.lightbox__next {
+  right:
+    max(
+      var(--space-4),
+      env(safe-area-inset-right)
+    );
+}
+
+.lightbox__previous:hover,
+.lightbox__next:hover {
+  border-color: rgba(255, 255, 255, 0.26);
+
+  background: rgba(30, 41, 59, 0.86);
+}
+
+.lightbox__previous:active,
+.lightbox__next:active {
+  transform:
+    translateY(-50%)
+    scale(0.95);
+}
+
+.lightbox__previous svg,
+.lightbox__next svg {
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+
+
+/* ==========================================================================
+   CAPTION
+   ========================================================================== */
+
+.lightbox__caption {
+  position: absolute;
+
+  right: var(--space-4);
+  bottom:
+    max(
+      var(--space-4),
+      env(safe-area-inset-bottom)
+    );
+  left: var(--space-4);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: var(--space-1);
+
+  pointer-events: none;
+
+  text-align: center;
+}
+
+.lightbox__title {
+  color: #ffffff;
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox__description {
+  max-width: 50rem;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-relaxed);
+
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ==========================================================================
+   COUNTER
+   ========================================================================== */
+
+.lightbox__counter {
+  position: absolute;
+
+  top:
+    max(
+      var(--space-4),
+      env(safe-area-inset-top)
+    );
+
+  left: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 2rem;
+
+  padding-inline: var(--space-3);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+
+  background: rgba(15, 23, 42, 0.62);
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+
+  transform: translateX(-50%);
+
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+}
+
+
+/* ==========================================================================
+   LOADING STATE
+   ========================================================================== */
+
+.lightbox__loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #ffffff;
+  border-radius: var(--radius-circle);
+
+  transform: translate(-50%, -50%);
+
+  animation: lightbox-spinner 0.8s linear infinite;
+}
+
+@keyframes lightbox-spinner {
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+}
+
+
+/* ==========================================================================
+   BODY LOCK
+   ========================================================================== */
+
+body.lightbox-open {
+  overflow: hidden;
+
+  overscroll-behavior: none;
+}
+
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 35.99rem) {
+  .lightbox {
+    padding:
+      max(var(--space-3), env(safe-area-inset-top))
+      var(--space-3)
+      max(var(--space-3), env(safe-area-inset-bottom));
+  }
+
+  #lightboxImage,
+  .lightbox__image {
+    max-height:
+      calc(
+        100dvh
+        - 9rem
+        - env(safe-area-inset-top)
+        - env(safe-area-inset-bottom)
+      );
+
+    border-radius: var(--radius-md);
+  }
+
+  .lightbox__previous,
+  .lightbox__next {
+    top: auto;
+    bottom:
+      max(
+        4.5rem,
+        calc(
+          var(--space-4)
+          + env(safe-area-inset-bottom)
+        )
+      );
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    transform: none;
+  }
+
+  .lightbox__previous {
+    left: calc(50% - 3.5rem);
+  }
+
+  .lightbox__next {
+    right: calc(50% - 3.5rem);
+  }
+
+  .lightbox__previous:active,
+  .lightbox__next:active {
+    transform: scale(0.95);
+  }
+
+  .lightbox__caption {
+    bottom:
+      max(
+        var(--space-3),
+        env(safe-area-inset-bottom)
+      );
+  }
+
+  .lightbox__description {
+    display: none;
+  }
+}
+
+
+/* ==========================================================================
+   TABLET+
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+  #closeLightbox,
+  .lightbox__close {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .lightbox__previous,
+  .lightbox__next {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
+
+/* ==========================================================================
+   TOUCH DEVICES
+   ========================================================================== */
+
+@media (hover: none) {
+  #closeLightbox:hover,
+  .lightbox__close:hover,
+  .lightbox__previous:hover,
+  .lightbox__next:hover {
+    transform: none;
+  }
+}
+
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox,
+  #lightboxImage,
+  .lightbox__image,
+  #closeLightbox,
+  .lightbox__close,
+  .lightbox__previous,
+  .lightbox__next {
+    transition: none;
+  }
+
+  .lightbox__loader {
+    animation-duration: 1.5s;
+  }
+}
+
+
+/* ==========================================================================
+   PRINT
+   ========================================================================== */
+
+@media print {
+  .lightbox {
+    display: none !important;
+  }
+}

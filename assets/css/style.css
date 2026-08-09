@@ -6,19 +6,21 @@
 
 
 /* ==========================================================================
-   01. FOUNDATION
+   01. BASE / DESIGN SYSTEM
    ========================================================================== */
 
-@import url("./tokens.css");
-@import url("./reset.css");
-@import url("./typography.css");
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
 
 
 /* ==========================================================================
-   02. GLOBAL LAYOUT
+   02. LAYOUT
    ========================================================================== */
 
-@import url("./layout.css");
+@import url("./layout/layout.css");
+@import url("./layout/navigation.css");
+@import url("./layout/footer.css");
 
 
 /* ==========================================================================
@@ -26,7 +28,6 @@
    ========================================================================== */
 
 @import url("./components/buttons.css");
-@import url("./components/header.css");
 @import url("./components/hero.css");
 @import url("./components/cards.css");
 @import url("./components/badges.css");
@@ -48,7 +49,7 @@
 
 /* ==========================================================================
    05. UTILITIES
-   Utilities load last so intentional utility classes can override components.
+   Load utilities last so intentional utility classes can override components.
    ========================================================================== */
 
 @import url("./utilities/animations.css");

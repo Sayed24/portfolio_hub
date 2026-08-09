@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Portfolio of Sayed Rahim Sadat — Web Designer and Developer creating responsive, modern, user-friendly web experiences."
+  >
+
+  <meta
+    name="theme-color"
+    content="#f8fafc"
+  >
+
+  <meta
+    name="color-scheme"
+    content="light dark"
+  >
+
+  <title>
+    Sayed Rahim Sadat | Web Designer & Developer
+  </title>
+
+
+  <!-- ================================================================
+       INITIAL THEME
+       Prevents a light/dark flash before app.js starts.
+       ================================================================ -->
+
+  <script>
+    (function () {
+      try {
+        var savedTheme =
+          localStorage.getItem(
+            "portfolio-theme"
+          );
+
+        var theme =
+          savedTheme === "dark" ||
+          savedTheme === "light"
+            ? savedTheme
+            : (
+                window.matchMedia &&
+                window.matchMedia(
+                  "(prefers-color-scheme: dark)"
+                ).matches
+                  ? "dark"
+                  : "light"
+              );
+
+        document.documentElement.setAttribute(
+          "data-theme",
+          theme
+        );
+      } catch (error) {
+        document.documentElement.setAttribute(
+          "data-theme",
+          "light"
+        );
+      }
+    })();
+  </script>
+
+
+  <!-- ================================================================
+       PWA
+       ================================================================ -->
+
+  <link
+    rel="manifest"
+    href="manifest.json"
+  >
+
+
+  <!-- ================================================================
+       MAIN CSS
+
+       IMPORTANT:
+       This is the ONLY stylesheet.
+       ================================================================ -->
+
+  <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- ================================================================
+       LOADING SCREEN
+       ================================================================ -->
+
+  <div
+    id="loadingScreen"
+    class="loading-screen"
+    aria-hidden="true"
+  >
+
+    <div class="loading-screen__content">
+
+      <div class="loading-screen__logo">
+        SR
+      </div>
+
+
+      <div
+        class="loading-screen__spinner"
+        aria-hidden="true"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================================================================
+       SKIP LINK
+       ================================================================ -->
+
+  <a
+    href="#mainContent"
+    class="skip-link"
+  >
+    Skip to main content
+  </a>
+
+
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
+
+  <header
+    id="siteHeader"
+    class="site-header"
+  >
+
+    <div class="container header-container">
+
+
+      <!-- Logo -->
+
+      <a
+        href="#home"
+        class="site-logo"
+        aria-label="Sayed Rahim Sadat home"
+      >
+
+        <span class="site-logo__mark">
+          SR
+        </span>
+
+
+        <span class="site-logo__name">
+          Sayed Sadat
+        </span>
+
+      </a>
+
+
+      <!-- Desktop Navigation -->
+
+      <nav
+        class="desktop-nav"
+        aria-label="Primary navigation"
+      >
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+
+      <div class="header-actions">
+
+
+        <!-- Recruiter Mode -->
+
+        <button
+          id="recruiterToggle"
+          class="header-button recruiter-toggle"
+          type="button"
+          aria-pressed="false"
+          title="Toggle recruiter mode"
+        >
+
+          <span
+            class="header-button__icon"
+            aria-hidden="true"
+          >
+            ★
+          </span>
+
+
+          <span class="header-button__text">
+            Recruiter Mode
+          </span>
+
+        </button>
+
+
+        <!-- Theme -->
+
+        <button
+          id="themeToggle"
+          class="icon-button"
+          type="button"
+          aria-label="Switch theme"
+          title="Switch theme"
+        >
+
+          <span
+            id="themeIcon"
+            aria-hidden="true"
+          >
+            ☾
+          </span>
+
+        </button>
+
+
+        <!-- Resume -->
+
+        <a
+          class="btn btn-primary desktop-resume-button"
+          href="assets/resume/Sayed_Rahim_Sadat_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-resume-link
+        >
+          Resume
+        </a>
+
+
+        <!-- Mobile Menu -->
+
+        <button
+          id="mobileMenuToggle"
+          class="mobile-menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Open navigation menu"
+        >
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- ==============================================================
+         MOBILE MENU
+         ============================================================== -->
+
+    <nav
+      id="mobileMenu"
+      class="mobile-menu"
+      aria-label="Mobile navigation"
+      hidden
+    >
+
+      <div class="container mobile-menu__inner">
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+
+        <a
+          class="btn btn-primary"
+          href="assets/resume/Sayed_Rahim_Sadat_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-resume-link
+        >
+          View Resume
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ================================================================
+       MAIN WEBSITE
+       ================================================================ -->
+
+  <main
+    id="mainContent"
+    class="main-content"
+  >
+
+
+    <!-- ==============================================================
+         HERO
+         ============================================================== -->
+
+    <section
+      id="home"
+      class="hero section"
+      data-section
+    >
+
+
+      <!-- Decorative Background -->
+
+      <div
+        class="hero-decoration hero-decoration--one"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="hero-decoration hero-decoration--two"
+        aria-hidden="true"
+      ></div>
+
+
+      <div class="container hero-container">
+
+
+        <!-- Hero Content -->
+
+        <div class="hero-content">
+
+
+          <div class="hero-availability">
+
+            <span
+              class="hero-availability__dot"
+              aria-hidden="true"
+            ></span>
+
+            Open to new opportunities
+
+          </div>
+
+
+          <p class="hero-eyebrow">
+            WEB DESIGNER &amp; DEVELOPER
+          </p>
+
+
+          <h1 class="hero-title">
+
+            I build modern digital
+
+            <span class="gradient-text">
+              experiences.
+            </span>
+
+          </h1>
+
+
+          <p class="hero-description">
+            Web Designer &amp; Developer with hands-on experience
+            creating responsive, user-friendly websites and modern
+            web applications with a strong focus on usability,
+            performance, and clean interface design.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              href="#projects"
+              class="btn btn-primary btn-large"
+              id="exploreProjects"
+            >
+
+              Explore My Work
+
+              <span aria-hidden="true">
+                →
+              </span>
+
+            </a>
+
+
+            <a
+              href="#contact"
+              class="btn btn-secondary btn-large"
+            >
+              Contact Me
+            </a>
+
+          </div>
+
+
+          <div class="hero-tech">
+
+            <span>
+              HTML
+            </span>
+
+            <span>
+              CSS
+            </span>
+
+            <span>
+              JavaScript
+            </span>
+
+            <span>
+              UI/UX
+            </span>
+
+            <span>
+              Responsive Design
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- ==========================================================
+             HERO VISUAL
+             ========================================================== -->
+
+        <div
+          class="hero-visual"
+          aria-hidden="true"
+        >
+
+          <div class="browser-card">
+
+
+            <!-- Browser Toolbar -->
+
+            <div class="browser-card__toolbar">
+
+              <div class="browser-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+
+              <div class="browser-address">
+                portfolio.dev
+              </div>
+
+            </div>
+
+
+            <!-- Browser Body -->
+
+            <div class="browser-card__body">
+
+
+              <!-- Sidebar -->
+
+              <div class="browser-sidebar">
+
+                <div class="browser-sidebar__logo">
+                  SR
+                </div>
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+              </div>
+
+
+              <!-- Content -->
+
+              <div class="browser-content">
+
+                <div class="browser-content__eyebrow"></div>
+
+                <div class="browser-content__title"></div>
+
+                <div class="browser-content__title short"></div>
+
+
+                <div class="browser-content__text"></div>
+
+                <div class="browser-content__text medium"></div>
+
+
+                <div class="browser-content__buttons">
+                  <span></span>
+                  <span></span>
+                </div>
+
+
+                <div class="browser-content__cards">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Floating Cards -->
+
+          <div class="floating-card floating-card--code">
+
+            <span>
+              &lt;/&gt;
+            </span>
+
+            Clean Code
+
+          </div>
+
+
+          <div class="floating-card floating-card--responsive">
+
+            <span>
+              ◇
+            </span>
+
+            Responsive
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ============================================================
+           HERO STATS
+           ============================================================ -->
+
+      <div class="container hero-stats">
+
+
+        <div class="hero-stat">
+
+          <strong>
+            20+
+          </strong>
+
+          <span>
+            Portfolio Projects
+          </span>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <strong>
+            Responsive
+          </strong>
+
+          <span>
+            Mobile-First Design
+          </span>
+
+        </div>
+
+
+        <div class="hero-stat">
+
+          <strong>
+            Modern
+          </strong>
+
+          <span>
+            UI/UX Development
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================================================
+         FEATURED PROJECTS
+         ============================================================== -->
+
+    <section
+      id="featured"
+      class="section featured-section"
+      data-section
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+
+          <div>
+
+            <p class="section-eyebrow">
+              SELECTED WORK
+            </p>
+
+            <h2>
+              Featured projects
+            </h2>
+
+          </div>
+
+
+          <p class="section-heading__description">
+            A selection of projects that showcase my work in
+            front-end development, application design, responsive
+            interfaces, and user experience.
+          </p>
+
+        </div>
+
+
+        <div
+          id="featuredProjects"
+          class="featured-projects"
+        >
+
+          <!-- Rendered by assets/js/app.js -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================================================
+         PROJECTS
+         ============================================================== -->
+
+    <section
+      id="projects"
+      class="section projects-section"
+      data-section
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+
+          <div>
+
+            <p class="section-eyebrow">
+              PORTFOLIO
+            </p>
+
+            <h2>
+              Explore my work
+            </h2>
+
+          </div>
+
+
+          <p class="section-heading__description">
+            Browse projects by category, search technologies,
+            or open a project to view the full case study.
+          </p>
+
+        </div>
+
+
+        <!-- ==========================================================
+             PROJECT TOOLBAR
+             ========================================================== -->
+
+        <div class="projects-toolbar">
+
+
+          <!-- Search -->
+
+          <div class="project-search">
+
+            <span
+              class="project-search__icon"
+              aria-hidden="true"
+            >
+              ⌕
+            </span>
+
+
+            <input
+              id="projectSearch"
+              type="search"
+              placeholder="Search projects or technologies..."
+              autocomplete="off"
+              aria-label="Search projects"
+            >
+
+
+            <button
+              id="clearProjectSearch"
+              class="project-search__clear"
+              type="button"
+              aria-label="Clear project search"
+              hidden
+            >
+              ×
+            </button>
+
+          </div>
+
+
+          <!-- Sort -->
+
+          <label class="project-sort">
+
+            <span class="visually-hidden">
+              Sort projects
+            </span>
+
+
+            <select
+              id="projectSort"
+              aria-label="Sort projects"
+            >
+
+              <option value="featured">
+                Featured
+              </option>
+
+              <option value="newest">
+                Newest
+              </option>
+
+              <option value="oldest">
+                Oldest
+              </option>
+
+              <option value="name">
+                Name A–Z
+              </option>
+
+            </select>
+
+          </label>
+
+        </div>
+
+
+        <!-- ==========================================================
+             FILTERS
+             ========================================================== -->
+
+        <div
+          id="filterButtons"
+          class="project-filters"
+          aria-label="Project categories"
+        >
+
+          <!-- Rendered by app.js -->
+
+        </div>
+
+
+        <!-- ==========================================================
+             RESULTS COUNT
+             ========================================================== -->
+
+        <div class="projects-results">
+
+          <p
+            id="projectResultsText"
+            class="projects-results__text"
+            aria-live="polite"
+          >
+            Loading projects...
+          </p>
+
+        </div>
+
+
+        <!-- ==========================================================
+             PROJECT GRID
+             ========================================================== -->
+
+        <div
+          id="projectGrid"
+          class="project-grid"
+        >
+
+          <!-- Rendered by app.js -->
+
+        </div>
+
+
+        <!-- ==========================================================
+             EMPTY STATE
+             ========================================================== -->
+
+        <div
+          id="projectsEmptyState"
+          class="empty-state"
+          hidden
+        >
+
+          <div class="empty-state__icon">
+            ⌕
+          </div>
+
+
+          <h3>
+            No projects found
+          </h3>
+
+
+          <p>
+            Try another search or select a different category.
+          </p>
+
+
+          <button
+            id="resetProjectFilters"
+            class="btn btn-secondary"
+            type="button"
+          >
+            Reset Filters
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================================================
+         ABOUT
+         ============================================================== -->
+
+    <section
+      id="about"
+      class="section about-section"
+      data-section
+    >
+
+      <div class="container about-grid">
+
+
+        <div class="about-intro">
+
+          <p class="section-eyebrow">
+            ABOUT ME
+          </p>
+
+
+          <h2>
+            Designing with purpose.
+            Building with care.
+          </h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+
+          <p class="about-lead">
+            I enjoy turning ideas into clean, responsive,
+            and intuitive digital experiences.
+          </p>
+
+
+          <p>
+            My background combines web design and front-end
+            development, allowing me to think about both how
+            an interface should look and how it should work.
+            I focus on creating websites and applications that
+            feel simple, polished, and easy to use across
+            desktop and mobile devices.
+          </p>
+
+
+          <div class="about-values">
+
+
+            <article class="about-value">
+
+              <span class="about-value__number">
+                01
+              </span>
+
+
+              <div>
+
+                <h3>
+                  User-focused
+                </h3>
+
+                <p>
+                  Interfaces designed around clarity,
+                  accessibility, and ease of use.
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="about-value">
+
+              <span class="about-value__number">
+                02
+              </span>
+
+
+              <div>
+
+                <h3>
+                  Responsive
+                </h3>
+
+                <p>
+                  Experiences built to work naturally across
+                  phones, tablets, laptops, and desktops.
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="about-value">
+
+              <span class="about-value__number">
+                03
+              </span>
+
+
+              <div>
+
+                <h3>
+                  Detail-oriented
+                </h3>
+
+                <p>
+                  Careful attention to layout, spacing,
+                  interaction, consistency, and performance.
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================================================
+         SKILLS
+         ============================================================== -->
+
+    <section
+      id="skills"
+      class="section skills-section"
+      data-section
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <div>
+
+            <p class="section-eyebrow">
+              SKILLS
+            </p>
+
+            <h2>
+              Tools &amp; technologies
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+          <!-- Front-End -->
+
+          <article class="skill-card">
+
+            <div class="skill-card__icon">
+              &lt;/&gt;
+            </div>
+
+            <h3>
+              Front-End
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>
+                HTML5
+              </span>
+
+              <span>
+                CSS3
+              </span>
+
+              <span>
+                JavaScript
+              </span>
+
+              <span>
+                Bootstrap
+              </span>
+
+              <span>
+                Responsive Design
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- UI/UX -->
+
+          <article class="skill-card">
+
+            <div class="skill-card__icon">
+              ◈
+            </div>
+
+            <h3>
+              UI / UX
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>
+                Figma
+              </span>
+
+              <span>
+                Wireframing
+              </span>
+
+              <span>
+                Prototyping
+              </span>
+
+              <span>
+                Accessibility
+              </span>
+
+              <span>
+                Design Systems
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- Platforms -->
+
+          <article class="skill-card">
+
+            <div class="skill-card__icon">
+              ◎
+            </div>
+
+            <h3>
+              Platforms
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>
+                WordPress
+              </span>
+
+              <span>
+                Shopify
+              </span>
+
+              <span>
+                Kajabi
+              </span>
+
+              <span>
+                Webflow
+              </span>
+
+              <span>
+                GitHub
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- Development -->
+
+          <article class="skill-card">
+
+            <div class="skill-card__icon">
+              ⚙
+            </div>
+
+            <h3>
+              Development
+            </h3>
+
+
+            <div class="skill-tags">
+
+              <span>
+                Git
+              </span>
+
+              <span>
+                REST APIs
+              </span>
+
+              <span>
+                JSON
+              </span>
+
+              <span>
+                Debugging
+              </span>
+
+              <span>
+                Performance
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================================================
+         EXPERIENCE
+         ============================================================== -->
+
+    <section
+      id="experience"
+      class="section experience-section"
+      data-section
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <div>
+
+            <p class="section-eyebrow">
+              EXPERIENCE
+            </p>
+
+            <h2>
+              Professional journey
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+          <!-- Freelance -->
+
+          <article class="timeline-item">
+
+            <div class="timeline-marker"></div>
+
+
+            <div class="timeline-card">
+
+
+              <div class="timeline-card__header">
+
+                <div>
+
+                  <p class="timeline-card__date">
+                    2021 — Present
+                  </p>
+
+
+                  <h3>
+                    Web Designer &amp; Developer
+                  </h3>
+
+
+                  <p class="timeline-card__company">
+                    Freelance / Self-Employed
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <p>
+                Designing and developing responsive websites
+                and web experiences with a focus on modern
+                UI/UX, maintainable front-end code, content
+                management, testing, and performance.
+              </p>
+
+
+              <div class="timeline-card__tags">
+
+                <span>
+                  Web Design
+                </span>
+
+                <span>
+                  Front-End
+                </span>
+
+                <span>
+                  UI/UX
+                </span>
+
+                <span>
+                  CMS
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Scholars Playground -->
+
+          <article class="timeline-item">
+
+            <div class="timeline-marker"></div>
+
+
+            <div class="timeline-card">
+
+
+              <div class="timeline-card__header">
+
+                <div>
+
+                  <p class="timeline-card__date">
+                    2021
+                  </p>
+
+
+                  <h3>
+                    Web Developer
+                  </h3>
+
+
+                  <p class="timeline-card__company">
+                    Scholars Playground
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <p>
+                Worked on website interfaces, maintenance,
+                wireframes, platform implementation, and
+                improvements to the overall user experience.
+              </p>
+
+
+              <div class="timeline-card__tags">
+
+                <span>
+                  Development
+                </span>
+
+                <span>
+                  UI
+                </span>
+
+                <span>
+                  Kajabi
+                </span>
+
+                <span>
+                  React
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================================================
+         RECRUITER MODE SECTION
+         ============================================================== -->
+
+    <section
+      id="recruiterSection"
+      class="section recruiter-section"
+      hidden
+    >
+
+      <div class="container">
+
+
+        <div class="recruiter-panel">
+
+
+          <div class="recruiter-panel__content">
+
+            <p class="section-eyebrow">
+              RECRUITER MODE
+            </p>
+
+
+            <h2>
+              Looking for the quick version?
+            </h2>
+
+
+            <p>
+              Review selected projects, technical strengths,
+              experience, GitHub work, and my resume without
+              searching through the entire portfolio.
+            </p>
+
+
+            <div class="recruiter-facts">
+
+
+              <div>
+
+                <strong>
+                  Web Development
+                </strong>
+
+                <span>
+                  Hands-on experience
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Sacramento, CA
+                </strong>
+
+                <span>
+                  Based in California
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Responsive UI
+                </strong>
+
+                <span>
+                  Mobile + desktop
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="recruiter-panel__actions">
+
+
+            <a
+              class="btn btn-primary btn-large"
+              href="assets/resume/Sayed_Rahim_Sadat_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-resume-link
+            >
+              View Resume
+            </a>
+
+
+            <a
+              class="btn btn-secondary btn-large"
+              href="https://github.com/Sayed24"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================================================
+         CONTACT
+         ============================================================== -->
+
+    <section
+      id="contact"
+      class="section contact-section"
+      data-section
+    >
+
+      <div class="container contact-grid">
+
+
+        <!-- Contact Information -->
+
+        <div class="contact-content">
+
+          <p class="section-eyebrow">
+            CONTACT
+          </p>
+
+
+          <h2>
+
+            Let's build something
+
+            <span class="gradient-text">
+              great.
+            </span>
+
+          </h2>
+
+
+          <p>
+            Have an opportunity, project, or question?
+            Send me a message and I'll be happy to connect.
+          </p>
+
+
+          <div class="contact-links">
+
+
+            <!-- Email -->
+
+            <a
+              href="mailto:sadatsr52@gmail.com"
+              class="contact-link"
+            >
+
+              <span class="contact-link__icon">
+                @
+              </span>
+
+
+              <span>
+
+                <small>
+                  Email
+                </small>
+
+                <strong>
+                  sadatsr52@gmail.com
+                </strong>
+
+              </span>
+
+            </a>
+
+
+            <!-- GitHub -->
+
+            <a
+              href="https://github.com/Sayed24"
+              class="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span class="contact-link__icon">
+                &lt;/&gt;
+              </span>
+
+
+              <span>
+
+                <small>
+                  GitHub
+                </small>
+
+                <strong>
+                  github.com/Sayed24
+                </strong>
+
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- ==========================================================
+             CONTACT FORM
+             ========================================================== -->
+
+        <form
+          id="contactForm"
+          class="contact-form"
+        >
+
+
+          <!-- Name -->
+
+          <div class="form-group">
+
+            <label for="contactName">
+              Name
+            </label>
+
+            <input
+              id="contactName"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+          <!-- Email -->
+
+          <div class="form-group">
+
+            <label for="contactEmail">
+              Email
+            </label>
+
+            <input
+              id="contactEmail"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+
+          <!-- Subject -->
+
+          <div class="form-group">
+
+            <label for="contactSubject">
+              Subject
+            </label>
+
+            <input
+              id="contactSubject"
+              name="subject"
+              type="text"
+              placeholder="What would you like to discuss?"
+              required
+            >
+
+          </div>
+
+
+          <!-- Message -->
+
+          <div class="form-group">
+
+            <label for="contactMessage">
+              Message
+            </label>
+
+            <textarea
+              id="contactMessage"
+              name="message"
+              rows="6"
+              placeholder="Tell me about the opportunity or project..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <!-- Submit -->
+
+          <button
+            class="btn btn-primary btn-large btn-block"
+            type="submit"
+          >
+
+            Send Message
+
+            <span aria-hidden="true">
+              →
+            </span>
+
+          </button>
+
+
+          <p class="contact-form__note">
+            This form opens your email application with
+            your message already prepared.
+          </p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================================================================
+       PROJECT DETAIL VIEW
+       ================================================================ -->
+
+  <main
+    id="projectView"
+    class="project-view"
+    hidden
+  >
+
+    <!-- Rendered by app.js -->
+
+  </main>
+
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-container">
+
+
+      <div>
+
+        <a
+          href="#home"
+          class="footer-logo"
+        >
+
+          <span>
+            SR
+          </span>
+
+          Sayed Rahim Sadat
+
+        </a>
+
+
+        <p class="footer-description">
+          Web Designer &amp; Developer creating modern,
+          responsive digital experiences.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        ©
+        <span id="currentYear"></span>
+        Sayed Rahim Sadat.
+      </p>
+
+
+      <p>
+        Designed &amp; developed with attention to detail.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================================================================
+       SCROLL TO TOP
+       ================================================================ -->
+
+  <button
+    id="scrollToTop"
+    class="scroll-to-top"
+    type="button"
+    aria-label="Scroll to top"
+    title="Back to top"
+    hidden
+  >
+    ↑
+  </button>
+
+
+  <!-- ================================================================
+       TOAST CONTAINER
+       ================================================================ -->
+
+  <div
+    id="toastContainer"
+    class="toast-container"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+
+  <!-- ================================================================
+       PORTFOLIO ASSISTANT BUTTON
+       ================================================================ -->
+
+  <button
+    id="assistantToggle"
+    class="assistant-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="assistantPanel"
+    title="Portfolio assistant"
+  >
+
+    <span aria-hidden="true">
+      ✦
+    </span>
+
+
+    <span class="assistant-toggle__text">
+      Ask about me
+    </span>
+
+  </button>
+
+
+  <!-- ================================================================
+       PORTFOLIO ASSISTANT
+       ================================================================ -->
+
+  <aside
+    id="assistantPanel"
+    class="assistant-panel"
+    aria-label="Portfolio assistant"
+    hidden
+  >
+
+
+    <div class="assistant-panel__header">
+
+
+      <div>
+
+        <span class="assistant-panel__status">
+          Portfolio Assistant
+        </span>
+
+        <h2>
+          Ask about my work
+        </h2>
+
+      </div>
+
+
+      <button
+        id="assistantClose"
+        type="button"
+        aria-label="Close assistant"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      id="assistantMessages"
+      class="assistant-messages"
+      aria-live="polite"
+    >
+
+      <div class="assistant-message assistant-message--bot">
+        Hi! I can help you quickly explore Sayed's projects,
+        skills, experience, GitHub, and contact information.
+      </div>
+
+    </div>
+
+
+    <div
+      id="assistantSuggestions"
+      class="assistant-suggestions"
+    >
+
+
+      <button
+        type="button"
+        data-assistant-question="best-projects"
+      >
+        Best projects
+      </button>
+
+
+      <button
+        type="button"
+        data-assistant-question="skills"
+      >
+        Technical skills
+      </button>
+
+
+      <button
+        type="button"
+        data-assistant-question="experience"
+      >
+        Experience
+      </button>
+
+
+      <button
+        type="button"
+        data-assistant-question="contact"
+      >
+        Contact
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ================================================================
+       ACCESSIBILITY ANNOUNCEMENT
+       ================================================================ -->
+
+  <div
+    id="appAnnouncement"
+    class="visually-hidden"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+
+  <!-- ================================================================
+       INDEPENDENT LOADER FAILSAFE
+
+       IMPORTANT:
+       This does NOT depend on app.js.
+
+       Even if app.js completely fails to download or contains an error,
+       the SR loading screen will still disappear.
+       ================================================================ -->
+
+  <script>
+    (function () {
+      var loader =
+        document.getElementById(
+          "loadingScreen"
+        );
+
+      if (!loader) {
+        return;
+      }
+
+      function forceHideLoader() {
+        if (!loader) {
+          return;
+        }
+
+        loader.classList.add(
+          "is-hidden"
+        );
+
+        loader.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+        window.setTimeout(
+          function () {
+            if (
+              loader &&
+              loader.parentNode
+            ) {
+              loader.parentNode.removeChild(
+                loader
+              );
+            }
+
+            loader = null;
+          },
+          500
+        );
+      }
+
+
+      /*
+       * If the page fully loads, do not leave
+       * the loading screen on top of the site.
+       */
+
+      window.addEventListener(
+        "load",
+        function () {
+          window.setTimeout(
+            forceHideLoader,
+            500
+          );
+        },
+        {
+          once: true
+        }
+      );
+
+
+      /*
+       * Absolute failsafe.
+       * Even if app.js fails completely,
+       * remove the loading screen.
+       */
+
+      window.setTimeout(
+        forceHideLoader,
+        4000
+      );
+    })();
+  </script>
+
+
+  <!-- ================================================================
+       MAIN JAVASCRIPT
+
+       IMPORTANT:
+       This is the ONLY external JavaScript file.
+       ================================================================ -->
+
+  <script
+    src="assets/js/app.js"
+  ></script>
+
+</body>
+
+</html>

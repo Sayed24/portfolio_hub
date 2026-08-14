@@ -4,7 +4,7 @@
     "slug": "flowdesk",
     "title": "FlowDesk",
     "description": "A modern offline-first productivity application for managing tasks, notes, goals, and habits in one responsive workspace.",
-    "longDescription": "FlowDesk is a productivity-focused web application that combines task management, notes, goals, and habit tracking in one clean interface. The project focuses on responsive design, local-first functionality, intuitive navigation, and an application-style user experience.",
+    "longDescription": "A modern offline-first productivity application for managing tasks, notes, goals, and habits in one responsive workspace.",
     "category": "Web Application",
     "technologies": [
       "HTML5",
@@ -19,263 +19,31 @@
       "Dashboard",
       "Responsive"
     ],
-    "image": "flowdesk/cover.webp",
-    "gallery": [
-      {
-        "src": "flowdesk/dashboard.webp",
-        "alt": "FlowDesk dashboard"
-      },
-      {
-        "src": "flowdesk/tasks.webp",
-        "alt": "FlowDesk task management interface"
-      },
-      {
-        "src": "flowdesk/mobile.webp",
-        "alt": "FlowDesk mobile interface"
-      }
-    ],
+    "image": "",
+    "gallery": [],
     "github": "https://github.com/Sayed24/FlowDesk",
-    "live": "https://sayed24.github.io/FlowDesk/",
+    "live": "",
     "featured": true,
     "recruiterRecommended": true,
     "status": "In Development",
-    "created": "2026-01-27",
+    "created": "",
     "updated": "",
     "order": 1,
     "features": [
       "Task, note, goal, and habit management",
-      "Offline-first browser storage with IndexedDB",
-      "Responsive desktop and mobile navigation",
-      "Persistent dark mode",
-      "Search, filtering, sorting, priorities, tags, and due dates",
-      "Local backup and restore workflow"
+      "Offline-first local data storage",
+      "Responsive desktop and mobile interface",
+      "Persistent theme support"
     ],
-    "challenges": [
-      "Organizing several productivity tools without overwhelming the interface",
-      "Creating reusable UI patterns across multiple application areas",
-      "Maintaining usability across desktop and mobile layouts"
-    ],
-    "results": [
-      "Created a unified productivity application architecture",
-      "Built a responsive application-style interface",
-      "Designed the project around local persistence and offline usability"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
     "id": 2,
-    "slug": "insighthub",
-    "title": "InsightHub",
-    "description": "A modern analytics dashboard for presenting metrics, trends, activity, and performance information in a clear responsive interface.",
-    "longDescription": "InsightHub is an analytics dashboard project focused on transforming complex information into a clean and readable user experience using metric cards, visual summaries, filters, and responsive layouts.",
-    "category": "Dashboard",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Responsive Design"
-    ],
-    "tags": [
-      "Analytics",
-      "Dashboard",
-      "Data Visualization",
-      "UI/UX"
-    ],
-    "image": "insighthub/cover.webp",
-    "gallery": [
-      {
-        "src": "insighthub/dashboard.webp",
-        "alt": "InsightHub analytics dashboard"
-      },
-      {
-        "src": "insighthub/analytics.webp",
-        "alt": "InsightHub analytics interface"
-      }
-    ],
-    "github": "https://github.com/Sayed24/InsightHub",
-    "live": "https://sayed24.github.io/InsightHub/",
-    "featured": true,
-    "recruiterRecommended": true,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 2,
-    "features": [
-      "Responsive analytics dashboard",
-      "Reusable metric cards",
-      "Performance and activity summaries",
-      "Filtering and dashboard controls"
-    ],
-    "challenges": [
-      "Displaying large amounts of information without visual clutter",
-      "Maintaining readability when dashboard components reorganize on smaller screens"
-    ],
-    "results": [
-      "Created a polished analytics interface",
-      "Improved information hierarchy through reusable dashboard components"
-    ]
-  },
-  {
-    "id": 3,
-    "slug": "personal-finance-tracker",
-    "title": "Personal Finance Tracker",
-    "description": "A personal finance application for organizing income, expenses, balances, categories, and transaction activity.",
-    "longDescription": "Personal Finance Tracker presents financial activity through a clean dashboard experience designed to help users understand balances, income, expenses, and transaction history.",
-    "category": "Web Application",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Local Storage"
-    ],
-    "tags": [
-      "Finance",
-      "Dashboard",
-      "Transactions",
-      "Responsive"
-    ],
-    "image": "personal-finance-tracker/cover.webp",
-    "gallery": [
-      {
-        "src": "personal-finance-tracker/dashboard.webp",
-        "alt": "Personal Finance Tracker dashboard"
-      },
-      {
-        "src": "personal-finance-tracker/transactions.webp",
-        "alt": "Personal Finance Tracker transactions"
-      }
-    ],
-    "github": "https://github.com/Sayed24/Finance_Tracker",
-    "live": "https://sayed24.github.io/Finance_Tracker/",
-    "featured": true,
-    "recruiterRecommended": true,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 3,
-    "features": [
-      "Income and expense tracking",
-      "Transaction categories",
-      "Balance summaries",
-      "Search and filtering",
-      "Responsive finance dashboard"
-    ],
-    "challenges": [
-      "Presenting financial data clearly without overwhelming users",
-      "Designing transaction controls that remain usable on smaller screens"
-    ],
-    "results": [
-      "Created a practical personal finance interface",
-      "Built reusable transaction and summary components"
-    ]
-  },
-  {
-    "id": 4,
-    "slug": "employee-management-system",
-    "title": "Employee Management System",
-    "description": "An administrative dashboard for organizing employee records, departments, roles, status, and workplace information.",
-    "longDescription": "The Employee Management System is an admin-style interface designed around searchable employee information, reusable management controls, status indicators, and responsive data presentation.",
-    "category": "Dashboard",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript"
-    ],
-    "tags": [
-      "Admin",
-      "Employees",
-      "CRUD",
-      "Management"
-    ],
-    "image": "employee-management-system/cover.webp",
-    "gallery": [
-      {
-        "src": "employee-management-system/dashboard.webp",
-        "alt": "Employee Management System dashboard"
-      },
-      {
-        "src": "employee-management-system/employees.webp",
-        "alt": "Employee management interface"
-      }
-    ],
-    "github": "https://github.com/Sayed24/Employee-Management-System",
-    "live": "https://sayed24.github.io/Employee-Management-System/",
-    "featured": true,
-    "recruiterRecommended": true,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 4,
-    "features": [
-      "Employee record management",
-      "Search and filtering",
-      "Department and role information",
-      "Status indicators",
-      "Responsive administrative interface"
-    ],
-    "challenges": [
-      "Making data-heavy employee information easy to navigate",
-      "Keeping management controls usable on smaller screens"
-    ],
-    "results": [
-      "Created reusable administrative UI patterns",
-      "Built a responsive employee-management interface"
-    ]
-  },
-  {
-    "id": 5,
-    "slug": "kanban-board",
-    "title": "Kanban Board",
-    "description": "A visual task-management board for organizing work through workflow columns and task states.",
-    "longDescription": "The Kanban Board provides a visual workflow for organizing tasks across different stages while emphasizing understandable interactions and responsive layout behavior.",
-    "category": "Productivity",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Drag and Drop"
-    ],
-    "tags": [
-      "Kanban",
-      "Tasks",
-      "Workflow",
-      "Productivity"
-    ],
-    "image": "kanban-board/cover.webp",
-    "gallery": [
-      {
-        "src": "kanban-board/board.webp",
-        "alt": "Kanban task board"
-      }
-    ],
-    "github": "",
-    "live": "",
-    "featured": false,
-    "recruiterRecommended": true,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 5,
-    "features": [
-      "Workflow columns",
-      "Task creation and organization",
-      "Drag-and-drop interactions",
-      "Responsive task-board layout"
-    ],
-    "challenges": [
-      "Making a horizontally oriented workflow practical on mobile",
-      "Keeping task interactions simple and understandable"
-    ],
-    "results": [
-      "Built an interactive workflow interface",
-      "Created reusable task-card components"
-    ]
-  },
-  {
-    "id": 6,
     "slug": "smart-movie-tv-explorer",
     "title": "Smart Movie & TV Explorer",
-    "description": "A media discovery application for browsing, searching, filtering, and viewing movie and television information.",
-    "longDescription": "Smart Movie & TV Explorer focuses on media discovery through searchable content, responsive cards, filtering controls, and detailed information views.",
+    "description": "A media discovery application for searching, browsing, and exploring movie and television content through a responsive interface.",
+    "longDescription": "A media discovery application for searching, browsing, and exploring movie and television content through a responsive interface.",
     "category": "API Project",
     "technologies": [
       "HTML5",
@@ -286,21 +54,160 @@
     "tags": [
       "Movies",
       "TV",
+      "Search",
+      "API"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Smart-Movie---TV-Explorer",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 2,
+    "features": [
+      "Movie and TV search",
+      "Responsive media cards",
+      "Content browsing",
+      "Detailed media presentation"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 3,
+    "slug": "user-management-dashboard",
+    "title": "User Management Dashboard",
+    "description": "A modern responsive front-end dashboard for presenting and managing user information through interactive controls.",
+    "longDescription": "A modern responsive front-end dashboard for presenting and managing user information through interactive controls.",
+    "category": "Dashboard",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Users",
+      "Dashboard",
+      "Management",
+      "Responsive"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/User_Management_Dashboard",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 3,
+    "features": [
+      "User-management interface",
+      "Responsive dashboard layout",
+      "Interactive front-end controls",
+      "Organized user-data presentation"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 4,
+    "slug": "github-profile-analyzer",
+    "title": "GitHub Profile Analyzer",
+    "description": "A responsive application that analyzes GitHub profiles, repositories, statistics, and developer activity from a username search.",
+    "longDescription": "A responsive application that analyzes GitHub profiles, repositories, statistics, and developer activity from a username search.",
+    "category": "API Project",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "GitHub API"
+    ],
+    "tags": [
+      "GitHub",
       "API",
-      "Search"
+      "Developers",
+      "Analytics"
     ],
-    "image": "movie-tv-explorer/cover.webp",
-    "gallery": [
-      {
-        "src": "movie-tv-explorer/browse.webp",
-        "alt": "Movie and television browsing interface"
-      },
-      {
-        "src": "movie-tv-explorer/details.webp",
-        "alt": "Movie details interface"
-      }
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/GitHub_Profile_Analyzer",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 4,
+    "features": [
+      "GitHub username search",
+      "Profile insights",
+      "Repository statistics",
+      "Developer data presentation"
     ],
-    "github": "",
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 5,
+    "slug": "user-data",
+    "title": "User Data",
+    "description": "A JavaScript project focused on loading, presenting, and interacting with user data in a clean browser interface.",
+    "longDescription": "A JavaScript project focused on loading, presenting, and interacting with user data in a clean browser interface.",
+    "category": "JavaScript App",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "User Data",
+      "JavaScript",
+      "Dynamic UI",
+      "Frontend"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/User_data",
+    "live": "",
+    "featured": false,
+    "recruiterRecommended": false,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 5,
+    "features": [
+      "Dynamic user-data rendering",
+      "Browser-based interaction",
+      "Responsive information presentation"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 6,
+    "slug": "nova",
+    "title": "Nova",
+    "description": "A mobile-first web experience focused on responsive UX, touch-friendly interaction, and clean navigation across screen sizes.",
+    "longDescription": "A mobile-first web experience focused on responsive UX, touch-friendly interaction, and clean navigation across screen sizes.",
+    "category": "Website",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Mobile First",
+      "Responsive",
+      "UI/UX",
+      "Frontend"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Nova",
     "live": "",
     "featured": true,
     "recruiterRecommended": true,
@@ -309,27 +216,543 @@
     "updated": "",
     "order": 6,
     "features": [
-      "Media search",
-      "Content filtering",
-      "Responsive media cards",
-      "Detailed movie and television views",
-      "API-driven content"
+      "Mobile-first responsive layout",
+      "Touch-friendly controls",
+      "Responsive navigation",
+      "Modern user interface"
     ],
-    "challenges": [
-      "Handling changing API results gracefully",
-      "Maintaining responsive performance with image-heavy content"
-    ],
-    "results": [
-      "Built a searchable media application",
-      "Practiced REST API integration and dynamic rendering"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
     "id": 7,
-    "slug": "weather-location-dashboard",
-    "title": "Weather + Location Dashboard",
-    "description": "A location-aware weather dashboard presenting current conditions and forecast information in a responsive interface.",
-    "longDescription": "Weather + Location Dashboard combines weather information with location-aware features to create a clear and practical forecast experience.",
+    "slug": "ai-quote-generator",
+    "title": "AI Quote Generator",
+    "description": "An interactive quote generator with categories, sharing tools, copy actions, and saved favorites.",
+    "longDescription": "An interactive quote generator with categories, sharing tools, copy actions, and saved favorites.",
+    "category": "JavaScript App",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Local Storage"
+    ],
+    "tags": [
+      "Quotes",
+      "Generator",
+      "Favorites",
+      "Interactive"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/AI_Quote_Generator",
+    "live": "",
+    "featured": false,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 7,
+    "features": [
+      "Dynamic quote generation",
+      "Quote categories",
+      "Copy and share actions",
+      "Saved favorites"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 8,
+    "slug": "sadat-chatapp",
+    "title": "Sadat ChatApp",
+    "description": "A responsive front-end chat application demonstrating real-time-style messaging interactions in a modern mobile-first interface.",
+    "longDescription": "A responsive front-end chat application demonstrating real-time-style messaging interactions in a modern mobile-first interface.",
+    "category": "Web Application",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Chat",
+      "Messaging",
+      "Responsive",
+      "Mobile First"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Sadat_ChatApp",
+    "live": "",
+    "featured": false,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 8,
+    "features": [
+      "Chat-style messaging interface",
+      "Responsive mobile-first layout",
+      "Interactive conversation UI",
+      "GitHub Pages-friendly front end"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 9,
+    "slug": "hublet",
+    "title": "Hublet",
+    "description": "A marketplace and listings application designed for browsing items for sale, job postings, rentals, and other listing categories.",
+    "longDescription": "A marketplace and listings application designed for browsing items for sale, job postings, rentals, and other listing categories.",
+    "category": "Web Application",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Marketplace",
+      "Listings",
+      "Jobs",
+      "Rentals"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Hublet",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 9,
+    "features": [
+      "Multiple listing categories",
+      "Marketplace-style browsing",
+      "Job listings",
+      "Rental listings"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 10,
+    "slug": "digital-services",
+    "title": "Digital Services",
+    "description": "A modern responsive website for presenting digital services and virtual-assistant business offerings.",
+    "longDescription": "A modern responsive website for presenting digital services and virtual-assistant business offerings.",
+    "category": "Business Website",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Business",
+      "Services",
+      "Responsive",
+      "Website"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Digital_Services",
+    "live": "",
+    "featured": false,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 10,
+    "features": [
+      "Digital-service presentation",
+      "Responsive business layout",
+      "Clear calls to action",
+      "Modern landing-page design"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 11,
+    "slug": "finance-tracker",
+    "title": "Finance Tracker",
+    "description": "A responsive finance tracker for recording income and expenses, organizing categories, filtering records, and reviewing financial activity.",
+    "longDescription": "A responsive finance tracker for recording income and expenses, organizing categories, filtering records, and reviewing financial activity.",
+    "category": "Finance",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Finance",
+      "Income",
+      "Expenses",
+      "Dashboard"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Finance_Tracker",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 11,
+    "features": [
+      "Income and expense tracking",
+      "Category-based entries",
+      "Daily, monthly, and yearly filters",
+      "Sorting and financial summaries"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 12,
+    "slug": "smart-form-builder",
+    "title": "Smart Form Builder",
+    "description": "A modern Google Forms-style interface for building and managing interactive forms with dynamic front-end controls.",
+    "longDescription": "A modern Google Forms-style interface for building and managing interactive forms with dynamic front-end controls.",
+    "category": "Web Application",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Forms",
+      "Builder",
+      "Dynamic UI",
+      "Productivity"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Smart-Form-Builder",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 12,
+    "features": [
+      "Dynamic form building",
+      "Interactive field controls",
+      "Form-style editing experience",
+      "Responsive layout"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 13,
+    "slug": "modern-interactive-image-slider",
+    "title": "Modern Interactive Image Slider",
+    "description": "A polished interactive image slider project focused on smooth navigation, modern visual presentation, and responsive behavior.",
+    "longDescription": "A polished interactive image slider project focused on smooth navigation, modern visual presentation, and responsive behavior.",
+    "category": "UI Component",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Slider",
+      "Images",
+      "UI",
+      "Interactive"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Modern_Interactive_Image_Slider",
+    "live": "",
+    "featured": false,
+    "recruiterRecommended": false,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 13,
+    "features": [
+      "Interactive image navigation",
+      "Responsive slider layout",
+      "Modern transitions",
+      "Visual content presentation"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 14,
+    "slug": "portfolio-platform",
+    "title": "Portfolio Platform",
+    "description": "A developer portfolio platform designed to present projects, technical work, and professional information through an application-style interface.",
+    "longDescription": "A developer portfolio platform designed to present projects, technical work, and professional information through an application-style interface.",
+    "category": "Portfolio",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Portfolio",
+      "Developer",
+      "Projects",
+      "Professional"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Portfolio_Platform",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 14,
+    "features": [
+      "Developer portfolio presentation",
+      "Project organization",
+      "Professional profile interface",
+      "Responsive design"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 15,
+    "slug": "insighthub",
+    "title": "InsightHub",
+    "description": "A modern API-driven dashboard for presenting useful information, insights, and dynamic data in a responsive interface.",
+    "longDescription": "A modern API-driven dashboard for presenting useful information, insights, and dynamic data in a responsive interface.",
+    "category": "Dashboard",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "REST API"
+    ],
+    "tags": [
+      "Dashboard",
+      "API",
+      "Analytics",
+      "Data"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/InsightHub",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 15,
+    "features": [
+      "API-driven dashboard",
+      "Dynamic information cards",
+      "Responsive analytics layout",
+      "Organized data presentation"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 16,
+    "slug": "open-data-scientific-research-dashboard",
+    "title": "Open Data Scientific Research Dashboard",
+    "description": "A scientific research dashboard designed to visualize and explore information from public open-data sources.",
+    "longDescription": "A scientific research dashboard designed to visualize and explore information from public open-data sources.",
+    "category": "Data Visualization",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "REST API"
+    ],
+    "tags": [
+      "Open Data",
+      "Science",
+      "Research",
+      "Visualization"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Open-Data-Scientific-Research-Dashboard",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 16,
+    "features": [
+      "Public scientific data presentation",
+      "Research-focused dashboard",
+      "Data visualization",
+      "Responsive information layout"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 17,
+    "slug": "modern-restaurant-ordering-website",
+    "title": "Modern Restaurant Ordering Website",
+    "description": "A mobile-first restaurant ordering website with responsive menu presentation and an interface designed around food ordering.",
+    "longDescription": "A mobile-first restaurant ordering website with responsive menu presentation and an interface designed around food ordering.",
+    "category": "Website",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Restaurant",
+      "Ordering",
+      "Mobile First",
+      "Responsive"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Modern-Restaurant-Ordering-Website",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 17,
+    "features": [
+      "Mobile-first restaurant interface",
+      "Menu presentation",
+      "Ordering-focused user experience",
+      "Responsive design"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 18,
+    "slug": "learnify-modern-learning-platform",
+    "title": "Learnify – Modern Learning Platform",
+    "description": "An interactive learning platform for presenting educational content, courses, lessons, and learner-focused experiences.",
+    "longDescription": "An interactive learning platform for presenting educational content, courses, lessons, and learner-focused experiences.",
+    "category": "Education",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Learning",
+      "Education",
+      "Courses",
+      "Interactive"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Learnify-Modern-Learning-Platform",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 18,
+    "features": [
+      "Interactive learning interface",
+      "Course and lesson presentation",
+      "Responsive educational layout",
+      "Learner-focused navigation"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 19,
+    "slug": "random-user-generator",
+    "title": "Random User Generator",
+    "description": "A browser application that generates and presents random user information through a simple interactive interface.",
+    "longDescription": "A browser application that generates and presents random user information through a simple interactive interface.",
+    "category": "API Project",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "REST API"
+    ],
+    "tags": [
+      "Users",
+      "Generator",
+      "API",
+      "JavaScript"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Random-User-Generator",
+    "live": "",
+    "featured": false,
+    "recruiterRecommended": false,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 19,
+    "features": [
+      "Random user generation",
+      "Dynamic profile presentation",
+      "API-driven content",
+      "Responsive interface"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 20,
+    "slug": "project-management-kanban-board",
+    "title": "Project Management Kanban Board",
+    "description": "A professional Trello-style project-management board for visually organizing tasks and workflow stages.",
+    "longDescription": "A professional Trello-style project-management board for visually organizing tasks and workflow stages.",
+    "category": "Productivity",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Drag and Drop"
+    ],
+    "tags": [
+      "Kanban",
+      "Project Management",
+      "Tasks",
+      "Workflow"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Project-Management-Kanban-Board",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 20,
+    "features": [
+      "Kanban workflow columns",
+      "Task organization",
+      "Project-management interface",
+      "Trello-style responsive UI"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 21,
+    "slug": "real-time-weather",
+    "title": "Real-Time Weather",
+    "description": "A real-time weather and location dashboard for presenting current conditions and location-based weather information.",
+    "longDescription": "A real-time weather and location dashboard for presenting current conditions and location-based weather information.",
     "category": "API Project",
     "technologies": [
       "HTML5",
@@ -340,98 +763,146 @@
     ],
     "tags": [
       "Weather",
-      "Forecast",
       "Location",
-      "API"
+      "API",
+      "Dashboard"
     ],
-    "image": "weather-location-dashboard/cover.webp",
-    "gallery": [
-      {
-        "src": "weather-location-dashboard/dashboard.webp",
-        "alt": "Weather and location dashboard"
-      },
-      {
-        "src": "weather-location-dashboard/mobile.webp",
-        "alt": "Weather dashboard mobile interface"
-      }
-    ],
-    "github": "",
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Real-Time-Weather",
     "live": "",
-    "featured": false,
+    "featured": true,
     "recruiterRecommended": true,
     "status": "Portfolio Project",
     "created": "",
     "updated": "",
-    "order": 7,
+    "order": 21,
     "features": [
-      "Current weather information",
-      "Forecast presentation",
-      "Location-aware functionality",
-      "Responsive weather cards"
+      "Current weather presentation",
+      "Location-aware information",
+      "Responsive weather dashboard",
+      "Dynamic API data"
     ],
-    "challenges": [
-      "Presenting several forecast values clearly",
-      "Handling location and weather-data states"
-    ],
-    "results": [
-      "Built an API-driven weather dashboard",
-      "Practiced geolocation and responsive data presentation"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
-    "id": 8,
-    "slug": "social-media-mini-app",
-    "title": "Social Media Mini-App",
-    "description": "A responsive social interface featuring posts, profiles, interactions, navigation, and content feeds.",
-    "longDescription": "The Social Media Mini-App explores familiar social-platform interface patterns including profiles, feeds, post interactions, and responsive navigation.",
-    "category": "Web Application",
+    "id": 22,
+    "slug": "sudoku",
+    "title": "Sudoku",
+    "description": "An interactive browser-based Sudoku game built around puzzle solving, JavaScript logic, and responsive user interaction.",
+    "longDescription": "An interactive browser-based Sudoku game built around puzzle solving, JavaScript logic, and responsive user interaction.",
+    "category": "JavaScript Game",
     "technologies": [
       "HTML5",
       "CSS3",
       "JavaScript"
     ],
     "tags": [
-      "Social",
-      "Feed",
-      "Profiles",
-      "UI"
+      "Sudoku",
+      "Game",
+      "Logic",
+      "JavaScript"
     ],
-    "image": "social-media-mini-app/cover.webp",
-    "gallery": [
-      {
-        "src": "social-media-mini-app/feed.webp",
-        "alt": "Social media content feed"
-      }
-    ],
-    "github": "",
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Sudoku",
     "live": "",
     "featured": false,
     "recruiterRecommended": false,
     "status": "Portfolio Project",
     "created": "",
     "updated": "",
-    "order": 8,
+    "order": 22,
     "features": [
-      "Responsive content feed",
-      "Profile interface",
-      "Post interactions",
-      "Mobile navigation"
+      "Sudoku puzzle interface",
+      "Interactive number input",
+      "Game logic",
+      "Responsive browser experience"
     ],
-    "challenges": [
-      "Creating a familiar social layout without unnecessary clutter",
-      "Maintaining content readability across screen sizes"
-    ],
-    "results": [
-      "Created reusable social-content components",
-      "Built a responsive feed interface"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
-    "id": 9,
-    "slug": "interactive-ecommerce-showcase",
-    "title": "Interactive E-Commerce Showcase",
-    "description": "A responsive shopping interface featuring product browsing, categories, filtering, product information, and modern e-commerce interactions.",
-    "longDescription": "Interactive E-Commerce Showcase demonstrates online-store interface patterns through product cards, category browsing, filtering controls, product presentation, and responsive layouts.",
+    "id": 23,
+    "slug": "personal-finance-tracker",
+    "title": "Personal Finance Tracker",
+    "description": "A personal finance application focused on organizing financial activity, transactions, income, expenses, and balances.",
+    "longDescription": "A personal finance application focused on organizing financial activity, transactions, income, expenses, and balances.",
+    "category": "Finance",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Personal Finance",
+      "Income",
+      "Expenses",
+      "Tracking"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Personal-Finance-Tracker",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 23,
+    "features": [
+      "Personal financial tracking",
+      "Transaction organization",
+      "Income and expense presentation",
+      "Responsive finance interface"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 24,
+    "slug": "interactive-resume-cv-builder",
+    "title": "Interactive Resume / CV Builder",
+    "description": "An interactive browser-based resume and CV builder for entering professional information and assembling it into a structured resume layout.",
+    "longDescription": "An interactive browser-based resume and CV builder for entering professional information and assembling it into a structured resume layout.",
+    "category": "Productivity",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "tags": [
+      "Resume",
+      "CV",
+      "Builder",
+      "Career"
+    ],
+    "image": "",
+    "gallery": [],
+    "github": "https://github.com/Sayed24/Interactive-resume-cv-builder",
+    "live": "",
+    "featured": true,
+    "recruiterRecommended": true,
+    "status": "Portfolio Project",
+    "created": "",
+    "updated": "",
+    "order": 24,
+    "features": [
+      "Interactive resume building",
+      "Structured professional-information entry",
+      "Dynamic resume presentation",
+      "Responsive interface"
+    ],
+    "challenges": [],
+    "results": []
+  },
+  {
+    "id": 25,
+    "slug": "interactive-ecommerce-product-showcase",
+    "title": "Interactive E-Commerce Product Showcase",
+    "description": "An interactive e-commerce product showcase designed to present products through a polished, responsive shopping interface.",
+    "longDescription": "An interactive e-commerce product showcase designed to present products through a polished, responsive shopping interface.",
     "category": "E-Commerce",
     "technologies": [
       "HTML5",
@@ -442,548 +913,210 @@
       "E-Commerce",
       "Products",
       "Shopping",
-      "Responsive"
-    ],
-    "image": "ecommerce-showcase/cover.webp",
-    "gallery": [
-      {
-        "src": "ecommerce-showcase/products.webp",
-        "alt": "E-commerce products interface"
-      },
-      {
-        "src": "ecommerce-showcase/product-details.webp",
-        "alt": "Product details interface"
-      }
-    ],
-    "github": "",
-    "live": "",
-    "featured": false,
-    "recruiterRecommended": true,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 9,
-    "features": [
-      "Product browsing",
-      "Category filtering",
-      "Responsive product cards",
-      "Product-detail presentation"
-    ],
-    "challenges": [
-      "Designing product cards that work across many screen sizes",
-      "Keeping shopping controls straightforward on mobile"
-    ],
-    "results": [
-      "Created a polished e-commerce interface",
-      "Built reusable product-display components"
-    ]
-  },
-  {
-    "id": 10,
-    "slug": "learnify",
-    "title": "Learnify",
-    "description": "An educational platform interface for browsing courses, organizing lessons, and presenting learning progress.",
-    "longDescription": "Learnify is an education-focused interface designed around course discovery, lesson organization, learner progress, and accessible navigation.",
-    "category": "Education",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript"
-    ],
-    "tags": [
-      "Education",
-      "Courses",
-      "Learning",
-      "Dashboard"
-    ],
-    "image": "learnify/cover.webp",
-    "gallery": [
-      {
-        "src": "learnify/dashboard.webp",
-        "alt": "Learnify learning dashboard"
-      },
-      {
-        "src": "learnify/courses.webp",
-        "alt": "Learnify courses interface"
-      }
-    ],
-    "github": "",
-    "live": "",
-    "featured": false,
-    "recruiterRecommended": false,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 10,
-    "features": [
-      "Course browsing",
-      "Learning-progress interface",
-      "Lesson organization",
-      "Responsive educational dashboard"
-    ],
-    "challenges": [
-      "Organizing course information clearly",
-      "Creating navigation suitable for learning content"
-    ],
-    "results": [
-      "Created a responsive educational interface",
-      "Built reusable course and lesson components"
-    ]
-  },
-  {
-    "id": 11,
-    "slug": "github-profile-analyzer",
-    "title": "GitHub Profile Analyzer",
-    "description": "A developer-focused application for presenting GitHub profile information, repositories, activity, and account statistics.",
-    "longDescription": "GitHub Profile Analyzer turns developer information into a cleaner dashboard experience using profile data, repository summaries, statistics, and responsive presentation.",
-    "category": "API Project",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "GitHub API"
-    ],
-    "tags": [
-      "GitHub",
-      "Developers",
-      "API",
-      "Analytics"
-    ],
-    "image": "github-profile-analyzer/cover.webp",
-    "gallery": [
-      {
-        "src": "github-profile-analyzer/profile.webp",
-        "alt": "GitHub Profile Analyzer interface"
-      }
-    ],
-    "github": "",
-    "live": "",
-    "featured": false,
-    "recruiterRecommended": true,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 11,
-    "features": [
-      "GitHub profile lookup",
-      "Repository information",
-      "Profile statistics",
-      "Responsive developer dashboard"
-    ],
-    "challenges": [
-      "Transforming API data into a clear information hierarchy",
-      "Handling incomplete profile information"
-    ],
-    "results": [
-      "Built a developer-oriented API interface",
-      "Practiced GitHub API data presentation"
-    ]
-  },
-  {
-    "id": 12,
-    "slug": "finance-tracker",
-    "title": "Finance Tracker",
-    "description": "A lightweight financial dashboard for recording transactions and reviewing income, expenses, and balances.",
-    "longDescription": "Finance Tracker is a focused finance project centered on transaction entry, balance summaries, expense organization, and a clear responsive layout.",
-    "category": "Productivity",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript"
-    ],
-    "tags": [
-      "Finance",
-      "Expenses",
-      "Income",
-      "Tracking"
-    ],
-    "image": "finance-tracker/cover.webp",
-    "gallery": [
-      {
-        "src": "finance-tracker/dashboard.webp",
-        "alt": "Finance Tracker dashboard"
-      }
-    ],
-    "github": "",
-    "live": "",
-    "featured": false,
-    "recruiterRecommended": false,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 12,
-    "features": [
-      "Income tracking",
-      "Expense tracking",
-      "Transaction history",
-      "Balance summaries"
-    ],
-    "challenges": [
-      "Keeping financial entry workflows simple",
-      "Presenting transactions clearly on mobile"
-    ],
-    "results": [
-      "Created a practical finance interface",
-      "Built reusable financial summary components"
-    ]
-  },
-  {
-    "id": 13,
-    "slug": "weather-dashboard",
-    "title": "Weather Dashboard",
-    "description": "A weather application for searching locations and reviewing current conditions and forecast information.",
-    "longDescription": "Weather Dashboard is a focused API project centered on city search, current conditions, forecast cards, and responsive weather presentation.",
-    "category": "API Project",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Weather API"
-    ],
-    "tags": [
-      "Weather",
-      "Forecast",
-      "Search",
-      "API"
-    ],
-    "image": "weather-dashboard/cover.webp",
-    "gallery": [
-      {
-        "src": "weather-dashboard/weather.webp",
-        "alt": "Weather Dashboard interface"
-      }
-    ],
-    "github": "",
-    "live": "",
-    "featured": false,
-    "recruiterRecommended": false,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 13,
-    "features": [
-      "Location search",
-      "Current weather",
-      "Forecast presentation",
-      "Responsive weather cards"
-    ],
-    "challenges": [
-      "Handling changing weather API states",
-      "Keeping forecast information readable on narrow screens"
-    ],
-    "results": [
-      "Built an API-driven weather interface",
-      "Practiced asynchronous JavaScript and dynamic rendering"
-    ]
-  },
-  {
-    "id": 14,
-    "slug": "guess-the-number-game",
-    "title": "Guess The Number Game",
-    "description": "An interactive browser game that challenges users to find a randomly generated number using feedback and score tracking.",
-    "longDescription": "Guess The Number Game is a JavaScript project focused on user interaction, application state, conditional logic, and immediate interface feedback.",
-    "category": "JavaScript Game",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript"
-    ],
-    "tags": [
-      "Game",
-      "JavaScript",
-      "Logic",
       "Interactive"
     ],
-    "image": "guess-the-number/cover.webp",
+    "image": "",
     "gallery": [],
-    "github": "",
+    "github": "https://github.com/Sayed24/Interactive-E-Commerce-Product-Showcase",
     "live": "",
-    "featured": false,
-    "recruiterRecommended": false,
+    "featured": true,
+    "recruiterRecommended": true,
     "status": "Portfolio Project",
     "created": "",
     "updated": "",
-    "order": 14,
+    "order": 25,
     "features": [
-      "Random-number generation",
-      "Player guesses",
-      "Feedback messages",
-      "Score tracking",
-      "Restart functionality"
+      "Product showcase interface",
+      "Responsive product presentation",
+      "Interactive shopping UI",
+      "Modern e-commerce layout"
     ],
-    "challenges": [
-      "Managing game state",
-      "Providing clear feedback for each guess"
-    ],
-    "results": [
-      "Practiced DOM manipulation",
-      "Strengthened JavaScript conditional logic"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
-    "id": 15,
-    "slug": "tic-tac-toe",
-    "title": "Tic-Tac-Toe",
-    "description": "A browser-based Tic-Tac-Toe game featuring turn management, win detection, draw detection, and restart controls.",
-    "longDescription": "Tic-Tac-Toe is an interactive JavaScript game focused on state management, event handling, game rules, and interface feedback.",
-    "category": "JavaScript Game",
+    "id": 26,
+    "slug": "employee-management-system",
+    "title": "Employee Management System",
+    "description": "A front-end employee-management simulation for organizing and presenting employee information through a responsive administrative interface.",
+    "longDescription": "A front-end employee-management simulation for organizing and presenting employee information through a responsive administrative interface.",
+    "category": "Dashboard",
     "technologies": [
       "HTML5",
       "CSS3",
       "JavaScript"
     ],
     "tags": [
-      "Game",
-      "JavaScript",
-      "DOM",
-      "Logic"
+      "Employees",
+      "Management",
+      "Admin",
+      "Dashboard"
     ],
-    "image": "tic-tac-toe/cover.webp",
+    "image": "",
     "gallery": [],
-    "github": "",
+    "github": "https://github.com/Sayed24/Employee-Management-System",
     "live": "",
-    "featured": false,
-    "recruiterRecommended": false,
+    "featured": true,
+    "recruiterRecommended": true,
     "status": "Portfolio Project",
     "created": "",
     "updated": "",
-    "order": 15,
+    "order": 26,
     "features": [
-      "Two-player gameplay",
-      "Turn management",
-      "Win detection",
-      "Draw detection",
-      "Game reset"
+      "Employee-management interface",
+      "Administrative dashboard",
+      "Responsive employee-data presentation",
+      "Interactive front-end simulation"
     ],
-    "challenges": [
-      "Keeping game state synchronized with the interface",
-      "Implementing reliable win and draw logic"
-    ],
-    "results": [
-      "Practiced event-driven JavaScript",
-      "Strengthened application-state management"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
-    "id": 16,
-    "slug": "task-management-app",
-    "title": "Task Management App",
-    "description": "A task-management application for creating, organizing, completing, filtering, and removing everyday tasks.",
-    "longDescription": "Task Management App demonstrates common CRUD interactions including task creation, completion, deletion, filtering, and local persistence.",
+    "id": 27,
+    "slug": "smart-task-dashboard",
+    "title": "Smart Task Dashboard",
+    "description": "A task-focused dashboard for organizing work, presenting task information, and supporting a clear productivity workflow.",
+    "longDescription": "A task-focused dashboard for organizing work, presenting task information, and supporting a clear productivity workflow.",
     "category": "Productivity",
     "technologies": [
       "HTML5",
       "CSS3",
-      "JavaScript",
-      "Local Storage"
+      "JavaScript"
     ],
     "tags": [
       "Tasks",
-      "CRUD",
+      "Dashboard",
       "Productivity",
-      "Local Storage"
+      "Workflow"
     ],
-    "image": "task-management-app/cover.webp",
+    "image": "",
     "gallery": [],
-    "github": "",
+    "github": "https://github.com/Sayed24/Smart-Task-Dashboard-",
     "live": "",
     "featured": false,
-    "recruiterRecommended": false,
+    "recruiterRecommended": true,
     "status": "Portfolio Project",
     "created": "",
     "updated": "",
-    "order": 16,
+    "order": 27,
     "features": [
-      "Create tasks",
-      "Complete tasks",
-      "Delete tasks",
-      "Task filtering",
-      "Local persistence"
+      "Task dashboard interface",
+      "Work organization",
+      "Responsive productivity layout",
+      "Interactive task presentation"
     ],
-    "challenges": [
-      "Keeping rendered tasks synchronized with stored data",
-      "Providing useful controls without cluttering the interface"
-    ],
-    "results": [
-      "Built a complete CRUD workflow",
-      "Practiced browser-based data persistence"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
-    "id": 17,
-    "slug": "smart-notes-app",
-    "title": "Smart Notes App",
-    "description": "A note-taking application for creating, editing, organizing, searching, and saving personal notes.",
-    "longDescription": "Smart Notes App focuses on quick note creation and organization using search, editing controls, persistent browser storage, and responsive card layouts.",
+    "id": 28,
+    "slug": "todo",
+    "title": "ToDo",
+    "description": "A browser-based to-do application for organizing everyday tasks through a simple interactive workflow.",
+    "longDescription": "A browser-based to-do application for organizing everyday tasks through a simple interactive workflow.",
     "category": "Productivity",
-    "technologies": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Local Storage"
-    ],
-    "tags": [
-      "Notes",
-      "Productivity",
-      "Search",
-      "CRUD"
-    ],
-    "image": "smart-notes-app/cover.webp",
-    "gallery": [],
-    "github": "",
-    "live": "",
-    "featured": false,
-    "recruiterRecommended": false,
-    "status": "Portfolio Project",
-    "created": "",
-    "updated": "",
-    "order": 17,
-    "features": [
-      "Create notes",
-      "Edit notes",
-      "Delete notes",
-      "Search notes",
-      "Persistent browser storage"
-    ],
-    "challenges": [
-      "Managing multiple editable notes efficiently",
-      "Making note management practical on mobile screens"
-    ],
-    "results": [
-      "Built a complete note-management workflow",
-      "Practiced persistent client-side data handling"
-    ]
-  },
-  {
-    "id": 18,
-    "slug": "interactive-quiz-app",
-    "title": "Interactive Quiz App",
-    "description": "A browser-based quiz application featuring questions, scoring, answer feedback, and completion results.",
-    "longDescription": "Interactive Quiz App demonstrates multi-step application flow through dynamic questions, answer selection, score tracking, and final results.",
-    "category": "JavaScript App",
     "technologies": [
       "HTML5",
       "CSS3",
       "JavaScript"
     ],
     "tags": [
-      "Quiz",
-      "JavaScript",
-      "Interactive",
-      "Learning"
+      "ToDo",
+      "Tasks",
+      "Productivity",
+      "JavaScript"
     ],
-    "image": "interactive-quiz-app/cover.webp",
+    "image": "",
     "gallery": [],
-    "github": "",
+    "github": "https://github.com/Sayed24/ToDo",
     "live": "",
     "featured": false,
     "recruiterRecommended": false,
     "status": "Portfolio Project",
     "created": "",
     "updated": "",
-    "order": 18,
+    "order": 28,
     "features": [
-      "Multiple quiz questions",
-      "Answer selection",
-      "Score tracking",
-      "Answer feedback",
-      "Final results"
+      "Task creation",
+      "Task organization",
+      "Interactive to-do workflow",
+      "Responsive interface"
     ],
-    "challenges": [
-      "Managing question state and user progress",
-      "Preventing duplicate answer submissions"
-    ],
-    "results": [
-      "Practiced dynamic JavaScript rendering",
-      "Built a complete multi-step application flow"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
-    "id": 19,
-    "slug": "secure-password-generator",
-    "title": "Secure Password Generator",
-    "description": "A configurable password-generation utility with options for password length and character types.",
-    "longDescription": "Secure Password Generator is a JavaScript utility focused on configurable password creation, form controls, interface feedback, and clipboard interaction.",
-    "category": "JavaScript App",
+    "id": 29,
+    "slug": "smarttaskdashboard",
+    "title": "SmartTaskDashboard",
+    "description": "A smart task-dashboard project focused on presenting and organizing tasks through a modern productivity interface.",
+    "longDescription": "A smart task-dashboard project focused on presenting and organizing tasks through a modern productivity interface.",
+    "category": "Productivity",
     "technologies": [
       "HTML5",
       "CSS3",
       "JavaScript"
     ],
     "tags": [
-      "Password",
-      "Utility",
-      "JavaScript",
-      "Security"
+      "Tasks",
+      "Dashboard",
+      "Productivity",
+      "Frontend"
     ],
-    "image": "password-generator/cover.webp",
+    "image": "",
     "gallery": [],
-    "github": "",
+    "github": "https://github.com/Sayed24/SmartTaskDashboard",
     "live": "",
     "featured": false,
     "recruiterRecommended": false,
     "status": "Portfolio Project",
     "created": "",
     "updated": "",
-    "order": 19,
+    "order": 29,
     "features": [
-      "Configurable password length",
-      "Character-type controls",
-      "Generated password display",
-      "Clipboard copy interaction"
+      "Task dashboard",
+      "Productivity-focused layout",
+      "Interactive task presentation",
+      "Responsive design"
     ],
-    "challenges": [
-      "Handling combinations of password options correctly",
-      "Keeping configuration controls simple"
-    ],
-    "results": [
-      "Built a practical JavaScript utility",
-      "Practiced randomized output generation"
-    ]
+    "challenges": [],
+    "results": []
   },
   {
-    "id": 20,
-    "slug": "expense-tracker",
-    "title": "Expense Tracker",
-    "description": "A lightweight expense-management application for recording purchases, categorizing spending, and reviewing totals.",
-    "longDescription": "Expense Tracker demonstrates form handling, transaction rendering, expense categories, calculation logic, and local persistence.",
-    "category": "Productivity",
+    "id": 30,
+    "slug": "guess-number-game",
+    "title": "Guess Number Game",
+    "description": "An interactive JavaScript number-guessing game built around user input, game logic, feedback, and score-style interaction.",
+    "longDescription": "An interactive JavaScript number-guessing game built around user input, game logic, feedback, and score-style interaction.",
+    "category": "JavaScript Game",
     "technologies": [
       "HTML5",
       "CSS3",
-      "JavaScript",
-      "Local Storage"
+      "JavaScript"
     ],
     "tags": [
-      "Expenses",
-      "Finance",
-      "Tracking",
-      "CRUD"
+      "Game",
+      "Number Guessing",
+      "Logic",
+      "Interactive"
     ],
-    "image": "expense-tracker/cover.webp",
+    "image": "",
     "gallery": [],
-    "github": "",
+    "github": "https://github.com/Sayed24/Guess-number-game",
     "live": "",
     "featured": false,
     "recruiterRecommended": false,
     "status": "Portfolio Project",
     "created": "",
     "updated": "",
-    "order": 20,
+    "order": 30,
     "features": [
-      "Add expenses",
-      "Delete expenses",
-      "Expense categories",
-      "Total calculations",
-      "Local browser storage"
+      "Random-number gameplay",
+      "User guesses",
+      "Interactive feedback",
+      "JavaScript game logic"
     ],
-    "challenges": [
-      "Keeping totals synchronized with transaction changes",
-      "Presenting transaction information clearly on small screens"
-    ],
-    "results": [
-      "Built a complete expense-tracking workflow",
-      "Practiced calculations and persistent state"
-    ]
+    "challenges": [],
+    "results": []
   }
 ]

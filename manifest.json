@@ -1,7 +1,7 @@
 {
   "name": "Sayed Rahim Sadat | Portfolio",
   "short_name": "SR Portfolio",
-  "description": "Portfolio of Sayed Rahim Sadat, Web Designer and Developer creating modern, responsive, user-friendly digital experiences.",
+  "description": "Responsive portfolio of Sayed Rahim Sadat, Web Designer & Developer.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
@@ -10,12 +10,7 @@
   "lang": "en-US",
   "dir": "ltr",
   "background_color": "#f8fafc",
-  "theme_color": "#2563eb",
-  "categories": [
-    "portfolio",
-    "development",
-    "design"
-  ],
+  "theme_color": "#1877f2",
   "icons": [
     {
       "src": "assets/icons/icon-192.png",
@@ -38,21 +33,13 @@
   ],
   "shortcuts": [
     {
-      "name": "View Projects",
+      "name": "Projects",
       "short_name": "Projects",
-      "description": "Browse Sayed Rahim Sadat's portfolio projects.",
       "url": "./#projects"
-    },
-    {
-      "name": "About Me",
-      "short_name": "About",
-      "description": "Learn more about Sayed Rahim Sadat.",
-      "url": "./#about"
     },
     {
       "name": "Contact",
       "short_name": "Contact",
-      "description": "View contact information for Sayed Rahim Sadat.",
       "url": "./#contact"
     }
   ]

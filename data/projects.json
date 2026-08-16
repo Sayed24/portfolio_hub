@@ -19,10 +19,10 @@
       "Dashboard",
       "Responsive"
     ],
-    "image": "",
+    "image": "flowdesk/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/FlowDesk",
-    "live": "https://sayed24.github.io/FlowDesk/",
+    "live": "",
     "featured": true,
     "recruiterRecommended": true,
     "status": "In Development",
@@ -36,7 +36,8 @@
       "Persistent theme support"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "FlowDesk"
   },
   {
     "id": 2,
@@ -57,7 +58,7 @@
       "Search",
       "API"
     ],
-    "image": "",
+    "image": "smart-movie-tv-explorer/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Smart-Movie---TV-Explorer",
     "live": "",
@@ -74,7 +75,8 @@
       "Detailed media presentation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Smart-Movie---TV-Explorer"
   },
   {
     "id": 3,
@@ -94,7 +96,7 @@
       "Management",
       "Responsive"
     ],
-    "image": "",
+    "image": "user-management-dashboard/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/User_Management_Dashboard",
     "live": "",
@@ -111,7 +113,8 @@
       "Organized user-data presentation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "User_Management_Dashboard"
   },
   {
     "id": 4,
@@ -132,7 +135,7 @@
       "Developers",
       "Analytics"
     ],
-    "image": "",
+    "image": "github-profile-analyzer/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/GitHub_Profile_Analyzer",
     "live": "",
@@ -149,7 +152,8 @@
       "Developer data presentation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "GitHub_Profile_Analyzer"
   },
   {
     "id": 5,
@@ -169,7 +173,7 @@
       "Dynamic UI",
       "Frontend"
     ],
-    "image": "",
+    "image": "user-data/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/User_data",
     "live": "",
@@ -185,7 +189,8 @@
       "Responsive information presentation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "User_data"
   },
   {
     "id": 6,
@@ -205,7 +210,7 @@
       "UI/UX",
       "Frontend"
     ],
-    "image": "",
+    "image": "nova/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Nova",
     "live": "",
@@ -222,7 +227,8 @@
       "Modern user interface"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Nova"
   },
   {
     "id": 7,
@@ -243,7 +249,7 @@
       "Favorites",
       "Interactive"
     ],
-    "image": "",
+    "image": "ai-quote-generator/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/AI_Quote_Generator",
     "live": "",
@@ -260,7 +266,8 @@
       "Saved favorites"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "AI_Quote_Generator"
   },
   {
     "id": 8,
@@ -280,7 +287,7 @@
       "Responsive",
       "Mobile First"
     ],
-    "image": "",
+    "image": "sadat-chatapp/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Sadat_ChatApp",
     "live": "",
@@ -297,7 +304,8 @@
       "GitHub Pages-friendly front end"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Sadat_ChatApp"
   },
   {
     "id": 9,
@@ -317,7 +325,7 @@
       "Jobs",
       "Rentals"
     ],
-    "image": "",
+    "image": "hublet/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Hublet",
     "live": "",
@@ -334,7 +342,8 @@
       "Rental listings"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Hublet"
   },
   {
     "id": 10,
@@ -354,7 +363,7 @@
       "Responsive",
       "Website"
     ],
-    "image": "",
+    "image": "digital-services/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Digital_Services",
     "live": "",
@@ -371,7 +380,8 @@
       "Modern landing-page design"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Digital_Services"
   },
   {
     "id": 11,
@@ -391,7 +401,7 @@
       "Expenses",
       "Dashboard"
     ],
-    "image": "",
+    "image": "finance-tracker/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Finance_Tracker",
     "live": "",
@@ -408,7 +418,8 @@
       "Sorting and financial summaries"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Finance_Tracker"
   },
   {
     "id": 12,
@@ -428,7 +439,7 @@
       "Dynamic UI",
       "Productivity"
     ],
-    "image": "",
+    "image": "smart-form-builder/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Smart-Form-Builder",
     "live": "",
@@ -445,7 +456,8 @@
       "Responsive layout"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Smart-Form-Builder"
   },
   {
     "id": 13,
@@ -465,7 +477,7 @@
       "UI",
       "Interactive"
     ],
-    "image": "",
+    "image": "modern-interactive-image-slider/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Modern_Interactive_Image_Slider",
     "live": "",
@@ -482,7 +494,8 @@
       "Visual content presentation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Modern_Interactive_Image_Slider"
   },
   {
     "id": 14,
@@ -502,7 +515,7 @@
       "Projects",
       "Professional"
     ],
-    "image": "",
+    "image": "portfolio-platform/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Portfolio_Platform",
     "live": "",
@@ -519,7 +532,8 @@
       "Responsive design"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Portfolio_Platform"
   },
   {
     "id": 15,
@@ -540,7 +554,7 @@
       "Analytics",
       "Data"
     ],
-    "image": "",
+    "image": "insighthub/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/InsightHub",
     "live": "",
@@ -557,7 +571,8 @@
       "Organized data presentation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "InsightHub"
   },
   {
     "id": 16,
@@ -578,7 +593,7 @@
       "Research",
       "Visualization"
     ],
-    "image": "",
+    "image": "open-data-scientific-research-dashboard/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Open-Data-Scientific-Research-Dashboard",
     "live": "",
@@ -595,7 +610,8 @@
       "Responsive information layout"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Open-Data-Scientific-Research-Dashboard"
   },
   {
     "id": 17,
@@ -615,7 +631,7 @@
       "Mobile First",
       "Responsive"
     ],
-    "image": "",
+    "image": "modern-restaurant-ordering-website/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Modern-Restaurant-Ordering-Website",
     "live": "",
@@ -632,7 +648,8 @@
       "Responsive design"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Modern-Restaurant-Ordering-Website"
   },
   {
     "id": 18,
@@ -652,7 +669,7 @@
       "Courses",
       "Interactive"
     ],
-    "image": "",
+    "image": "learnify-modern-learning-platform/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Learnify-Modern-Learning-Platform",
     "live": "",
@@ -669,7 +686,8 @@
       "Learner-focused navigation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Learnify-Modern-Learning-Platform"
   },
   {
     "id": 19,
@@ -690,7 +708,7 @@
       "API",
       "JavaScript"
     ],
-    "image": "",
+    "image": "random-user-generator/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Random-User-Generator",
     "live": "",
@@ -707,7 +725,8 @@
       "Responsive interface"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Random-User-Generator"
   },
   {
     "id": 20,
@@ -728,7 +747,7 @@
       "Tasks",
       "Workflow"
     ],
-    "image": "",
+    "image": "project-management-kanban-board/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Project-Management-Kanban-Board",
     "live": "",
@@ -745,7 +764,8 @@
       "Trello-style responsive UI"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Project-Management-Kanban-Board"
   },
   {
     "id": 21,
@@ -767,7 +787,7 @@
       "API",
       "Dashboard"
     ],
-    "image": "",
+    "image": "real-time-weather/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Real-Time-Weather",
     "live": "",
@@ -784,7 +804,8 @@
       "Dynamic API data"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Real-Time-Weather"
   },
   {
     "id": 22,
@@ -804,7 +825,7 @@
       "Logic",
       "JavaScript"
     ],
-    "image": "",
+    "image": "sudoku/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Sudoku",
     "live": "",
@@ -821,7 +842,8 @@
       "Responsive browser experience"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Sudoku"
   },
   {
     "id": 23,
@@ -841,7 +863,7 @@
       "Expenses",
       "Tracking"
     ],
-    "image": "",
+    "image": "personal-finance-tracker/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Personal-Finance-Tracker",
     "live": "",
@@ -858,7 +880,8 @@
       "Responsive finance interface"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Personal-Finance-Tracker"
   },
   {
     "id": 24,
@@ -878,7 +901,7 @@
       "Builder",
       "Career"
     ],
-    "image": "",
+    "image": "interactive-resume-cv-builder/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Interactive-resume-cv-builder",
     "live": "",
@@ -895,7 +918,8 @@
       "Responsive interface"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Interactive-resume-cv-builder"
   },
   {
     "id": 25,
@@ -915,7 +939,7 @@
       "Shopping",
       "Interactive"
     ],
-    "image": "",
+    "image": "interactive-ecommerce-product-showcase/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Interactive-E-Commerce-Product-Showcase",
     "live": "",
@@ -932,7 +956,8 @@
       "Modern e-commerce layout"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Interactive-E-Commerce-Product-Showcase"
   },
   {
     "id": 26,
@@ -952,7 +977,7 @@
       "Admin",
       "Dashboard"
     ],
-    "image": "",
+    "image": "employee-management-system/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Employee-Management-System",
     "live": "",
@@ -969,7 +994,8 @@
       "Interactive front-end simulation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Employee-Management-System"
   },
   {
     "id": 27,
@@ -989,7 +1015,7 @@
       "Productivity",
       "Workflow"
     ],
-    "image": "",
+    "image": "smart-task-dashboard/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Smart-Task-Dashboard-",
     "live": "",
@@ -1006,7 +1032,8 @@
       "Interactive task presentation"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Smart-Task-Dashboard-"
   },
   {
     "id": 28,
@@ -1026,7 +1053,7 @@
       "Productivity",
       "JavaScript"
     ],
-    "image": "",
+    "image": "todo/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/ToDo",
     "live": "",
@@ -1043,7 +1070,8 @@
       "Responsive interface"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "ToDo"
   },
   {
     "id": 29,
@@ -1063,7 +1091,7 @@
       "Productivity",
       "Frontend"
     ],
-    "image": "",
+    "image": "smarttaskdashboard/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/SmartTaskDashboard",
     "live": "",
@@ -1080,7 +1108,8 @@
       "Responsive design"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "SmartTaskDashboard"
   },
   {
     "id": 30,
@@ -1100,7 +1129,7 @@
       "Logic",
       "Interactive"
     ],
-    "image": "",
+    "image": "guess-number-game/cover.svg",
     "gallery": [],
     "github": "https://github.com/Sayed24/Guess-number-game",
     "live": "",
@@ -1117,6 +1146,7 @@
       "JavaScript game logic"
     ],
     "challenges": [],
-    "results": []
+    "results": [],
+    "repository": "Guess-number-game"
   }
 ]
